@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A3E72"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <EditText
+        android:id="@+id/id_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter First Name"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+
+        />
+
+    <EditText
+        android:id="@+id/id_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Last Name"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        />
+
+    <EditText
+        android:id="@+id/id_email_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Email ID"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#fff"
+        />
+
+    <EditText
+        android:id="@+id/id_mobile_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Mobile Name"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:inputType="number"
+        android:textColorHint="#fff"
+        />
+
+    <Button
+        android:id="@+id/id_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:background="#fff"
+        android:text="Add Contact"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:fontFamily="serif"
+        />
+</LinearLayout>
+
+
