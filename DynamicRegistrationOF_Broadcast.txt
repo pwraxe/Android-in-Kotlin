@@ -1,0 +1,47 @@
+------------------------------------- Dynamic Broadcast -------------------------------------
+
+-------- activity_main.xml ---------------------
+
+	<TextView />   to shopw what to do to trigger implicite Broadcast
+	
+	
+-------- MainActivity.kt -----------------------
+
+
+class MainActivity : AppCompatActivity() {
+
+	private var textView: TextView? = null
+    private var broadcast : BroadcastReceiver? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+		
+        textView = findViewById(R.id.id_emoji)
+        broadcast = CustomBR()
+
+        val filter = IntentFilter()
+        filter.addAction(Intent.ACTION_POWER_CONNECTED)
+        filter.addAction(Intent.ACTION_POWER_DISCONNECTED)
+        registerReceiver(broadcast,filter)
+    }
+    override fun onStop() {
+        super.onStop()
+        unregisterReceiver(broadcast)
+    }
+}
+
+----------------------------------- CustomBR.kt --------------------------------------------------
+
+class CustomBR : BroadcastReceiver()
+{
+    override fun onReceive(context: Context?, intent: Intent?) {
+
+        when {
+            Intent.ACTION_POWER_CONNECTED == intent?.action -> Toast.makeText(context,"USB Connect",Toast.LENGTH_LONG).show()
+            Intent.ACTION_POWER_DISCONNECTED == intent?.action -> Toast.makeText(context,"USB Disconnect",Toast.LENGTH_LONG).show()
+            else -> Toast.makeText(context,"Broadcast Received",Toast.LENGTH_LONG).show()
+        }
+
+    }
+}

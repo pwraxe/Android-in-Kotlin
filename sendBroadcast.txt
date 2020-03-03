@@ -1,0 +1,47 @@
+------------------------ activity_main.xml ----------------------------------
+
+	create button with id = button
+	
+------------------------ MainActivity.xml ----------------------------------
+	
+	
+	class MainActivity : AppCompatActivity() {
+	
+    private var button : Button? = null
+    
+	override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        button = findViewById(R.id.id_button)
+
+        button?.setOnClickListener {
+
+            sendBroadcast(Intent(this,CustomBR::class.java))
+
+        }
+    }
+}
+
+------------------------ CustomBR.xml ----------------------------------------
+
+class CustomBR : BroadcastReceiver()
+{
+    override fun onReceive(context: Context?, intent: Intent?) {
+		Toast.makeText(context,"Broadcast Received",Toast.LENGTH_LONG).show()
+    }
+}
+
+------------------------ AndroidManifest.xml ----------------------------------
+
+<application>
+	<activity>
+	----
+	----
+	----
+	</activity>
+	<receiver android:name=".CustomBR"/>
+</application>
+
+
+
+
