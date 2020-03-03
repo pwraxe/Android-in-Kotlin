@@ -1,0 +1,21 @@
+2019-12-01 11:04:24.349 13846-13846/? E/AXE: Current Thread in onCreate : 2
+2019-12-01 11:04:41.660 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 17
+2019-12-01 11:04:42.662 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 41
+2019-12-01 11:04:43.662 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 44
+2019-12-01 11:04:44.663 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 35
+2019-12-01 11:04:45.663 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 61
+2019-12-01 11:04:46.664 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 70
+2019-12-01 11:04:47.665 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 83
+2019-12-01 11:04:48.665 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 80
+2019-12-01 11:04:49.666 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 60
+2019-12-01 11:04:50.666 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 87
+2019-12-01 11:04:51.667 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 74
+2019-12-01 11:04:52.668 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 44
+2019-12-01 11:04:53.668 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 31
+2019-12-01 11:04:54.669 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 17
+2019-12-01 11:04:55.669 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 30
+2019-12-01 11:04:56.670 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 71
+2019-12-01 11:04:57.671 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 74
+2019-12-01 11:04:58.671 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 68
+2019-12-01 11:04:59.671 13846-14183/com.example.service_demo E/AXE: Current Thread 46092 == Random Number 15
+2019-12-01 11:05:00.016 13846-13846/com.example.service_demo E/AXE: You Stop to Generate Random Number
