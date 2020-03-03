@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/android_id"
+        android:title="Android"
+        android:icon="@drawable/android"
+        />
+    <item
+        android:id="@+id/cake_id"
+        android:title="Cake"
+        android:icon="@drawable/cake"
+        />
+    <item
+        android:id="@+id/cloud_id"
+        android:title="Cloud"
+        android:icon="@drawable/cloud"
+        />
+    <item
+        android:id="@+id/education_id"
+        android:title="Education"
+        android:icon="@drawable/education"
+        />
+    <item
+        android:id="@+id/flight_id"
+        android:title="Flight"
+        android:icon="@drawable/flight"
+        />
+
+    <item
+        android:id="@+id/info_id"
+        android:icon="@drawable/info"
+        app:showAsAction="always"
+        android:title="Info"
+        >
+
+        <menu>
+            <item
+                android:id="@+id/laptop_id"
+                android:title="Laptop"
+                android:icon="@drawable/laptop"
+                />
+            <item
+                android:id="@+id/mobile_id"
+                android:title="Mobile"
+                android:icon="@drawable/mobile"
+                />
+            <item
+                android:id="@+id/moon_id"
+                android:title="Moon"
+                android:icon="@drawable/moon"
+                />
+
+        </menu>
+
+
+    </item>
+
+
+
+
+
+</menu>
