@@ -1,0 +1,83 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/search_editText_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search Anything"
+                android:layout_weight="10"
+                />
+            <Button
+                android:id="@+id/searchButton_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:layout_weight="1"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/githubButton_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Github"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                />
+            <Button
+                android:id="@+id/googleButton_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Google"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                />
+            <Button
+                android:id="@+id/youtubeButton_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YouTube"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webView_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+
+</LinearLayout>
