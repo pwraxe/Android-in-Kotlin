@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#00ff00"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you like this dialog?"
+        android:textSize="20dp"
+        android:fontFamily="serif"
+        android:textColor="#000"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/yesButton_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:fontFamily="serif"
+            android:background="#fff"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:layout_margin="20dp"
+            />
+
+        <Button
+            android:id="@+id/noButton_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:fontFamily="serif"
+            android:background="#fff"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:layout_margin="20dp"
+            />
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
