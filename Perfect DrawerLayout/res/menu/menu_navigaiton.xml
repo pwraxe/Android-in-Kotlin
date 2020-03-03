@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/id_home"
+            android:title="Home"
+            android:icon="@drawable/ic_home"
+            />
+
+        <item
+            android:id="@+id/id_security"
+            android:title="Security"
+            android:icon="@drawable/ic_security"
+            />
+
+        <item
+            android:id="@+id/id_shop"
+            android:title="Shopping"
+            android:icon="@drawable/ic_shopping"
+            />
+        <item
+            android:id="@+id/id_about"
+            android:title="About Us"
+            android:icon="@drawable/ic_about"
+            />
+        <item
+            android:id="@+id/id_contact"
+            android:title="Contact Us"
+            android:icon="@drawable/ic_contact"
+            />
+    <item android:title="Controls">
+
+        <menu>
+
+            <item
+                android:id="@+id/id_setting"
+                android:title="Setting"
+                android:icon="@drawable/ic_settings"
+                />
+
+            <item
+                android:id="@+id/id_logout"
+                android:title="Logout"
+                android:icon="@drawable/ic_logout"
+                />
+
+        </menu>
+
+    </item>
+
+    </group>
+</menu>

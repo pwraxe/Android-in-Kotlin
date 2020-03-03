@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item
+            android:id="@+id/item1"
+            android:title="Import"/>
+
+        <item
+            android:id="@+id/item2"
+            android:title="Export"/>
+
+        <item
+            android:id="@+id/item3"
+            android:title="Block"/>
+
+        <item
+            android:id="@+id/id_search"
+            app:showAsAction="always"
+            android:title="Search"
+            android:icon="@drawable/ic_search"
+            />
+
+        <item
+            android:id="@+id/id_heart"
+            android:icon="@drawable/ic_heart"
+            app:showAsAction="ifRoom"
+            android:title="Like"
+            />
+</menu>
