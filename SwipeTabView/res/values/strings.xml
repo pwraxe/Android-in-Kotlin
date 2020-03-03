@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SwipeTabView</string>
+
+    <string name="chat_tab"><b>CHAT</b></string>
+    <string name="status_tab"><i>STATUS</i></string>
+    <string name="calls_tab">CALLS</string>
+
+    <style name="tabTextStyle">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>
