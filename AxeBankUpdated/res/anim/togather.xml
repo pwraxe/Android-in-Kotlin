@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true"
+    android:interpolator="@android:anim/linear_interpolator" >
+
+
+    <!-- Move -->
+    <scale
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:duration="5000"
+        android:fromXScale="1dp"
+        android:fromYScale="1dp"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toXScale="350dp"
+        android:toYScale="150dp" >
+    </scale>
+
+    <!-- Rotate 180 degrees -->
+<!--    <rotate-->
+<!--        android:duration="500"-->
+<!--        android:fromDegrees="0"-->
+<!--        android:pivotX="50%"-->
+<!--        android:pivotY="50%"-->
+<!--        android:repeatCount="5"-->
+<!--        android:repeatMode="restart"-->
+<!--        android:toDegrees="360"-->
+<!--        android:interpolator="@android:anim/cycle_interpolator"-->
+<!--        />-->
+
+</set>

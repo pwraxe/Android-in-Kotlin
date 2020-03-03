@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/logoText_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Axe Bank"
+        android:textSize="70sp"
+        android:textColor="#0040ff"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:fontFamily="serif"
+        />
+</RelativeLayout>

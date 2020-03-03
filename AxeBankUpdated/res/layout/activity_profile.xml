@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/user_icon"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/delete_button_id"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:src="@drawable/delete_icon"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:tooltipText="Delete Account"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete Account"
+                android:textSize="15dp"
+                android:fontFamily="serif"
+                android:textColor="#ff0000"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Customer ID : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+                <TextView
+                    android:id="@+id/profile_set_cid_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="First Name : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+                <TextView
+                    android:id="@+id/profile_set_fname_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Last Name : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+                <TextView
+                    android:id="@+id/profile_set_lname_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Email ID : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+                <TextView
+                    android:id="@+id/profile_set_email_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="IFSC Code : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+                <TextView
+                    android:id="@+id/profile_set_ifsc_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Account No : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+                <TextView
+                    android:id="@+id/profile_set_accNo_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Mobile No : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+                <TextView
+                    android:id="@+id/profile_set_mobile_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Area : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+                <TextView
+                    android:id="@+id/profile_set_area_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Town : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+                <TextView
+                    android:id="@+id/profile_set_town_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="City : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+                <TextView
+                    android:id="@+id/profile_set_city_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="State : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+                <TextView
+                    android:id="@+id/profile_set_state_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Pincode : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+                <TextView
+                    android:id="@+id/profile_set_pincode_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Password : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+                <TextView
+                    android:id="@+id/profile_set_password_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    android:inputType="textPassword"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Mpin : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+                <TextView
+                    android:id="@+id/profile_set_mpin_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Term &amp; Condition: "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+                <TextView
+                    android:id="@+id/profile_set_tc_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_margin="10sp"
+                    />
+
+
+
+            </GridLayout>
+
+
+
+
+        </ScrollView>
+
+
+    </HorizontalScrollView>
+
+
+
+</LinearLayout>

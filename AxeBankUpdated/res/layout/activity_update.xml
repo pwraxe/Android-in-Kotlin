@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/user_icon"
+            android:layout_gravity="center"
+            app:civ_border_color="#ff0000"
+            />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1sp"
+            android:layout_margin="10dp" >
+
+            <EditText
+                android:id="@+id/update_customer_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Customer ID : See on Bank Passbook"
+                android:inputType="number"
+                android:visibility="visible"
+                android:maxLength="10"
+                android:padding="8dp"
+                android:layout_margin="15dp"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1sp"
+            android:layout_margin="10dp" >
+
+            <EditText
+                android:id="@+id/update_CustomerFirstName_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:inputType="text"
+                android:padding="8dp"
+                android:layout_margin="15dp"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1sp"
+            android:layout_margin="10dp" >
+
+            <EditText
+                android:id="@+id/update_CustomerLastName_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                android:padding="8dp"
+                android:layout_margin="15dp"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1sp"
+            android:layout_margin="10dp" >
+
+            <EditText
+                android:id="@+id/update_CustomerEmail_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email ID"
+                android:inputType="textEmailAddress"
+                android:padding="8dp"
+                android:layout_margin="15dp"
+
+                />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1sp"
+            android:layout_margin="10dp" >
+
+            <EditText
+                android:id="@+id/update_CustomerIFSC_Code_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter IFSC Code"
+                android:inputType="textEmailAddress"
+                android:padding="8dp"
+                android:layout_margin="15dp"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1sp"
+            android:layout_margin="10dp" >
+
+            <EditText
+                android:id="@+id/update_CustomerAccountNo_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Account No"
+                android:inputType="number"
+                android:padding="8dp"
+                android:layout_margin="15dp"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1sp"
+            android:layout_margin="10dp" >
+
+            <EditText
+                android:id="@+id/update_CustomerMobile_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mobile Number"
+                android:inputType="number"
+                android:padding="8dp"
+                android:maxLength="10"
+                android:layout_margin="15dp"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1sp"
+            android:layout_margin="10dp" >
+
+            <EditText
+                android:id="@+id/update_CustomerArea_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Living Area"
+                android:inputType="text"
+                android:padding="8dp"
+                android:layout_margin="15dp"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1sp"
+            android:layout_margin="10dp" >
+
+            <EditText
+                android:id="@+id/update_CustomerTown_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Living Town"
+                android:padding="8dp"
+                android:layout_margin="15dp"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1sp"
+            android:layout_margin="10dp" >
+
+            <EditText
+                android:id="@+id/update_CustomerCity_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Living City"
+                android:padding="8dp"
+                android:layout_margin="15dp"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1dp"
+            android:layout_margin="10dp"
+            >
+            <Spinner
+                android:id="@+id/update_CustomerState_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1sp"
+            android:layout_margin="10dp" >
+
+            <EditText
+                android:id="@+id/update_CustomerPincode_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Area Pincode"
+                android:inputType="number"
+                android:padding="8dp"
+                android:maxLength="6"
+                android:layout_margin="15dp"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1sp"
+            android:layout_margin="10dp" >
+
+            <EditText
+                android:id="@+id/update_CustomerFirstPassword_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Create New Password"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:layout_margin="15dp"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1sp"
+            android:layout_margin="10dp" >
+
+            <EditText
+                android:id="@+id/update_CustomerSecondPassword_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:layout_margin="15dp"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1sp"
+            android:layout_margin="10dp" >
+
+            <EditText
+                android:id="@+id/update_CustomerMPin_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Set 4 digit M-PIN"
+                android:inputType="numberPassword"
+                android:visibility="visible"
+                android:padding="8dp"
+                android:maxLength="4"
+                android:textSize="25sp"
+                android:layout_margin="15dp"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/update_card_button_id"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_weight="1"
+            android:layout_margin="15dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" update "
+                android:textSize="25sp"
+                android:layout_margin="20sp"
+                android:fontFamily="serif"
+                android:textStyle="italic"
+                android:textColor="#000"
+                android:layout_gravity="center"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

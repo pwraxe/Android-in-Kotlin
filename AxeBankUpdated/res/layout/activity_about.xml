@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/axe_icon"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="275dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:fontFamily="serif"
+        android:gravity="center_vertical"
+        android:text="We are Provide the interest , different typs of loan, This bank found in 14 Oct. 2019 in indian Collage (We'll update more details soon)"
+        android:textColor="#000"
+        android:textSize="25sp"
+        android:textStyle="italic" />
+
+</LinearLayout>

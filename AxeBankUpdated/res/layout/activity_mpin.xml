@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+     <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Enter M-Pin"
+          android:layout_gravity="center"
+          android:layout_marginTop="50dp"
+          android:textSize="30sp"
+          android:fontFamily="serif"
+          android:textColor="#000"
+
+
+         />
+
+     <com.dpizarro.pinview.library.PinView
+         android:id="@+id/pinView_id"
+         android:layout_width="match_parent"
+         android:layout_height="80dp"
+         android:layout_marginTop="80dp"
+         android:minHeight="80dp"
+         app:textSizePinBox="25dp"
+         app:numberPinBoxes="4"
+         app:colorTextPinBox="#000"
+          />
+
+
+     <TextView
+         android:id="@+id/forgotMpin_id"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="forgot M-Pin?"
+         android:layout_marginTop="30dp"
+         android:textSize="20dp"
+         android:fontFamily="serif"
+         android:textColor="#000"
+         android:layout_gravity="end"
+         android:textStyle="italic"
+         android:layout_margin="20dp"
+         />
+
+     <de.hdodenhof.circleimageview.CircleImageView
+         android:id="@+id/makeTransactionButton_id"
+         android:layout_width="150dp"
+         android:layout_height="150dp"
+         android:layout_gravity="center"
+         android:layout_marginTop="80dp"
+         android:src="@drawable/make_transation"
+
+         />
+
+
+
+
+
+
+
+
+</LinearLayout>
