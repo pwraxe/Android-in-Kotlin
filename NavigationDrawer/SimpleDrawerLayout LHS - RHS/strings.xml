@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SimpleDrawer</string>
+    <string-array name="language">
+        <item>C++</item>
+        <item>Java</item>
+        <item>PHP</item>
+        <item>Python</item>
+        <item>Android</item>
+        <item>Kotlin</item>
+        <item>iOS</item>
+    </string-array>
+
+    <string-array name="days">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
+
+</resources>

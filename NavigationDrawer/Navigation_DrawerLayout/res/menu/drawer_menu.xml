@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/Frag1_id"
+            android:title="Fragment 1"
+            android:icon="@drawable/ic_home"
+            />
+
+        <item
+            android:id="@+id/Frag2_id"
+            android:title="Fragment 2"
+            android:icon="@drawable/ic_home"
+            />
+        <item
+            android:id="@+id/Frag3_id"
+            android:title="Fragment 3"
+            android:icon="@drawable/ic_home"
+            />
+        <item
+            android:id="@+id/Frag4_id"
+            android:title="Fragment 4"
+            android:icon="@drawable/ic_home"
+            />
+        <item
+            android:title="Controls">
+
+            <menu>
+                <item
+                    android:id="@+id/Frag5_id"
+                    android:title="Fragment 5"
+                    android:icon="@drawable/ic_home"
+                    />
+
+                <item
+                    android:id="@+id/Frag6_id"
+                    android:title="Fragment 6"
+                    android:icon="@drawable/ic_home"
+                    />
+
+            </menu>
+        </item>
+
+    </group>
+</menu>
