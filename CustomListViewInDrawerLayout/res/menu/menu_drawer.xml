@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/battery30_id"
+            android:title="Battery 30%"
+            android:icon="@drawable/ic_battery30"
+            />
+        <item
+            android:id="@+id/battery60_id"
+            android:title="Battery 60%"
+            android:icon="@drawable/ic_battery60"
+            />
+        <item
+            android:id="@+id/battery90_id"
+            android:title="Battery 90%"
+            android:icon="@drawable/ic_battery90"
+            />
+        <item
+            android:id="@+id/battery100_id"
+            android:title="Battery Full"
+            android:icon="@drawable/ic_battery100"
+            />
+
+
+    </group>
+
+</menu>
