@@ -1,0 +1,120 @@
+ 20:15.231   E/Axe First Fragment: onAttach()
+ 20:15.231   E/Axe First Fragment: onCreate()
+ 20:15.253   E/Axe First Fragment: onCreateView()
+ 20:15.257   E/Axe Second Fragment: __onCreate
+ 20:15.265   E/Axe Second Fragment: __onCreateView
+ 20:15.266   E/Axe MainActivity: on_Create
+ 20:15.286   E/Axe Second Fragment: __onActivityCreated
+ 20:15.287   E/Axe First Fragment: onStart
+ 20:15.288   E/Axe Second Fragment: __onStart
+ 20:15.289   E/Axe MainActivity: on_Start
+ 20:15.300   E/Axe MainActivity: on_Resume
+ 20:15.300   E/Axe First Fragment: onResume()
+ 20:15.301   E/Axe Second Fragment: __onResume
+
+
+when mobile screen auto offs
+
+ 22:10.574   E/Axe First Fragment: onPause()
+ 22:10.575   E/Axe Second Fragment: __onPause
+ 22:10.575   E/Axe MainActivity: on_Pause
+ 22:10.610   E/Axe Second Fragment: __onSaveInstanceState
+ 22:10.611   E/Axe First Fragment: onSaveInstanceState
+ 22:10.617   E/Axe First Fragment: onStop()
+ 22:10.617   E/Axe Second Fragment: __onStop
+ 22:10.618   E/Axe MainActivity: on_Stop
+
+when mobile screen manually on 
+
+ 22:36.244   E/Axe MainActivity: on_Restart
+ 22:36.265   E/Axe First Fragment: onStart
+ 22:36.265   E/Axe Second Fragment: __onStart
+ 22:36.266   E/Axe MainActivity: on_Start
+ 22:36.273   E/Axe MainActivity: on_Resume
+ 22:36.274   E/Axe First Fragment: onResume()
+ 22:36.275   E/Axe Second Fragment: __onResume
+
+when mobile screen rotation turn into horizontal orientation
+
+ 23:15.017   E/Axe First Fragment: onActivityCreated()
+ 23:15.666   E/Axe First Fragment: onActivityCreated()
+ 23:16.223   E/Axe First Fragment: onActivityCreated()
+ 23:21.143   E/Axe First Fragment: onPause()
+ 23:21.144   E/Axe Second Fragment: __onPause
+ 23:21.144   E/Axe MainActivity: on_Pause 
+ 23:21.147   E/Axe Second Fragment: __onSaveInstanceState
+ 23:21.149   E/Axe First Fragment: onSaveInstanceState
+ 23:21.151   E/Axe First Fragment: onStop()
+ 23:21.151   E/Axe Second Fragment: __onStop
+ 23:21.151   E/Axe MainActivity: on_Stop
+ 23:21.153   E/Axe First Fragment: onDestroyView()
+ 23:21.154   E/Axe First Fragment: onDestroy()
+ 23:21.154   E/Axe First Fragment: onDetach()
+ 23:21.155   E/Axe Second Fragment: __onDestroyView
+ 23:21.156   E/Axe Second Fragment: __onDestroy
+ 23:21.156   E/Axe Second Fragment: __onDetach
+ 23:21.157   E/Axe MainActivity: on_Destroy
+ 23:21.270   E/Axe First Fragment: onAttach()
+ 23:21.271   E/Axe First Fragment: onCreate()
+ 23:21.294   E/Axe First Fragment: onCreateView()
+ 23:21.296   E/Axe Second Fragment: __onCreate
+ 23:21.303   E/Axe Second Fragment: __onCreateView
+ 23:21.304   E/Axe MainActivity: on_Create
+ 23:21.306   E/Axe Second Fragment: __onActivityCreated
+ 23:21.307   E/Axe First Fragment: onStart
+ 23:21.307   E/Axe Second Fragment: __onStart
+ 23:21.308   E/Axe MainActivity: on_Start
+ 23:21.315   E/Axe MainActivity: on_Resume
+ 23:21.316   E/Axe First Fragment: onResume()
+ 23:21.316   E/Axe Second Fragment: __onResume
+ 
+ 
+when mobile screen orientation retain back to verticle orientation
+
+ 25:16.813   E/Axe First Fragment: onPause()
+ 25:16.814   E/Axe Second Fragment: __onPause
+ 25:16.814   E/Axe MainActivity: on_Pause
+ 25:16.820   E/Axe Second Fragment: __onSaveInstanceState
+ 25:16.822   E/Axe First Fragment: onSaveInstanceState
+ 25:16.827   E/Axe First Fragment: onStop()
+ 25:16.827   E/Axe Second Fragment: __onStop
+ 25:16.827   E/Axe MainActivity: on_Stop
+ 25:16.828   E/Axe First Fragment: onDestroyView()
+ 25:16.829   E/Axe First Fragment: onDestroy()
+ 25:16.829   E/Axe First Fragment: onDetach()
+ 25:16.830   E/Axe Second Fragment: __onDestroyView
+ 25:16.831   E/Axe Second Fragment: __onDestroy
+ 25:16.831   E/Axe Second Fragment: __onDetach
+ 25:16.832   E/Axe MainActivity: on_Destroy
+ 25:16.909   E/Axe First Fragment: onAttach()
+ 25:16.910   E/Axe First Fragment: onCreate()
+ 25:16.917   E/Axe First Fragment: onCreateView()
+ 25:16.919   E/Axe Second Fragment: __onCreate
+ 25:16.924   E/Axe Second Fragment: __onCreateView
+ 25:16.925   E/Axe MainActivity: on_Create
+ 25:16.927   E/Axe Second Fragment: __onActivityCreated
+ 25:16.928   E/Axe First Fragment: onStart
+ 25:16.928   E/Axe Second Fragment: __onStart
+ 25:16.929   E/Axe MainActivity: on_Start
+ 25:16.933   E/Axe MainActivity: on_Resume
+ 25:16.934   E/Axe First Fragment: onResume()
+ 25:16.934   E/Axe Second Fragment: __onResume
+
+
+when manually press back button to close an application
+
+ 26:05.443   E/Axe First Fragment: onPause()
+ 26:05.443   E/Axe Second Fragment: __onPause
+ 26:05.444   E/Axe MainActivity: on_Pause
+ 26:05.983   E/Axe First Fragment: onStop()
+ 26:05.983   E/Axe Second Fragment: __onStop
+ 26:05.984   E/Axe MainActivity: on_Stop
+ 26:05.987   E/Axe First Fragment: onDestroyView()
+ 26:05.988   E/Axe First Fragment: onDestroy()
+ 26:05.989   E/Axe First Fragment: onDetach()
+ 26:05.990   E/Axe Second Fragment: __onDestroyView
+ 26:05.991   E/Axe Second Fragment: __onDestroy
+ 26:05.992   E/Axe Second Fragment: __onDetach
+ 26:05.993   E/Axe MainActivity: on_Destroy
+
+

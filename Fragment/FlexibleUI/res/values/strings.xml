@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Flexible_UI_Interface</string>
+
+    <string-array name="language">
+        <item>Android</item>
+        <item>C#</item>
+        <item>iOS</item>
+        <item>Java</item>
+        <item>JavaScript</item>
+        <item>Python</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>Android is a mobile operating system based on a modified version of the Linux kernel and other open source software, designed for touchscreen mobile devices</item>
+        <item>C Sharp is a general-purpose, multi-paradigm programming language encompassing strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented, and component-oriented programming disciplines.</item>
+        <item>iOS is a mobile operating system created and developed by Apple Inc. exclusively for its hardware. It is the operating system that presently powers many of the company mobile devices, including the iPhone, and iPod Touch;</item>
+        <item>Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible.</item>
+        <item>JavaScript, often abbreviated as JS, is a high-level, interpreted scripting language that conforms to the ECMAScript specification. JavaScript has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.</item>
+        <item>Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python design philosophy emphasizes code readability through use of significant whitespace.</item>
+    </string-array>
+    
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/addFragButton_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add frag1"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:layout_margin="5dp"
+            />
+        <Button
+            android:id="@+id/removeFragButton_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove frag1"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:layout_margin="5dp"
+            />
+
+        <Button
+            android:id="@+id/replaceFrag1With2Button_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="replace f1 with f2"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:layout_margin="5dp"
+            />
+
+        <Button
+            android:id="@+id/replaceFrag2With1Button_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="replace f2 with f1"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:layout_margin="5dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/attachFrag1_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attach frag1"
+            android:textAllCaps="false"
+            android:background="#fff"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/detachFrag1_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detach frag1"
+            android:textAllCaps="false"
+            android:background="#fff"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainPlace_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ccc">
+
+
+    </LinearLayout>
+</LinearLayout>
