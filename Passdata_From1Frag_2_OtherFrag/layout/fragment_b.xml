@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/secondFragment_id"
+    android:background="#1CDEF0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:id="@+id/rowUsername_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="username"
+        android:textSize="30sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="100sp"
+        />
+
+    <TextView
+        android:id="@+id/rowPassword_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="30sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30sp"
+        />
+
+
+
+
+</LinearLayout>
