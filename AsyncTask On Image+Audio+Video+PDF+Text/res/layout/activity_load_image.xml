@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+       <Button
+           android:id="@+id/loadImageButton"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="load Image From Internet"
+           android:textAllCaps="false"
+           android:textStyle="bold"
+           android:background="#fff"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginRight="20dp"
+           android:padding="20dp"
+           android:textSize="20sp"
+           android:fontFamily="serif"
+           />
+
+       <ImageView
+           android:id="@+id/loadedImage_id"
+           android:layout_width="match_parent"
+           android:layout_height="180dp"
+           android:background="#123456"
+           android:layout_marginLeft="20sp"
+           android:layout_marginRight="20dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginBottom="20dp"
+           />
+
+       <Button
+           android:id="@+id/loadLocalImageButton"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="load Local Image"
+           android:textAllCaps="false"
+           android:textStyle="bold"
+           android:background="#fff"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginRight="20dp"
+           android:padding="20dp"
+           android:textSize="20sp"
+           android:fontFamily="serif"
+           />
+
+       <ImageView
+           android:id="@+id/loadedLocalImage_id"
+           android:layout_width="match_parent"
+           android:layout_height="180dp"
+           android:background="#123456"
+           android:layout_marginLeft="20sp"
+           android:layout_marginRight="20dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginBottom="20dp"
+           />
+
+       <EditText
+           android:id="@+id/customLink_id"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Paste image link here..."
+           android:layout_margin="20dp"
+           android:padding="20dp"
+           />
+
+       <Button
+           android:id="@+id/loadCustomLinkImageButton"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Load Custom Link Image"
+           android:textAllCaps="false"
+           android:textStyle="bold"
+           android:background="#fff"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginRight="20dp"
+           android:padding="20dp"
+           android:textSize="20sp"
+           android:fontFamily="serif"
+           />
+
+       <ImageView
+           android:id="@+id/loadedCustomImage_id"
+           android:layout_width="match_parent"
+           android:layout_height="180dp"
+           android:background="#123456"
+           android:layout_marginLeft="20sp"
+           android:layout_marginRight="20dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginBottom="20dp"
+           />
+
+
+
+   </LinearLayout>
+
+
+</ScrollView>
