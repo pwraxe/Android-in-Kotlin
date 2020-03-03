@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/text1_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android is Software stack which mainly target small screen devices like cellphones tables etc."
+        android:textSize="25sp"
+        android:fontFamily="serif"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:ellipsize="start"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ellipsize = start"
+        android:textColor="#ff0000"
+        />
+    <TextView
+        android:id="@+id/text2_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android is Software stack which mainly target small screen devices like cellphones tables etc."
+        android:textSize="25sp"
+        android:fontFamily="serif"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:ellipsize="middle"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ellipsize = middle"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ff0000"
+        />
+
+    <TextView
+        android:id="@+id/text3_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android is Software stack which mainly target small screen devices like cellphones tables etc."
+        android:textSize="25sp"
+        android:fontFamily="serif"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:ellipsize="end"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ellipsize = end"
+        android:layout_gravity="end"
+        android:textColor="#ff0000"
+        />
+    <TextView
+        android:id="@+id/text4_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android is Software stack which mainly target small screen devices like cellphones tables etc."
+        android:textSize="25sp"
+        android:fontFamily="serif"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:ellipsize="marquee"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ellipsize = marquee"
+        android:textColor="#ff0000"
+        />
+
+
+</LinearLayout>
