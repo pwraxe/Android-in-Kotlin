@@ -1,0 +1,30 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/fname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Akshay"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:textColor="#0040ff"
+        />
+
+    <TextView
+        android:id="@+id/lname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pawar"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:textColor="#0040ff"
+        />
+
+
+
+</LinearLayout>
