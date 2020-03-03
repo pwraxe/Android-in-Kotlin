@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/id_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="abc"
+        android:textSize="30sp"
+        android:fontFamily="serif"
+        android:textColor="#000"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/id_textBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type Something..."
+        android:layout_below="@id/id_textView"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:textColorHint="#ff0000"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/id_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set and Save"
+        android:textAllCaps="false"
+        android:layout_below="@id/id_textBox"
+        android:layout_centerHorizontal="true"
+        android:background="#fff"
+        android:padding="20dp"
+        />
+
+    <Button
+        android:id="@+id/id_loadSaveDataButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load Saved Data"
+        android:textAllCaps="false"
+        android:layout_below="@id/id_button"
+        android:layout_centerHorizontal="true"
+        android:background="#fff"
+        android:padding="20dp"
+        android:layout_marginTop="30sp"
+        />
+
+    <TextView
+        android:id="@+id/id_userText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type Something appear here"
+        android:textSize="25sp"
+        android:fontFamily="serif"
+        android:textColor="#000"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/id_loadSaveDataButton"
+        />
+
+
+
+
+</RelativeLayout>
