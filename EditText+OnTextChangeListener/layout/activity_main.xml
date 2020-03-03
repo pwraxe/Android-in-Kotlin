@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:id="@+id/editText1_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Simple"
+            />
+        <TextView
+            android:id="@+id/sample_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+        <EditText
+            android:id="@+id/editText2_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Border Color Background"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_bg1"
+            />
+        <TextView
+            android:id="@+id/sample2_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+
+        <EditText
+            android:id="@+id/editText3_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Background Style"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/button_bg2"
+            />
+        <TextView
+            android:id="@+id/sample3_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+
+
+        <EditText
+            android:id="@+id/editText4_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="OnTextChangeListener"
+            android:layout_marginTop="80dp"
+            />
+        <TextView
+            android:id="@+id/sample4_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+
+
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="80dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button1_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simple"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/button2_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BrdrColor"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button3_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BgStryle"
+                android:textAllCaps="false"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
