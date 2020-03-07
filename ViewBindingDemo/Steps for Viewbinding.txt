@@ -1,0 +1,43 @@
+In -----> build.gradle file
+
+android {
+	
+	defaultConfig{
+	   ---------
+	   ---------
+	}
+	buildTypes {
+	   --------
+      	   --------
+	}
+	
+	viewBinding {
+	   enabled = true	
+	}
+}
+
+
+-----------------------------------------------------------
+activity_main.xml
+
+No need to wrap parent layout in xml file like
+<layout>
+	<LL>
+	-----
+	</LL>
+</layout>
+
+-----------------------------------------------------------
+
+MainActivity.kt
+
+onCreate(...){
+	val binding  = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding?.root)
+}
+
+// for binding see MainActivity.kt file
+
+it binds TextView,ImageView,Button,....
+
+

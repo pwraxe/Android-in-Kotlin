@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:id="@+id/id_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unseen"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:typeface="serif"
+            android:textColor="#0040ff"
+            />
+
+        <ImageView
+            android:id="@+id/id_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            />
+        <Button
+            android:id="@+id/id_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Click Me to Test"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:background="#fff"
+            android:typeface="serif"
+            android:textAllCaps="false"
+            android:textColor="#0040ff"
+            />
+        <CheckBox
+            android:id="@+id/id_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="unchecked"
+            android:layout_gravity="center"
+            />
+        <RadioGroup
+            android:id="@+id/id_radioGrp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="20dp"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/id_radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                />
+            <RadioButton
+                android:id="@+id/id_radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                />
+        </RadioGroup>
+
+        <RatingBar
+            android:id="@+id/id_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+
+        <SeekBar
+            android:id="@+id/id_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:thumbTint="@color/colorPrimary"
+            />
+
+        <Switch
+            android:id="@+id/id_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="false"
+            android:layout_gravity="center"
+            />
+
+
+
+
+    </LinearLayout>
