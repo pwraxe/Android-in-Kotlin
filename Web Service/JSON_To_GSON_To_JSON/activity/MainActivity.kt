@@ -35,6 +35,8 @@ class Employee(var name : String,var age : Int, var email : String)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 other file : 
 -------------
+
+
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,8 +65,29 @@ class MainActivity : AppCompatActivity() {
             "name":"Akshay Pawar"
         }
 */
+        // retain it back to java object
+        val jsonform = "{\"address\": {\"city\":\"Nashik\",\"country\":\"India\",\"pin\":422103,\"state\":\"Maharashtra\",\"town\":\"Sinnar\"},\"age\":23,\"email\":\"pawarakshay13@gmail.com\",\"name\":\"Akshay Pawar\"}"
+        val gsonObj = Gson()
+        val emp : Employee = gsonObj.fromJson(jsonform,Employee::class.java)
+
+        Log.e("AXE", emp.name)
+        Log.e("AXE", emp.email)
+        Log.e("AXE","${emp.age}")
+        Log.e("AXE","${emp.address.country} > ${emp.address.state} > ${emp.address.city} > ${emp.address.town} > ${emp.address.pin}")
+    /*
+
+    ---output---
+
+        E/AXE: Akshay Pawar
+        E/AXE: pawarakshay13@gmail.com
+        E/AXE: 23
+        E/AXE: India > Maharashtra > Nashik > Sinnar > 422103
+
+    */
+
     }
 }
 
 data class Employee(var name : String,var email : String,var age : Int, var address : Address)
 data class Address(var country : String, var state : String, var city : String, var town : String, var pin : Int )
+
