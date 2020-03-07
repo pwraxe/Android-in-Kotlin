@@ -32,3 +32,39 @@ class MainActivity : AppCompatActivity() {
 
 
 class Employee(var name : String,var age : Int, var email : String)
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+other file : 
+-------------
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val address : Address = Address("India","Maharashtra","Nashik","Sinnar",422103)
+        val employee : Employee = Employee("Akshay Pawar","pawarakshay13@gmail.com",23,address)
+
+        val gson = Gson()
+        val jsonData = gson.toJson(employee)
+        Log.e("AXE",jsonData)
+
+/*
+        {
+            "address":
+            {
+                "city":"Nashik",
+                "country":"India",
+                "pin":422103,
+                "state":"Maharashtra",
+                "town":"Sinnar"
+            },
+            "age":23,
+            "email":"pawarakshay13@gmail.com",
+            "name":"Akshay Pawar"
+        }
+*/
+    }
+}
+
+data class Employee(var name : String,var email : String,var age : Int, var address : Address)
+data class Address(var country : String, var state : String, var city : String, var town : String, var pin : Int )
