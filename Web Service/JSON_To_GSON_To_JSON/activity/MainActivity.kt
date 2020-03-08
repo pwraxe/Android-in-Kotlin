@@ -130,3 +130,60 @@ class MainActivity : AppCompatActivity() {
 }
 
 class Employee (var name : String, var age : Int)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+class MainActivity : AppCompatActivity() {
+
+    private var gson : Gson? = null
+
+    var stud = ArrayList<Student>()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        gson = Gson()
+        
+        stud.add(Student("Akshay",1001,"SVIT CHINCHOLI"))
+        stud.add(Student("Vijay",2002,"KK Wagh"))
+        stud.add(Student("Kalpesh",3003,"Sandeep Foundation"))
+
+        val c1 = Collage(1000,250)
+        val comb = Combine(stud,c1)
+        val toJson = gson?.toJson(comb)
+        Log.e("AXE","$toJson")
+    }
+}
+
+class Student(var name : String,var id : Int,var clg : String)
+
+class Collage(var totalStud : Int,var totalStaff : Int)
+
+class Combine(var stud : ArrayList<Student>,var collage : Collage)
+
+/*
+    -----------------------OUTPUT---------------------------
+    {
+        "collage":
+            {"totalStaff":250,"totalStud":1000},
+        "stud":
+            [
+                {
+                    "clg":"SVIT CHINCHOLI",
+                    "id":1001,"name":"Akshay"
+                },
+                {
+                    "clg":"KK Wagh",
+                    "id":2002,
+                    "name":"Vijay"
+                },
+                {
+                    "clg":"Sandeep Foundation",
+                    "id":3003,
+                    "name":"Kalpesh"
+                 }
+              ]
+        }
+
+*/
