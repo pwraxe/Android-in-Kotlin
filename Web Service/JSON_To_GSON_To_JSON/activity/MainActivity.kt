@@ -187,3 +187,72 @@ class Combine(var stud : ArrayList<Student>,var collage : Collage)
         }
 
 */
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+class MainActivity : AppCompatActivity() {
+
+
+    // sending 2 objects for json
+    private var gson : Gson? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        gson = Gson()
+
+        val emp1 = Employee("Akshay Pawar",30000)
+        val emp2 = Employee("Sachine Pangarkar",30000)
+        val emp3 = Employee("Vishal More",30000)
+        var eobj = Employee2Obj(emp1,emp2)
+        val jsonData = gson?.toJson(eobj)
+        Log.e("AXE","$jsonData")
+
+        /*
+        *       // Passing 2 object
+        * {
+        *   "emp1":
+        *       {
+        *           "name":"Akshay Pawar",
+        *           "sal":30000
+        *       },
+        *   "emp2":
+        *       {
+        *           "name":"Sachine Pangarkar",
+        *           "sal":30000
+        *       }
+        * }
+        * */
+
+        Log.e("AXE","-----------------------------------------------------")
+
+        val e3obj = Employee3Obj(emp1,emp2,emp3)
+        var json3Data = gson?.toJson(e3obj)
+        Log.e("AXE","$json3Data")
+        /*
+        *       // passing 3 object
+        * {
+        *   "emp1":
+        *       {
+        *           "name":"Akshay Pawar",
+        *           "sal":30000
+        *       },
+        *   "emp2":
+        *       {
+        *           "name":"Sachine Pangarkar",
+        *           "sal":30000
+        *       },
+        *       "emp3":
+        *       {
+        *           "name":"Vishal More",
+        *           "sal":30000
+        *       }
+        * }
+        * */
+    }
+}
+
+class Employee(var name : String, var sal : Int)
+
+class Employee2Obj(var emp1 : Employee,var emp2 : Employee)
+class Employee3Obj(var emp1 : Employee,var emp2 : Employee,var emp3: Employee)
