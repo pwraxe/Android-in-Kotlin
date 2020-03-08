@@ -90,4 +90,43 @@ class MainActivity : AppCompatActivity() {
 
 data class Employee(var name : String,var email : String,var age : Int, var address : Address)
 data class Address(var country : String, var state : String, var city : String, var town : String, var pin : Int )
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+// JSON Array
+
+class MainActivity : AppCompatActivity() {
+
+    private var gson: Gson? = null
+    val lang = arrayOf("C","C++","Java","Kotlin","PHP","Python","JSP","ASP.NET","JavaScript")
+    val emp = ArrayList<Employee>()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        gson = Gson()
+
+        emp.add(Employee("Akshay",23))
+        emp.add(Employee("Vishal",23))
+        emp.add(Employee("Mayur",23))
+        emp.add(Employee("Harsh",24))
+
+
+        // val jsonData = gson?.toJson(lang)    // ---> OUTPUT---------->  ["C","C++","Java","Kotlin","PHP","Python","JSP","ASP.NET","JavaScript"]
+
+        val jsonData = gson?.toJson(emp)
+
+        /* --------------OUTPUT-----------------
+         [
+            {"age":23,"name":"Akshay"},
+            {"age":23,"name":"Vishal"},
+            {"age":23,"name":"Mayur"},
+            {"age":24,"name":"Harsh"}
+         ]
+    */
+
+        Log.e("AXE","$jsonData")
+    }
+}
+
+class Employee (var name : String, var age : Int)
