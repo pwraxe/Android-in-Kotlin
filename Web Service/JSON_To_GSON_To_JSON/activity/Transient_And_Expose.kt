@@ -56,3 +56,42 @@ class Student (@Transient private var fname : String, @Expose private var email 
 * }
 *
 * */
+
+____________________________________________________________________________________________________________________________________________________________________________________
+
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import com.google.gson.annotations.Expose
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val gson = GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()     //<-----------------------------Expose works base on this line
+        val stud = Student("Alex","alexandy@gmail.com",1001,"Amity University",2015,"B.E.I.T.")
+        var jsonData = gson.toJson(stud)
+        Log.e("AXE","$jsonData")
+    }
+}
+class Student (@Transient private var fname : String, @Expose private var email : String,
+               @Expose(serialize = true) var id : Int, @Expose(serialize = false) private var collage : String,
+               @Expose(deserialize = true) private var passYear : Int, @Expose(deserialize = false) private var quali : String)
+
+
+/*
+*
+* ----------OUTPUT-----------
+*
+* {
+*   "email":"alexandy@gmail.com",           // @Expose
+*   "id":1001,                              // @Expose(serialize = true)
+*   "passYear":2015,                        // @Expose(deserialize = true)
+*   "quali":"B.E.I.T."                      // @Expose(deserialize = false)
+* }
+* */
