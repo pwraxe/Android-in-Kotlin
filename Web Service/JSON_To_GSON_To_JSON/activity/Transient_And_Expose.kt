@@ -59,7 +59,6 @@ class Student (@Transient private var fname : String, @Expose private var email 
 
 ____________________________________________________________________________________________________________________________________________________________________________________
 
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -73,23 +72,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val gson = GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()     //<-----------------------------Expose works base on this line
+        val gson = GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()
         val stud = Student("Alex","alexandy@gmail.com",1001,"Amity University",2015,"B.E.I.T.")
         var jsonData = gson.toJson(stud)
         Log.e("AXE","$jsonData")
     }
 }
-class Student (@Transient private var fname : String, @Expose private var email : String,
-               @Expose(serialize = true) var id : Int, @Expose(serialize = false) private var collage : String,
-               @Expose(deserialize = true) private var passYear : Int, @Expose(deserialize = false) private var quali : String)
+class Student (@Transient private var fname : String,                   // variable ignore
+               @Expose private var email : String,                      // can be serialize and deserialize
+               @Expose(serialize = true) var id : Int,                  // can serialized
+               @Expose(serialize = false) private var collage : String, // cannot serialized
+               @Expose(deserialize = true) private var passYear : Int,  // can be deserialize i.e. can convert from json to Object
+               @Expose(deserialize = false) private var quali : String) // cannot be deserialize i.e. cannot convert from json to Object
 
 
 /*
-*
 * ----------OUTPUT-----------
 *
 * {
-*   "email":"alexandy@gmail.com",           // @Expose      // i.e. by Default @Expose(serialize = true) and / @Expose(deserialize = true)
+*   "email":"alexandy@gmail.com",           // @Expose
 *   "id":1001,                              // @Expose(serialize = true)
 *   "passYear":2015,                        // @Expose(deserialize = true)
 *   "quali":"B.E.I.T."                      // @Expose(deserialize = false)
