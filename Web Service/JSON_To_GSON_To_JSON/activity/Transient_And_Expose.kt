@@ -89,7 +89,7 @@ class Student (@Transient private var fname : String, @Expose private var email 
 * ----------OUTPUT-----------
 *
 * {
-*   "email":"alexandy@gmail.com",           // @Expose
+*   "email":"alexandy@gmail.com",           // @Expose      // i.e. by Default @Expose(serialize = true) and / @Expose(deserialize = true)
 *   "id":1001,                              // @Expose(serialize = true)
 *   "passYear":2015,                        // @Expose(deserialize = true)
 *   "quali":"B.E.I.T."                      // @Expose(deserialize = false)
