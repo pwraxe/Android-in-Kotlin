@@ -1,0 +1,25 @@
+add internet Permission
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+
+add following line in build.gradle
+
+	android {
+		...
+		 compileOptions {
+        		sourceCompatibility JavaVersion.VERSION_1_8
+        		targetCompatibility JavaVersion.VERSION_1_8
+    	 	}
+		...
+	} 
+	
+
+add Dependency for retrofit and gson-converter
+
+dependencies {
+	...
+	implementation 'com.squareup.retrofit2:retrofit:2.7.1'
+	implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
+
+}
+ 

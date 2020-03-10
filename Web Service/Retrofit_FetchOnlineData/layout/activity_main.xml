@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <TextView
+           android:id="@+id/id_onlineText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="0"
+           android:textSize="20sp"
+           android:typeface="serif"
+           android:textColor="#0040ff"
+           android:padding="10dp"
+           />
+
+   </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
