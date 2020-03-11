@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/id_splash_rotate"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_rotate"
+        android:layout_centerInParent="true"
+        />
+
+
+</RelativeLayout>
