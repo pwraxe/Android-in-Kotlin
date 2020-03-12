@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/id_text_id"
+        android:text="id"
+        style="@style/myTextViewStyle"
+        />
+
+    <TextView
+        android:id="@+id/id_user_id"
+        android:text="UserID"
+        style="@style/myTextViewStyle"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:id="@+id/id_hr_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#0040ff"
+        android:layout_below="@id/id_text_id"
+        />
+
+
+    <TextView
+        android:id="@+id/id_title"
+        android:text="title"
+        style="@style/myTextViewStyle"
+        android:layout_below="@id/id_hr_line"
+
+        />
+    <TextView
+        android:id="@+id/id_body"
+        android:text="body"
+        style="@style/myTextViewStyle"
+        android:layout_below="@id/id_title"/>
+
+
+
+
+
+
+
+
+</RelativeLayout>
