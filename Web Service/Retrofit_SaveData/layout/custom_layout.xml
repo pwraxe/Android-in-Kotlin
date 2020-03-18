@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#123456"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/id_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="id"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:typeface="serif"
+        android:textColor="#fff"
+        />
+
+
+    <TextView
+
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#fff"
+        android:layout_margin="20dp"
+        />
+
+
+    <TextView
+        android:id="@+id/id_userId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="user ID"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:typeface="serif"
+        android:textColor="#fff"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/id_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="title"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:typeface="serif"
+        android:textColor="#fff"
+        android:layout_below="@id/id_id"
+        />
+    <TextView
+        android:id="@+id/id_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="body"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:typeface="serif"
+        android:textColor="#fff"
+        android:layout_below="@id/id_title"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="20dp"
+        android:background="#fff"
+        android:layout_below="@id/id_body"
+        />
+
+</RelativeLayout>
