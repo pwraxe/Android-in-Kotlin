@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ProgressBar
+        android:id="@+id/id_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="#0040ff"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/id_networdState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Wait..."
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:textColor="#0040ff"
+        />
+
+</RelativeLayout>
