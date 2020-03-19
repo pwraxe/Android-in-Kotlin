@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ProgressBar
+        android:id="@+id/id_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/lite_blue"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/id_linear"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <EditText
+            android:id="@+id/id_mId"
+            android:hint="Enter ID"
+            style="@style/custom_edit_style"
+            android:autofillHints="@string/app_name"
+            android:inputType="number"
+            android:background="@drawable/back_border"
+            />
+
+
+        <EditText
+            android:id="@+id/id_mUserId"
+            android:hint="Enter user ID"
+            style="@style/custom_edit_style"
+            android:autofillHints="@string/app_name"
+            android:inputType="number"
+            android:background="@drawable/back_border"
+            />
+
+        <EditText
+            android:id="@+id/id_mTitle"
+            android:hint="Enter Title"
+            style="@style/custom_edit_style"
+            android:autofillHints="@string/app_name"
+            android:inputType="text"
+            android:background="@drawable/back_border"
+            />
+
+        <EditText
+            android:id="@+id/id_mBody"
+            android:hint="Enter Body"
+            style="@style/custom_edit_style"
+            android:autofillHints="@string/app_name"
+            android:inputType="text"
+            android:background="@drawable/back_border"
+            />
+
+
+        <Button
+            android:id="@+id/id_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/custom_edit_style"
+            android:background="#fff"
+            android:text="Send Data"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:typeface="serif"
+            android:textColor="@color/lite_blue"
+            />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/id_error_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Something went wrong !"
+        android:layout_centerInParent="true"
+        android:textSize="15sp"
+        android:textColor="@color/lite_blue"
+        android:typeface="serif"
+        android:visibility="gone"
+
+        />
+
+
+    <Button
+        android:id="@+id/id_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retry"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:padding="20dp"
+        android:textColor="@color/lite_blue"
+        android:background="@color/white"
+        android:typeface="serif"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:visibility="gone"
+
+        />
+
+
+
+</RelativeLayout>
+

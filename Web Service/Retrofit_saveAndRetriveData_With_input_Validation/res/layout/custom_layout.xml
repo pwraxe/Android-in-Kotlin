@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#123456">
+
+    <TextView
+        android:id="@+id/id_custom_layout_id"
+        style="@style/custom_text_style"
+        android:text="ID" />
+
+    <TextView
+        android:id="@+id/id_custom_layout_userId"
+        style="@style/custom_text_style"
+        android:text="User ID"
+        android:layout_alignParentEnd="true"
+        />
+
+    <TextView
+        android:id="@+id/id_custom_layout_title"
+        style="@style/custom_text_style"
+        android:text="title"
+        android:layout_below="@id/id_custom_layout_id"/>
+
+
+    <TextView
+        android:id="@+id/id_custom_layout_body"
+        style="@style/custom_text_style"
+        android:text="body"
+        android:layout_below="@id/id_custom_layout_title"
+        />
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:background="@color/white"
+        />
+
+</RelativeLayout>
