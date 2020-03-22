@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/id_LinearData">
+
+        <EditText
+            android:id="@+id/id_id"
+            android:hint="Enter ID"
+            android:background="@drawable/back_border"
+            style="@style/edit_style"
+            android:inputType="number"
+            />
+        <EditText
+            android:id="@+id/id_userId"
+            android:hint="Enter User ID"
+            android:background="@drawable/back_border"
+            style="@style/edit_style"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:id="@+id/id_title"
+            android:hint="Enter Title"
+            android:background="@drawable/back_border"
+            style="@style/edit_style"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/id_body"
+            android:hint="Enter Message Body"
+            android:background="@drawable/back_border"
+            style="@style/edit_style"
+            android:inputType="text"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/id_sendButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_LinearData"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:text="Send Data"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:typeface="serif"
+        android:background="@color/white"
+        android:textColor="@color/lite_blue"
+        />
+
+
+    <ProgressBar
+        android:id="@+id/id_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/lite_blue"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/id_LinearData"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/id_error_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We are facing, poor Internet Connection !"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="20sp"
+        android:textColor="@color/lite_blue"
+        android:visibility="gone"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/id_recyclerView"
+        android:visibility="gone"
+        />
+</RelativeLayout>
+
+
+<!--
+
+linear
+Button
+progress
+error msg
+recyclerview
+-->

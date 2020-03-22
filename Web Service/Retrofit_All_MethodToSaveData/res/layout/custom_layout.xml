@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#123456">
+
+
+    <TextView
+        android:id="@+id/id_custom_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID "
+        android:layout_margin="20dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:typeface="serif"
+        />
+    <TextView
+        android:id="@+id/id_custom_userId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User ID"
+        android:layout_margin="20dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:typeface="serif"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/id_custom_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="title"
+        android:layout_margin="20dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:typeface="serif"
+        android:layout_below="@id/id_custom_id"
+        />
+
+    <TextView
+        android:id="@+id/id_custom_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Body "
+        android:layout_margin="20dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:typeface="serif"
+        android:layout_below="@id/id_custom_title"
+        />
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        android:layout_below="@id/id_custom_body"
+        android:layout_margin="20dp"
+        />
+
+
+</RelativeLayout>
