@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.retrofit_put_patch_delete.databinding.ActivityMainBinding
+import com.google.gson.GsonBuilder
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -12,10 +15,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
 
-    private var binding : ActivityMainBinding? = null
+    private var binding: ActivityMainBinding? = null
 
 
-    private var retrofit : Retrofit? = null
+    private var retrofit: Retrofit? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,11 +26,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        //putData()
+        putData()
 
         //------------------------------------------------------------------------------------------
 
-        patchData()
+        //patchData()
 
         //------------------------------------------------------------------------------------------
 
@@ -40,8 +43,8 @@ class MainActivity : AppCompatActivity() {
             binding?.idDisplayData?.visibility = View.GONE
             binding?.idErrorMsg?.visibility = View.GONE
             binding?.idRetryButton?.visibility = View.GONE
-            //putData()
-            patchData()
+            putData()
+            //patchData()
             //deleteData()
 
         }
@@ -50,15 +53,26 @@ class MainActivity : AppCompatActivity() {
 
     private fun putData() {
 
+        val gson = GsonBuilder().serializeNulls().create()          //
+                                                                    //
+        val okHttpLog = HttpLoggingInterceptor()                    //
+        okHttpLog.level = HttpLoggingInterceptor.Level.BODY         //  
+                                                                    //  To Check the status of request and responce
+        val okHttpClient = OkHttpClient.Builder()                   //
+            .addInterceptor(okHttpLog)                              //
+            .build()                                                //
+
+
         retrofit = Retrofit.Builder()
             .baseUrl("https://jsonplaceholder.typicode.com/")
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .client(okHttpClient)
             .build()
 
-        val online = OnlineData(10,null,"Sample Body")
-        val json = retrofit?.create(JsonAPI::class.java)?.putCustomData(3,online)
+        val online = OnlineData(10, null, "Sample Body")
+        val json = retrofit?.create(JsonAPI::class.java)?.putCustomData(3, online)
 
-        json?.enqueue(object : Callback<OnlineData>{
+        json?.enqueue(object : Callback<OnlineData> {
             override fun onFailure(call: Call<OnlineData>, t: Throwable) {
                 binding?.idProgress?.visibility = View.GONE
                 binding?.idDisplayData?.visibility = View.GONE
@@ -68,7 +82,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<OnlineData>, response: Response<OnlineData>) {
 
-                if(response.isSuccessful){
+                if (response.isSuccessful) {
                     val data = response.body()
 
 
@@ -89,7 +103,6 @@ class MainActivity : AppCompatActivity() {
         })
 
 
-
     }
 
     private fun patchData() {
@@ -99,11 +112,11 @@ class MainActivity : AppCompatActivity() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        val online = OnlineData(10,null,"Sample Body")
+        val online = OnlineData(10, null, "Sample Body")
 
-        val json = retrofit?.create(JsonAPI::class.java)?.patchCustomData(3,online)
+        val json = retrofit?.create(JsonAPI::class.java)?.patchCustomData(3, online)
 
-        json?.enqueue(object : Callback<OnlineData>{
+        json?.enqueue(object : Callback<OnlineData> {
             override fun onFailure(call: Call<OnlineData>, t: Throwable) {
                 binding?.idProgress?.visibility = View.GONE
                 binding?.idDisplayData?.visibility = View.GONE
@@ -113,7 +126,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<OnlineData>, response: Response<OnlineData>) {
 
-                if(response.isSuccessful){
+                if (response.isSuccessful) {
                     val data = response.body()
 
 
@@ -143,7 +156,7 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         val json = retrofit?.create(JsonAPI::class.java)?.deleteCustomData(3)
-        json?.enqueue(object  : Callback<Void>{
+        json?.enqueue(object : Callback<Void> {
             override fun onFailure(call: Call<Void>, t: Throwable) {
                 binding?.idProgress?.visibility = View.GONE
                 binding?.idDisplayData?.visibility = View.GONE
@@ -153,7 +166,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
 
-                if(response.isSuccessful){
+                if (response.isSuccessful) {
 
                     val data = response.body()   // return type here is --> Void
 
@@ -163,7 +176,6 @@ class MainActivity : AppCompatActivity() {
                     binding?.idRetryButton?.visibility = View.GONE
 
                     binding?.idDisplayData?.text = "\n Code : ${response.code()}"
-
 
 
                 }
