@@ -1,0 +1,29 @@
+D/OkHttp: --> PUT https://jsonplaceholder.typicode.com/posts/3
+D/OkHttp: Content-Type: application/json; charset=UTF-8
+D/OkHttp: Content-Length: 57
+D/OkHttp: {"_body":"Sample Body","_title":null,"_userId":10,"id":0}
+D/OkHttp: --> END PUT (57-byte body)
+D/OkHttp: <-- 200 https://jsonplaceholder.typicode.com/posts/3 (4388ms)
+D/OkHttp: date: Mon, 23 Mar 2020 14:17:05 GMT
+D/OkHttp: content-type: application/json; charset=utf-8
+D/OkHttp: set-cookie: __cfduid=df1a2d50dc69ededa1762753f82affe901584973021; expires=Wed, 22-Apr-20 14:17:01 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+D/OkHttp: x-powered-by: Express
+D/OkHttp: vary: Origin, Accept-Encoding
+D/OkHttp: access-control-allow-credentials: true
+D/OkHttp: cache-control: no-cache
+D/OkHttp: pragma: no-cache
+D/OkHttp: expires: -1
+D/OkHttp: x-content-type-options: nosniff
+D/OkHttp: etag: W/"4a-al25EE+/JhYvCMQY9Vbf+xi9mEE"
+D/OkHttp: via: 1.1 vegur
+D/OkHttp: cf-cache-status: DYNAMIC
+D/OkHttp: expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+D/OkHttp: server: cloudflare
+D/OkHttp: cf-ray: 5788c6081f7cedeb-CDG
+D/OkHttp: {
+D/OkHttp:   "_body": "Sample Body",
+D/OkHttp:   "_title": null,
+D/OkHttp:   "_userId": 10,
+D/OkHttp:   "id": 3
+D/OkHttp: }
+D/OkHttp: <-- END HTTP (74-byte body)
