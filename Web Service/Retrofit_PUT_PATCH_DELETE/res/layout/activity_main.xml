@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <ProgressBar
+        android:id="@+id/id_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/lite_blue"
+
+        />
+
+
+    <TextView
+            android:id="@+id/id_displayData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="displayData"
+            android:textSize="25sp"
+            android:typeface="serif"
+            android:textColor="@color/white"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:background="#123456"
+            android:visibility="gone"
+            />
+
+    <TextView
+            android:id="@+id/id_error_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Someting went wrong!"
+            android:textSize="25sp"
+            android:typeface="serif"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:textColor="@color/lite_blue"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            />
+
+
+    <Button
+        android:id="@+id/id_retryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:padding="20dp"
+        android:background="@color/white"
+        android:text="Retry"
+        android:textAllCaps="false"
+        android:textSize="30sp"
+        android:typeface="serif"
+        android:textColor="@color/lite_blue"
+        android:visibility="gone"
+        />
+
+
+
+</RelativeLayout>
