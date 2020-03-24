@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="#ddd"
+        android:layout_height="match_parent">
+
+
+    <TextView
+            android:id="@+id/id_displayMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Click Button to Load Data"
+            android:textColor="#0040ff"
+            android:textSize="20sp"
+            android:typeface="serif" />
+
+    <ProgressBar
+        android:id="@+id/id_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="#0040ff"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+
+    <Button
+            android:id="@+id/id_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:background="#fff"
+            android:padding="20dp"
+            android:text="Parse Data"
+            android:textAllCaps="false"
+            android:textColor="#0040ff"
+            android:typeface="serif" />
+
+</RelativeLayout>
