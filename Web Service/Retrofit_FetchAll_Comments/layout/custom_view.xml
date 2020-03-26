@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content"
+    android:background="#123456"
+    android:layout_margin="10dp"
+    >
+
+    <TextView
+        android:id="@+id/id_comm_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="id"
+        android:textSize="20sp"
+        android:typeface="serif"
+        android:layout_margin="10dp"
+        android:textColor="#fff"
+        />
+
+    <TextView
+        android:id="@+id/id_comm_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="user id"
+        android:textSize="20sp"
+        android:typeface="serif"
+        android:layout_margin="10dp"
+        android:textColor="#fff"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/id_comm_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:textSize="20sp"
+        android:typeface="serif"
+        android:layout_margin="10dp"
+        android:textColor="#fff"
+        android:layout_below="@id/id_comm_id"
+        />
+
+
+    <TextView
+        android:id="@+id/id_comm_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="email"
+        android:textSize="20sp"
+        android:typeface="serif"
+        android:layout_margin="10dp"
+        android:textColor="#fff"
+        android:layout_below="@id/id_comm_name"
+        />
+
+    <TextView
+        android:id="@+id/id_comm_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="body"
+        android:textSize="20sp"
+        android:typeface="serif"
+        android:layout_margin="10dp"
+        android:textColor="#fff"
+        android:layout_below="@id/id_comm_email"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/id_comm_body"
+        android:background="#fff"
+        />
+
+
+
+
+
+
+</RelativeLayout>
