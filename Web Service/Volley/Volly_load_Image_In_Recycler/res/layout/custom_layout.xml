@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#0040ff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/id_custom_userImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_margin="10dp"
+
+                />
+            <ImageView
+                android:id="@+id/id_custom_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_below="@id/id_custom_userImage"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+
+            <TextView
+                android:id="@+id/id_custom_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile Name"
+                android:textSize="20sp"
+                android:textColor="#0040ff"
+                android:layout_toRightOf="@id/id_custom_userImage"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/id_custom_userImage" />
+
+            <TextView
+                android:id="@+id/id_custom_view_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="20dp"
+                android:text="Views "
+                android:layout_alignParentEnd="true"
+                android:textColor="#0040ff"/>
+
+
+            <TextView
+                android:id="@+id/id_custom_favorite_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Favorites "
+                android:layout_below="@id/id_custom_image"
+                android:layout_margin="20dp"
+                android:textSize="15sp"
+                android:textColor="#0040ff"
+                />
+
+            <TextView
+                android:id="@+id/id_custom_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Comment "
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:textColor="#0040ff"
+                android:layout_margin="20dp"
+                android:layout_below="@id/id_custom_image"
+                />
+
+            <TextView
+                android:id="@+id/id_custom_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Downloads "
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/id_custom_image"
+                android:layout_margin="20dp"
+                android:textSize="15sp"
+                android:textColor="#0040ff"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
