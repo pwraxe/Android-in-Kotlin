@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="#0040ff"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/id_custom_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="id"
+                android:textSize="25sp"
+                android:layout_margin="20dp"
+                android:typeface="serif"
+                android:textColor="#0040ff"
+                />
+
+            <TextView
+                android:id="@+id/id_custom_album_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="album ID"
+                android:textSize="25sp"
+                android:layout_margin="20dp"
+                android:typeface="serif"
+                android:textColor="#0040ff"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+
+            <LinearLayout
+                android:id="@+id/id_img_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_custom_id">
+
+                <ImageView
+                    android:id="@+id/id_custom_pic1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/id_custom_pic2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/id_custom_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:textSize="25sp"
+                android:layout_margin="20dp"
+                android:typeface="serif"
+                android:textColor="#0040ff"
+                android:layout_below="@id/id_img_container"
+                />
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
