@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/id_custom_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="id"
+                android:textSize="15sp"
+                android:layout_margin="20dp"
+                android:typeface="serif"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_centerHorizontal="true"/>
+
+
+            <TextView
+                android:id="@+id/id_custom_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:typeface="serif"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@id/id_custom_id"/>
+
+            <TextView
+                android:id="@+id/id_custom_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="user name"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:typeface="serif"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@id/id_custom_name" />
+
+            <TextView
+                android:id="@+id/id_custom_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="email"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:typeface="serif"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@id/id_custom_username"
+                />
+
+            <TextView
+                android:id="@+id/id_custom_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone number"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:typeface="serif"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@id/id_custom_email"
+                />
+
+            <TextView
+                android:id="@+id/id_custom_website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="website"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:typeface="serif"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@id/id_custom_phone" />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"
+                android:layout_below="@id/id_custom_website"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:id="@+id/id_custom_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="address details"
+                android:textSize="15sp"
+                android:layout_margin="20dp"
+                android:typeface="serif"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@id/id_custom_website" />
+
+
+            <TextView
+                android:id="@+id/id_custom_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="company details"
+                android:textSize="15sp"
+                android:layout_margin="20dp"
+                android:typeface="serif"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@id/id_custom_website"
+                android:layout_alignParentRight="true"/>
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
