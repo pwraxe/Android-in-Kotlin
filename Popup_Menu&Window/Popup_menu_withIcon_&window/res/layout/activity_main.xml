@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <Button
+        android:id="@+id/id_default_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Default Popup Menu"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/white"
+        android:typeface="serif"
+        android:textAllCaps="false"
+        android:padding="20dp"
+        />
+
+    <Button
+        android:id="@+id/id_icon_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popup Menu with Icon"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/white"
+        android:typeface="serif"
+        android:textAllCaps="false"
+        android:padding="20dp"
+        />
+
+
+    <Button
+        android:id="@+id/id_popup_window"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popup Window"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/white"
+        android:typeface="serif"
+        android:textAllCaps="false"
+        android:padding="20dp"
+
+        />
+</LinearLayout>

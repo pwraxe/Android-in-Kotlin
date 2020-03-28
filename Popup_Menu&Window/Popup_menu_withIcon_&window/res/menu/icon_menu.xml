@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <group android:id="@+id/group">
+
+
+        <item android:id="@+id/ic_no_battery"
+            android:title="No Battery"
+            android:icon="@drawable/ic_no_battery"
+            />
+        <item android:id="@+id/ic_battery_20"
+            android:title="Battery 20%"
+            android:icon="@drawable/ic_battery_20"
+            />
+        <item android:id="@+id/ic_battery_30"
+            android:title="Battery 30%"
+            android:icon="@drawable/ic_battery_30"
+            />
+        <item android:id="@+id/ic_battery_50"
+            android:title="Battery 50%"
+            android:icon="@drawable/ic_battery_50"
+            />
+        <item android:id="@+id/ic_battery_60"
+            android:title="Battery 60%"
+            android:icon="@drawable/ic_battery_60"
+            />
+        <item android:id="@+id/ic_battery_80"
+            android:title="Battery 80%"
+            android:icon="@drawable/ic_battery_80"
+            />
+        <item android:id="@+id/ic_battery_90"
+            android:title="Battery 90%"
+            android:icon="@drawable/ic_battery_90"
+            />
+        <item android:id="@+id/ic_battery_100"
+            android:title="Battery Full"
+            android:icon="@drawable/ic_battery_100"
+            />
+
+
+
+    </group>
+
+
+</menu>

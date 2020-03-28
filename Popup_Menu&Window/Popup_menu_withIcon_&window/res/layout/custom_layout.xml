@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_popup_card"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/id_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/id_image"
+            android:layout_toRightOf="@id/id_image"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/id_image_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="android_ic_launcher.png"
+                android:textColor="@android:color/holo_blue_light"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/id_image_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Likes : 25M"
+                android:textColor="@android:color/holo_blue_light"
+                android:typeface="serif" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Comments : 15M"
+                android:textColor="@android:color/holo_blue_light"
+                android:typeface="serif" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+
