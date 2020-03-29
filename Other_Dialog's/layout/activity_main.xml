@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/id_button1"
+            android:text="Progress Dialog"
+            style="@style/button_style"
+            />
+
+        <Button
+            android:id="@+id/id_button2"
+            android:text="Horizontal Progress Dialog"
+            style="@style/button_style"
+            />
+
+        <Button
+            android:id="@+id/id_button3"
+            android:text="Progress Bar"
+            style="@style/button_style"
+            />
+        <ProgressBar
+            android:id="@+id/id_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+
+        <Button
+            android:id="@+id/id_button4"
+            android:text="Custom Progress Bar"
+            style="@style/button_style"
+            />
+
+        <Button
+            android:id="@+id/id_button5"
+            android:text="Date Picker"
+            style="@style/button_style"
+            />
+            <TextView
+                android:id="@+id/id_displayDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#ff0000"
+
+                />
+
+        <Button
+            android:id="@+id/id_button6"
+            android:text="Time Picker"
+            style="@style/button_style"
+            />
+
+        <TextView
+            android:id="@+id/id_displayTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#ff0000"
+            />
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

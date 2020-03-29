@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#0000ff"
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Wait"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:typeface="serif"
+        android:textColor="#fff"
+        android:layout_margin="20sp"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="#fff"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fetching Data..."
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:layout_margin="20sp"
+        android:textColor="#fff"
+        android:typeface="serif"
+        />
+
+
+
+</LinearLayout>
