@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="10dp"
+        android:elevation="8dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/id_child_view_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Views"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+                android:typeface="serif"
+                android:textColor="#0040ff"
+                />
+
+            <TextView
+                android:id="@+id/id_child_view_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="viewcount"
+                android:textColor="#0040ff"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="20dp"
+                android:textSize="20sp"
+                android:typeface="serif"
+                 />
+
+            <TextView
+                android:id="@+id/id_child_like_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Likes"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+                android:typeface="serif"
+                android:textColor="#0040ff"
+                android:layout_below="@id/id_child_view_name"
+                />
+
+            <TextView
+                android:id="@+id/id_child_like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="likecount"
+                android:textColor="#0040ff"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="20dp"
+                android:textSize="20sp"
+                android:typeface="serif"
+                android:layout_below="@id/id_child_view_count"
+                />
+
+            <TextView
+                android:id="@+id/id_child_comment_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comment"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+                android:typeface="serif"
+                android:textColor="#0040ff"
+                android:layout_below="@id/id_child_like_name"
+                />
+
+            <TextView
+                android:id="@+id/id_child_comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="comment_count"
+                android:textColor="#0040ff"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="20dp"
+                android:textSize="20sp"
+                android:typeface="serif"
+                android:layout_below="@id/id_child_like_count"
+                />
+
+            <TextView
+                android:id="@+id/id_child_download_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Downloads"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+                android:typeface="serif"
+                android:textColor="#0040ff"
+                android:layout_below="@id/id_child_comment_name"
+                />
+
+            <TextView
+                android:id="@+id/id_child_download_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="downloadcount"
+                android:textColor="#0040ff"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="20dp"
+                android:textSize="20sp"
+                android:typeface="serif"
+                android:layout_below="@id/id_child_comment_count"
+                />
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
