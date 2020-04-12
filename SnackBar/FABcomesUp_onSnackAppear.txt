@@ -1,0 +1,47 @@
+Dependency  :  
+      implementation 'com.google.android.material:material:1.2.0-alpha05'
+-------------------------------------------------------------------------------------------------------------------------------
+activity_main.xml
+-----------------
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/id_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/id_fab_button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_delete"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+-------------------------------------------------------------------------------------------------------------------------------
+MainActivity.kt
+---------------
+class MainActivity : AppCompatActivity() {
+
+    private var fab1 : FloatingActionButton? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        fab1 = findViewById(R.id.id_fab_button1)
+        fab1?.setOnClickListener {view ->
+
+            val bar = Snackbar.make(view,"Successfully Deleted",Snackbar.LENGTH_LONG)
+            bar.setAction("UNDO"){
+                bar.dismiss()
+                Snackbar.make(it,"Recovered Successfully",Snackbar.LENGTH_SHORT).show()
+            }
+            bar.show()
+        }
+    }
+}
