@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/id_mainFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        app:fabSize="auto"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="@android:color/black"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/id_fab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="20dp"
+        app:fabSize="mini"
+        android:src="@drawable/ic_love"
+        app:backgroundTint="@android:color/black"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/id_fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:fabSize="mini"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/ic_key"
+        app:backgroundTint="@android:color/black"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/id_fab3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="20dp"
+        app:fabSize="mini"
+        android:src="@drawable/ic_loved"
+        app:backgroundTint="@android:color/black"
+        />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
