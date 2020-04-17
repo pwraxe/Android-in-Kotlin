@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <EditText
+        android:id="@+id/id_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Course Name"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:inputType="text"
+        />
+
+    <Button
+        android:id="@+id/id_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="create Chip"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:typeface="serif"
+        android:textAllCaps="false"
+        />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/id_chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#aaa"
+    />
+
+</LinearLayout>
