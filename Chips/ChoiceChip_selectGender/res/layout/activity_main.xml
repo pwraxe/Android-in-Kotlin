@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.chip.ChipGroup
+        app:singleSelection="true"
+        android:id="@+id/id_chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="#FFE500"
+        >
+
+        <com.google.android.material.chip.Chip
+            android:text="Male"
+            app:chipCornerRadius="20dp"
+            android:id="@+id/id_maleChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipBackgroundColor="@drawable/chip_back"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+
+            />
+
+        <com.google.android.material.chip.Chip
+            android:text="Female"
+            app:chipCornerRadius="20dp"
+            android:id="@+id/id_FemaleChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipBackgroundColor="@drawable/chip_back"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            />
+
+    </com.google.android.material.chip.ChipGroup>
+
+</RelativeLayout>
