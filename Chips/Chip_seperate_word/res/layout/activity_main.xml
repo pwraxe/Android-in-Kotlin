@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    >
+
+    <EditText
+        android:id="@+id/id_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Complete Line"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:inputType="text"
+        />
+
+    <Button
+        android:id="@+id/id_showChips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:text="Show Chips"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/id_chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eee"
+        />
+
+
+
+</LinearLayout>
