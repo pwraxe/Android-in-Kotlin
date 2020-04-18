@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.chip.ChipGroup
+
+        android:id="@+id/id_chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        android:padding="20dp"
+        >
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/id_toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correct it"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            app:chipBackgroundColor="@drawable/chip_back"
+            app:chipIconVisible="true"
+            android:textStyle="bold"
+            app:chipIcon="@drawable/ic_check_circle"
+
+
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/id_snack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share Location"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            app:chipIconVisible="true"
+            android:textStyle="bold"
+            app:chipIcon="@drawable/ic_location"
+            app:chipBackgroundColor="#ff0000"
+            />
+
+    </com.google.android.material.chip.ChipGroup>
+
+</RelativeLayout>
