@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.shuhart.stepview.StepView
+        android:id="@+id/id_stepView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:sv_animationDuration="500"
+        app:sv_animationType="All"
+        android:padding="12dp"
+
+        app:sv_doneCircleColor="#00ff00"
+        app:sv_doneCircleRadius="10dp"
+        app:sv_doneStepLineColor="#00ff00"
+        app:sv_doneTextColor="#00ff00"
+
+        app:sv_nextStepCircleColor="#888"
+        app:sv_nextStepCircleEnabled="true"
+        app:sv_nextStepLineColor="#888"
+        app:sv_nextTextColor="#888"
+
+        app:sv_selectedCircleColor="#ff0000"
+        app:sv_selectedCircleRadius="18dp"
+        app:sv_selectedStepNumberColor="#fff"
+        app:sv_selectedTextColor="#000"
+
+        app:sv_stepLineWidth="2dp"
+        app:sv_stepNumberTextSize="8dp"
+        app:sv_steps="@array/userDetailStep"
+        app:sv_stepsNumber="5"
+        app:sv_textSize="12dp"
+        />
+
+    <Button
+        android:id="@+id/id_nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">StepView_Demo2</string>
+
+    <string-array name="userDetailStep">
+        <item>Personal \nDetail</item>
+        <item>Education \nDetail</item>
+        <item>Address \nDetails</item>
+        <item>Final \nOverview</item>
+        <item>Done</item>
+    </string-array>
+
+
+</resources>
