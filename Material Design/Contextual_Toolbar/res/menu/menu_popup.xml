@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/id_radio"
+        android:title="Radio"
+        android:icon="@drawable/ic_radio"
+        app:showAsAction="always|collapseActionView"
+        />
+
+    <item android:id="@+id/id_delete"
+        android:title="Delete"
+        />
+    <item android:id="@+id/id_edit"
+        android:title="Edit"
+        />
+
+</menu>

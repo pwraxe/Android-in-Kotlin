@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/id_edit"
+        android:title="Edit"
+        app:showAsAction="always|collapseActionView"
+        android:icon="@drawable/ic_edit"
+        />
+
+    <item android:id="@+id/id_reply"
+        android:title="Reply"
+        app:showAsAction="ifRoom|collapseActionView"
+        android:icon="@drawable/ic_reply"
+        />
+    <item android:id="@+id/id_share"
+        android:title="Share"
+        app:showAsAction="always|collapseActionView"
+        android:icon="@drawable/ic_share"
+        />
+
+</menu>
