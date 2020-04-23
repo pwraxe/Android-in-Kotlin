@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_radio"
+        android:layout_gravity="center_horizontal"
+        android:transitionName="radioIconName"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android Kotlin"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/black"
+        android:transitionName="androidText"
+        />
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_share"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+        android:transitionName="shareIconName"
+        />
+
+    <Button
+        android:id="@+id/id_backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:onClick="finishAct"
+        />
+
+
+
+
+
+
+</LinearLayout>
