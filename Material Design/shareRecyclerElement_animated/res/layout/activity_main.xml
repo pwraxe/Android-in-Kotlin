@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <ProgressBar
+        android:id="@+id/id_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/colorPrimaryDark"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/id_errorMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Error Msg"
+        android:textSize="25sp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:typeface="serif"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>
