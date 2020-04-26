@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">slide trans</string>
+
+    <string-array name="langauge">
+
+        <item>Android</item>
+        <item>Basic</item>
+        <item>COBOL</item>
+        <item>Dart</item>
+        <item>Flutter</item>
+        <item>Go</item>
+        <item>Java</item>
+        <item>Kotlin</item>
+        <item>Laravel</item>
+        <item>Marshmallow</item>
+        <item>Nougat</item>
+        <item>Oreo</item>
+        <item>Python</item>
+        <item>Ruby on Rails</item>
+        <item>Simple</item>
+
+    </string-array>
+</resources>
