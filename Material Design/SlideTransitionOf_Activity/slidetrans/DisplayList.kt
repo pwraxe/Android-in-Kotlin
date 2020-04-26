@@ -24,7 +24,7 @@ class DisplayList : AppCompatActivity() {
         listView = findViewById(R.id.id_listView)
 
         val slide = Slide()
-        slide.slideEdge = Gravity.TOP
+        slide.slideEdge = Gravity.TOP  // //  Gravity.LEFT | Gravity.TOP  |  Gravity.RIGHT | Gravity.BOTTOM
         slide.duration = 1000
         slide.interpolator = AnticipateOvershootInterpolator()
         window.enterTransition = slide
@@ -40,3 +40,23 @@ class DisplayList : AppCompatActivity() {
         return true
     }
 }
+
+
+/*
+Interpolator Class and attribute
+------- Java Class------------ | ---------XML attrib---------------
+
+AccelerateDecelerateInterpolator()	----- | ----- @android:anim/accelerate_decelerate_interpolator
+AccelerateInterpolator()	        ----- | ----- @android:anim/accelerate_interpolator
+AnticipateInterpolator()	        ----- | ----- @android:anim/anticipate_interpolator
+AnticipateOvershootInterpolator()	----- | ----- @android:anim/anticipate_overshoot_interpolator
+BounceInterpolator()	            ----- | ----- @android:anim/bounce_interpolator
+CycleInterpolator()	                ----- | ----- @android:anim/cycle_interpolator
+DecelerateInterpolator()	        ----- | ----- @android:anim/decelerate_interpolator
+LinearInterpolator()	            ----- | ----- @android:anim/linear_interpolator
+OvershootInterpolator()             ----- | ----- @android:anim/overshoot_interpolator
+*
+* */
+
+
+
