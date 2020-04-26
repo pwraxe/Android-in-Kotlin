@@ -1,0 +1,52 @@
+
+
+activity_main.xml
+
+	<Button
+		...
+		onClick="fadeTrans"
+	/>
+
+
+MainActivity.kt
+
+	fun fadeTrans(view : View){
+		val option = ActivityOptions.makeSceneTransitionAnimation(this)
+        startActivity(Intent(this,DisplayList::class.java),option?.toBundle())
+	}
+
+
+
+actvity_display_list.xml
+
+	<LiniarLayout>
+		<ListView ../>
+	</LiniarLayout>
+
+
+DisplayList.kt
+
+	onCreate(...){
+		window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
+		super.onCreate(...)
+		setContentView(R.layout.activity_display_list)
+
+		find id of listview and 
+
+		// using kotlin/java
+        	val slide = Fade()
+        	slide.duration = 1000  // 1000 = 1 second
+        	slide.interpolator = AnticipateOvershootInterpolator()
+        	window.enterTransition = slide
+
+        // using xml
+         	window.enterTransition = TransitionInflater.from(this).inflateTransition(R.transition.fade)
+
+
+		set ArrayAdapter to listview
+
+
+
+
+	}
+
