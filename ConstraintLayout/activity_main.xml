@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorAccent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+<!--    ********************  Top  *********************  -->
+
+    <Button
+        android:id="@+id/id_topLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="topLeft"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/id_topCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="topCenter"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/id_topLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/id_topRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="TopRight"
+        android:textAllCaps="false"
+        />
+
+<!-- ************************  Middle / Center  *****************************  -->
+
+    <Button
+        android:id="@+id/id_centerLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CenterLeft"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/id_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Center"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <Button
+        android:id="@+id/id_centerRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CenterRight"
+        android:textAllCaps="false"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+<!-- ******************************  Bottom  ********************************  -->
+
+    <Button
+        android:id="@+id/id_bottomLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BottomLeft"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <Button
+        android:id="@+id/id_bottomCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BottomCenter"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <Button
+        android:id="@+id/id_bottomRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BottomRight"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+<!-- *************************  AboveCenter = AC ***************************  -->
+
+    <Button
+        android:id="@+id/id_ac_Left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AboveCenter\nLeft"
+        android:textAllCaps="false"
+
+        app:layout_constraintBottom_toTopOf="@id/id_centerLeft"
+        app:layout_constraintTop_toBottomOf="@id/id_topLeft"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/id_ac_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AboveCenter\nCenter"
+        android:textAllCaps="false"
+
+        app:layout_constraintBottom_toTopOf="@id/id_center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_topCenter" />
+
+
+    <Button
+        android:id="@+id/id_ac_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AboveCenter\nRight"
+        android:textAllCaps="false"
+
+        app:layout_constraintBottom_toTopOf="@+id/id_centerRight"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_topRight" />
+
+
+<!-- *************************  BelowCenter = BC ***************************  -->
+
+
+    <Button
+        android:id="@+id/id_bc_Left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BelowCenter\nLeft"
+        android:textAllCaps="false"
+
+        app:layout_constraintTop_toBottomOf="@id/id_centerLeft"
+        app:layout_constraintBottom_toTopOf="@id/id_bottomLeft"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/id_bc_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BelowCenter\nCenter"
+        android:textAllCaps="false"
+
+        app:layout_constraintBottom_toTopOf="@+id/id_bottomCenter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_center" />
+
+
+    <Button
+        android:id="@+id/id_bc_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BelowCenter\nRight"
+        android:textAllCaps="false"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/id_bottomRight"
+        app:layout_constraintTop_toBottomOf="@id/id_centerRight"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
