@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="frag1"
+            type="com.example.fragnavigation.fragment.Fragment1" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.Fragment1"
+        android:background="@color/red">
+
+        <TextView
+            android:text="@string/fragment_1"
+            style="@style/text_style"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/id_button1"
+            android:text="@string/goto_fragment_2"
+            style="@style/button_style"
+            />
+
+    </FrameLayout>
+</layout>
