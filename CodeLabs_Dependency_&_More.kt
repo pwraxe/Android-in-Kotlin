@@ -35,6 +35,17 @@ Add navigation components to the project
 				implementation"android.arch.navigation:navigation-fragment-ktx:$navigationVersion"
     			implementation "android.arch.navigation:navigation-ui-ktx:$navigationVersion"
 
+	in activity_main.xml
+	===================== 
+	<androidx.fragment.app.FragmentContainerView
+        	android:id="@+id/NavHostFragment"
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:name="androidx.navigation.fragment.NavHostFragment"
+        	app:navGraph="@navigation/navigation"
+        	app:defaultNavHost="true"
+        	/>
+
 ***************************************************************************************************************************
 ***************************************************************************************************************************
 data class MySelfClass(var name: String = "", var nickname: String = "")
