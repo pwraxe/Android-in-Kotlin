@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/randomNumberFragment">
+
+    <fragment
+        android:id="@+id/randomNumberFragment"
+        android:name="randomnumber.example.safeargsfrag.fragments.randomnumber.RandomNumberFragment"
+        android:label="fragment_random_number"
+        tools:layout="@layout/fragment_random_number" >
+        <action
+            android:id="@+id/action_randomNumberFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" >
+
+
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="randomnumber.example.safeargsfrag.fragments.score.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score">
+
+
+        <argument android:name="randomNumber"
+            android:defaultValue="0"
+            app:argType="integer"
+            />
+
+    </fragment>
+
+
+</navigation>

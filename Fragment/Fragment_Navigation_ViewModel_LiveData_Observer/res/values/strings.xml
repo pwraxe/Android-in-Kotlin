@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SAfeArgsFrag</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="random_number_text">Current Randome Number is :</string>
+    <string name="end_game">End Game</string>
+    <string name="next_number">Next Number</string>
+    <string name="congrats">Congrats</string>
+    <string name="text_zero">0</string>
+</resources>
