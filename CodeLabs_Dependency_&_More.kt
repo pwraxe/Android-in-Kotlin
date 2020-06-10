@@ -209,3 +209,9 @@ Addding Guidlines in ConstraintLayout
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="20dp" />
+
+***********************************************************************************************************************
+
+Retrofit dependencies
+	implementation "com.squareup.retrofit2:retrofit:2.5.0"
+	implementation "com.squareup.retrofit2:converter-scalars:2.5.0"
