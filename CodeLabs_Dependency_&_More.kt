@@ -212,6 +212,11 @@ Addding Guidlines in ConstraintLayout
 
 ***********************************************************************************************************************
 
-Retrofit dependencies
-	implementation "com.squareup.retrofit2:retrofit:2.5.0"
-	implementation "com.squareup.retrofit2:converter-scalars:2.5.0"
+Retrofit & moshi dependencies
+ //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
+    implementation "com.squareup.retrofit2:converter-moshi:$version_retrofit"       // moshi converter
+
+    // Moshi Library
+    implementation "com.squareup.moshi:moshi:$version_moshi"
+    implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
