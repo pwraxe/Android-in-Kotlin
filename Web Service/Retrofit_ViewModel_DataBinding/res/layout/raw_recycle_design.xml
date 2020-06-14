@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="homeFrag"
+            type="com.example.retrofit_viewmodel_databinding.retrofit.UserData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/id_raw_imageView"
+            android:layout_width="250dp"
+            android:layout_height="250sp"
+            app:loadOnlineImage="@{homeFrag.largeImageURL}"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_broken_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="8dp"
+            />
+
+        <TextView
+            android:id="@+id/id_raw_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#B3000000"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@{homeFrag.user}"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_raw_imageView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
