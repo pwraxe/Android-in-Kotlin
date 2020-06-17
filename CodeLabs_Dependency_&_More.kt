@@ -1,5 +1,15 @@
 For All Dependencies 
-https://maven.google.com/web/index.html
+	https://maven.google.com/web/index.html
+
+***************************************************************************************************************************
+
+Color group by google for app
+ 	https://material.io/tools/color
+
+***************************************************************************************************************************
+
+Change App themr to Dark Mode
+	AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
 
 ***************************************************************************************************************************
 
@@ -220,3 +230,15 @@ Retrofit & moshi dependencies
     // Moshi Library
     implementation "com.squareup.moshi:moshi:$version_moshi"
     implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
+
+***********************************************************************************************************************
+
+// Room dependency
+ def room_version = "2.3.0-alpha01"
+ implementation "androidx.room:room-runtime:$room_version"
+ kapt "androidx.room:room-compiler:$room_version"
+
+
+***********************************************************************************************************************
+
+
