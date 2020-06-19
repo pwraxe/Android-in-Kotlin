@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.myapplication.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.myapplication.fragments.homefrag.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.myapplication.fragments.setting.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/appearanceFragment"
+        android:name="com.example.myapplication.fragments.setting.AppearanceFragment"
+        android:label="fragment_appearance"
+        tools:layout="@layout/fragment_appearance" />
+    <fragment
+        android:id="@+id/themeFragment"
+        android:name="com.example.myapplication.fragments.setting.ThemeFragment"
+        android:label="fragment_theme"
+        tools:layout="@layout/fragment_theme" />
+    <fragment
+        android:id="@+id/bedroomFragment"
+        android:name="com.example.myapplication.fragments.homefrag.BedroomFragment"
+        android:label="fragment_bedroom"
+        tools:layout="@layout/fragment_bedroom" />
+    <fragment
+        android:id="@+id/kitchenFragment"
+        android:name="com.example.myapplication.fragments.homefrag.KitchenFragment"
+        android:label="fragment_kitchen"
+        tools:layout="@layout/fragment_kitchen" />
+</navigation>
