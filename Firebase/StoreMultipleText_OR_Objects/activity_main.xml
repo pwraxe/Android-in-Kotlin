@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/id_UserID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter id"
+            android:layout_margin="@dimen/size_20_dp"
+            android:padding="@dimen/size_20_dp"
+            android:fontFamily="sans-serif-thin"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/id_UserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter name"
+            android:layout_margin="@dimen/size_20_dp"
+            android:padding="@dimen/size_20_dp"
+            android:fontFamily="sans-serif-thin" />
+
+        <EditText
+            android:id="@+id/id_UserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter email"
+            android:layout_margin="@dimen/size_20_dp"
+            android:padding="@dimen/size_20_dp"
+            android:fontFamily="sans-serif-thin" />
+
+        <EditText
+            android:id="@+id/id_UserMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter mobile"
+            android:layout_margin="@dimen/size_20_dp"
+            android:padding="@dimen/size_20_dp"
+            android:fontFamily="sans-serif-thin"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/id_saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Data"
+            android:layout_gravity="center"
+            android:background="#fff"
+            android:layout_margin="@dimen/size_20_dp"
+            android:padding="@dimen/size_20_dp"
+            android:fontFamily="sans-serif-thin"
+            android:textAllCaps="false" />
+
+
+    </LinearLayout>
+</layout>
