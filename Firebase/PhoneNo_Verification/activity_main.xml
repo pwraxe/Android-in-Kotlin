@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        tools:context=".MainActivity">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/id_ccp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="8dp"
+            app:ccpDialog_showCloseIcon="true"
+            app:ccp_defaultLanguage="ENGLISH"
+            app:ccp_rememberLastSelection="true"
+            app:ccp_hintExampleNumberType="FIXED_LINE_OR_MOBILE"
+            app:ccp_showNameCode="true"
+            app:ccp_showPhoneCode="true"
+            app:ccp_countryAutoDetectionPref="NETWORK_LOCALE"
+            app:ccpDialog_allowSearch="true"
+            app:ccp_areaCodeDetectedCountry="true"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_autoDetectLanguage="true"
+            app:ccp_showFullName="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/id_numberInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="10 digit mobile no"
+            android:maxLength="10"
+            android:padding="16dp"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_ccp" />
+
+        <Button
+            android:id="@+id/id_getNoButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#fff"
+            android:fontFamily="sans-serif-thin"
+            android:padding="20dp"
+            android:text="Get Pin"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_numberInput" />
+
+        <TextView
+            android:id="@+id/id_displayNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-thin"
+            android:layout_marginTop="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_getNoButton" />
+
+        <com.dpizarro.pinview.library.PinView
+            android:id="@+id/id_PinView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:inputType="numberPassword"
+            android:splitMotionEvents="true"
+            app:keyboardMandatory="false"
+            app:nativePinBox="true"
+            app:numberCharacters="1"
+            app:numberPinBoxes="6"
+            app:password="false"
+
+            app:textSizePinBox="20dp"
+            app:colorTextPinBox="@color/colorPrimaryDark"
+            app:deleteOnClick="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_displayNo"
+             />
+
+
+        <Button
+            android:id="@+id/id_pinDetailButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verify Number"
+            android:layout_marginTop="30sp"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:background="#fff"
+            android:fontFamily="sans-serif-thin"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:onClick="manualVerification"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_PinView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
