@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/id_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20_dp"
+            android:fontFamily="serif"
+            android:hint="@string/hint_enter_name"
+            android:inputType="textPersonName"
+            android:padding="@dimen/size_20_dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:autofillHints="@string/hint_enter_name" />
+
+
+        <EditText
+            android:id="@+id/id_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20_dp"
+            android:fontFamily="serif"
+            android:hint="@string/hint_enter_email"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/size_20_dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_name"
+            android:autofillHints="@string/hint_enter_email" />
+
+        <EditText
+            android:id="@+id/id_mobileNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20_dp"
+            android:fontFamily="serif"
+            android:hint="@string/hint_enter_mobile_no"
+            android:inputType="number"
+            android:maxLength="10"
+            android:padding="@dimen/size_20_dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_email"
+            android:autofillHints="@string/hint_enter_mobile_no" />
+
+
+        <Button
+            android:id="@+id/id_selectImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/size_20_dp"
+            android:background="#10000000"
+            android:fontFamily="sans-serif-thin"
+            android:padding="@dimen/size_20_dp"
+            android:text="@string/select_image"
+            android:textAllCaps="false"
+            android:textSize="@dimen/size_20_sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_mobileNo"
+            android:onClick="selectLocalImage"
+            />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:fitsSystemWindows="true"
+            android:layout_margin="@dimen/size_20_dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_selectImageButton"
+            android:contentDescription="@string/user_selected_image" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/id_uploadFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_upload"
+            android:onClick="uploadLocalData"
+            android:backgroundTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/id_selectImageButton"
+            app:layout_constraintEnd_toStartOf="@+id/ViewFAB"
+            app:layout_constraintStart_toEndOf="@+id/id_selectImageButton"
+            app:layout_constraintTop_toTopOf="@+id/id_selectImageButton" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@id/ViewFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_eye"
+            android:onClick="viewFirebaseData"
+            android:backgroundTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/id_selectImageButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/id_uploadFAB"
+            app:layout_constraintTop_toTopOf="@+id/id_selectImageButton" />
+
+
+        <ProgressBar
+            android:id="@+id/id_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="#000"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

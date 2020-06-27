@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/size_20_dp"
+        app:cardElevation="@dimen/size_20_dp"
+        android:layout_margin="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#10000000">
+
+            <ImageView
+                android:id="@+id/id_rawImageView"
+                android:layout_width="match_parent"
+                android:layout_height="300sp"
+                android:layout_margin="16dp"
+                android:scaleType="centerCrop"
+                android:src="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/id_raw_crossIcon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_cross"
+                app:layout_constraintEnd_toEndOf="@+id/id_rawImageView"
+                app:layout_constraintTop_toTopOf="@+id/id_rawImageView" />
+
+            <TextView
+                android:id="@+id/id_nameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_20_dp"
+                android:fontFamily="sans-serif-thin"
+                android:text="@string/hint_enter_name"
+                android:textSize="@dimen/size_20_sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_rawImageView" />
+
+
+            <ImageView
+                android:id="@+id/id_rawDeleteIcon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/size_20_dp"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/id_rawImageView" />
+
+
+            <TextView
+                android:id="@+id/id_rawEmailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_20_dp"
+                android:fontFamily="sans-serif-thin"
+                android:text="@string/hint_enter_email"
+                android:textSize="@dimen/size_20_sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_nameText" />
+
+            <TextView
+                android:id="@+id/id_raw_mobileText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_20_dp"
+                android:fontFamily="sans-serif-thin"
+                android:text="@string/hint_enter_name"
+                android:textSize="@dimen/size_20_sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_rawEmailText" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>
+

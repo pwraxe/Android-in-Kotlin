@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">StoreRetrive_ImagesFromFirebase</string>
+    <string name="hint_enter_name">Enter Name</string>
+    <string name="hint_enter_email">Enter Email</string>
+    <string name="hint_enter_mobile_no">Enter Mobile No</string>
+    <string name="select_image">Select Image</string>
+    <string name="user_selected_image">user selected image</string>
+</resources>
