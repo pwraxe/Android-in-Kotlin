@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+    // lottie library
+    implementation "com.airbnb.android:lottie:3.4.1"
+
+    Don't forget internet permission while using url link for animation
+
+-->
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".MainActivity">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Animation from asset folder"
+               android:textSize="20sp"
+               android:fontFamily="sans-serif-thin"
+               android:layout_gravity="center"
+               />
+
+           <com.airbnb.lottie.LottieAnimationView
+               android:layout_width="200dp"
+               android:layout_height="200dp"
+
+               app:lottie_autoPlay="true"
+               app:lottie_cacheComposition="true"
+               app:lottie_enableMergePathsForKitKatAndAbove="true"
+               app:lottie_loop="true"
+               app:lottie_repeatMode="reverse"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+
+               app:lottie_fileName="hello.json"
+
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:background="#000"
+               android:layout_marginTop="20dp"
+               app:layout_constraintTop_toBottomOf="parent" />
+
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Animation from Raw folder"
+               android:textSize="20sp"
+               android:fontFamily="sans-serif-thin"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               />
+
+           <com.airbnb.lottie.LottieAnimationView
+               android:id="@+id/id_lotteView"
+               android:layout_width="200dp"
+               android:layout_height="200dp"
+
+               app:lottie_autoPlay="true"
+               app:lottie_cacheComposition="true"
+               app:lottie_enableMergePathsForKitKatAndAbove="true"
+               app:lottie_loop="true"
+               app:lottie_repeatMode="reverse"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+
+               app:lottie_rawRes="@raw/card"
+               />
+
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:background="#000"
+               android:layout_marginTop="20dp"
+               app:layout_constraintTop_toBottomOf="parent"
+               tools:layout_editor_absoluteX="0dp" />
+
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Animation from url"
+               android:textSize="20sp"
+               android:fontFamily="sans-serif-thin"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               />
+
+           <com.airbnb.lottie.LottieAnimationView
+               android:layout_width="200dp"
+               android:layout_height="200dp"
+
+               app:lottie_autoPlay="true"
+               app:lottie_cacheComposition="true"
+               app:lottie_enableMergePathsForKitKatAndAbove="true"
+               app:lottie_loop="true"
+               app:lottie_repeatMode="reverse"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+
+               app:lottie_url="https://assets3.lottiefiles.com/packages/lf20_MHKEba.json"
+               />
+
+
+       </LinearLayout>
+
+</ScrollView>
+
+
+<!--
+    Steps to follow (animation from RAW folder)
+
+        1. Go to https://lottiefiles.com/  & login
+        2. select any one of the image to open it dialog box
+        3. at the top you will see download button
+        4. click on it for dropdown
+        5. click on 'Lottie JSON' & download, save it at known location
+
+        6. create 'raw' folder in 'res' folder (right click on res > New > Folder > Raw Resource Folder > click finish)
+        7. paste that downloaded json file in raw folder
+        8. use of it :->  app:lottie_rawRes="@raw/animatedFile"
+
+    Steps to follow  (animation from Assets folder)
+
+        steps 1 to 5 is same as above
+
+        6. create assets folder (right click on res > New > Folder > Assets > click finish )
+        7. paste that downloaded json file in assets folder
+        8. use of it :->   app:lottie_fileName="downloadedJSONFileName.json"
+
+
+    Steps to follow (animation from URL)
+        1. Go to https://lottiefiles.com/  & login
+        2. select any one of the image to open it dialog box
+        3. below of video you will see 'Lottie Animation URL'
+        4. copy that & paste it in Lottie attribute
+        5. use of it :->  app:lottie_url="past that copied url here"
+
+        ** IMP ** In such use case Don't forget INTERNET PERMISSION
+-->
