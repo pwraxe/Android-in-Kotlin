@@ -12,6 +12,23 @@ import com.google.firebase.database.*
 import java.lang.NumberFormatException
 import kotlin.properties.Delegates
 
+
+/*
+
+    //Country code dependency
+    implementation 'com.hbb20:ccp:2.4.0'
+
+    // pinView
+    implementation 'com.github.davidpizarro:pinview:1.0.0'
+
+    //lottie animation view
+    implementation "com.airbnb.android:lottie:3.4.1"
+
+
+    Don't forget INTERNET PERMISSION
+
+*/
+
 private const val EXTRA_MOBILE = "mobile_number"
 private const val USER_EXISTS = "userExists"        //1
 private const val USER_NOT_EXISTS = "userNOTExists"     // 0
