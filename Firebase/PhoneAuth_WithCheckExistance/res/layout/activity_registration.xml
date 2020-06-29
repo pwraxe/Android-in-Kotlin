@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/id_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20_dp"
+            android:fontFamily="sans-serif-thin"
+            android:hint="Enter name"
+            android:inputType="textPersonName"
+            android:padding="@dimen/size_20_dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_20_sp" />
+
+        <EditText
+            android:id="@+id/id_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20_dp"
+            android:fontFamily="sans-serif-thin"
+            android:hint="Enter Email ID"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/size_20_dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_20_sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/id_countryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/size_20_sp"
+                android:paddingTop="@dimen/size_20_sp"
+                android:paddingBottom="@dimen/size_20_sp"
+                app:ccpDialog_showCloseIcon="true"
+                app:ccp_areaCodeDetectedCountry="true"
+                app:ccp_autoDetectLanguage="true"
+                app:ccp_autoFormatNumber="true"
+
+                app:ccp_clickable="true"
+                app:ccp_countryAutoDetectionPref="NETWORK_LOCALE_SIM"
+                app:ccp_defaultLanguage="ENGLISH"
+
+                app:ccp_rememberLastSelection="true"
+                app:ccp_showFlag="true"
+                app:ccp_showNameCode="true"
+                app:ccp_showPhoneCode="true" />
+
+            <EditText
+                android:id="@+id/id_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-thin"
+                android:hint="Enter Mobile No"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="@dimen/size_20_dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_20_sp" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/id_nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20_dp"
+            android:background="@color/transperent_background"
+            android:fontFamily="sans-serif-thin"
+            android:onClick="registerNewUser"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_20_sp" />
+
+
+    </LinearLayout>
+</layout>
