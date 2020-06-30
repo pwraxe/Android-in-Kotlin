@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/id_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="example@gmail.com"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:textColorHint="@color/colorAccent"
+            android:fontFamily="sans-serif-thin" />
+
+        <EditText
+            android:id="@+id/id_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:textColorHint="@color/colorAccent"
+            android:fontFamily="sans-serif-thin" />
+
+        <CheckBox
+            android:id="@+id/id_showCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:text="show Password"
+            android:fontFamily="sans-serif-thin" />
+
+        <Button
+            android:id="@+id/id_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:text="Login"
+            android:onClick="loginExistingUser"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-thin"
+            android:background="#fff" />
+
+        <Button
+            android:id="@+id/id_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:text="register"
+            android:onClick="createNewUser"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-thin"
+            android:background="#fff" />
+
+        <TextView
+            android:id="@+id/id_forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textSize="20sp"
+            android:onClick="forgotPassword"
+            android:fontFamily="sans-serif-thin"
+            android:textStyle="italic"
+            android:layout_gravity="end"
+            android:layout_margin="20dp"
+            />
+
+
+    </LinearLayout>
+</layout>
