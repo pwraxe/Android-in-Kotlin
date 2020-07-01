@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/id_anonymButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SignIn Anonym"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:onClick="signInAnonym"
+                android:layout_margin="@dimen/size_20_dp"
+                android:padding="@dimen/size_20_dp"
+                android:layout_gravity="center"
+                android:background="#fff"
+                android:fontFamily="sans-serif-thin" />
+
+            <Button
+                android:id="@+id/id_linkEmailButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="link my account with email"
+                android:layout_margin="@dimen/size_20_dp"
+                android:padding="@dimen/size_20_dp"
+                android:fontFamily="sans-serif-thin"
+                android:textSize="20sp"
+                android:onClick="linkWithEmail"
+                android:background="#fff"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/id_userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_20_dp"
+                android:padding="@dimen/size_20_dp"
+                android:hint="Enter Email ID"
+                android:inputType="textEmailAddress"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/id_userPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_20_dp"
+                android:padding="@dimen/size_20_dp"
+                android:hint="Password > 6"
+                android:inputType="textPassword"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/id_resultText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="_"
+                android:layout_gravity="center"
+                />
+
+
+            <Button
+                android:id="@+id/id_logoutButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:onClick="logoutUser"
+                android:layout_margin="@dimen/size_20_dp"
+                android:padding="@dimen/size_20_dp"
+                android:fontFamily="sans-serif-thin"
+                android:background="#fff"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+</layout>
