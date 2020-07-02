@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/id_mainContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/id_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter name"
+            android:layout_margin="@dimen/size_20_dp"
+            android:padding="@dimen/size_20_dp"
+            android:textSize="@dimen/text_size_20"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/id_userEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email ID"
+            android:layout_margin="@dimen/size_20_dp"
+            android:padding="@dimen/size_20_dp"
+            android:textSize="@dimen/text_size_20"
+            android:inputType="textEmailAddress" />
+
+       <HorizontalScrollView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <Button
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="save Data"
+                   android:padding="@dimen/size_20_dp"
+                   android:background="#fff"
+                   android:layout_weight="1"
+                   android:onClick="saveData"
+                   android:layout_gravity="center"
+                   android:fontFamily="sans-serif-thin"
+                   android:layout_margin="@dimen/text_size_20"/>
+
+
+               <Button
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Load Data"
+                   android:padding="@dimen/size_20_dp"
+                   android:background="#fff"
+                   android:layout_weight="1"
+                   android:onClick="retrievedData"
+                   android:layout_gravity="center"
+                   android:fontFamily="sans-serif-thin"
+                   android:layout_margin="@dimen/text_size_20"/>
+
+               <Button
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="update Data"
+                   android:padding="@dimen/size_20_dp"
+                   android:background="#fff"
+                   android:layout_weight="1"
+                   android:onClick="updateData"
+                   android:layout_gravity="center"
+                   android:fontFamily="sans-serif-thin"
+                   android:layout_margin="@dimen/text_size_20"/>
+
+               <Button
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Delete Email"
+                   android:padding="@dimen/size_20_dp"
+                   android:background="#fff"
+                   android:layout_weight="1"
+                   android:onClick="deleteEmail"
+                   android:layout_gravity="center"
+                   android:fontFamily="sans-serif-thin"
+                   android:layout_margin="@dimen/text_size_20"/>
+
+
+               <Button
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="delete Document"
+                   android:padding="@dimen/size_20_dp"
+                   android:background="#fff"
+                   android:layout_weight="1"
+                   android:onClick="deleteDocument"
+                   android:layout_gravity="center"
+                   android:fontFamily="sans-serif-thin"
+                   android:layout_margin="@dimen/text_size_20"
+                   />
+
+
+           </LinearLayout>
+
+       </HorizontalScrollView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/id_displayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_"
+                android:textSize="@dimen/text_size_20"
+                android:fontFamily="sans-serif-thin"
+                android:textColor="#000"
+                android:layout_margin="@dimen/size_20_dp"
+                />
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>
