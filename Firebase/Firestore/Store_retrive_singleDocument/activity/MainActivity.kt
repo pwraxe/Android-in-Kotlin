@@ -9,8 +9,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.cloudfirestoredemo.databinding.ActivityMainBinding
 import com.google.firebase.database.DatabaseReference
-import com.google.firebase.firestore.DocumentReference
-import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.*
 
 
 /**
@@ -33,7 +32,17 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         fireStore = FirebaseFirestore.getInstance()
+        docRef = fireStore.collection("UserData").document("user_1")
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        docRef.addSnapshotListener(this) { snapshot, firebaseFirestoreException ->
+            if(snapshot!!.exists()){
+                Log.e("AXE","Quick Data : ${snapshot.data}")
+            }
+        }
     }
 
     fun saveData(view: View) {
@@ -66,6 +75,7 @@ class MainActivity : AppCompatActivity() {
         //fetching single document
         fireStore.collection("UserData").document("user_1")
             .addSnapshotListener { documentSnapshot, firebaseFirestoreException ->
+
                 if(documentSnapshot?.exists()!!){
 
                     // Now, I have 4 different method to retrieved single document data
@@ -93,18 +103,70 @@ class MainActivity : AppCompatActivity() {
                     Log.e("AXE","Exception : ",firebaseFirestoreException)
                 }
             }
-    }
-    
-    // fetch all document at a time 
-     fireStore.collection("UserData").addSnapshotListener { querySnapshot, firebaseFirestoreException ->
+
+
+        fireStore.collection("UserData").addSnapshotListener(this) { querySnapshot, firebaseFirestoreException ->
 
             for(data in querySnapshot!!.documents){
-                
-                Log.e("AXE","${count}: ${data.data}   :  ${data.id}")           //Ex.o/p ==>  {name=Alex doe, email=alex@gmail.com}   :  user_1
+
+                Log.e("AXE","count ${count}: ${data.data}   :  ${data.id}")
             }
 
         }
-    
-    
-    
+
+    }
+
+    fun updateData(view: View) {
+
+        val name = binding.idUsername.text.toString().trim()
+        val email = binding.idUserEmail.text.toString().trim()
+
+        if(name.isNotEmpty() && email.isNotEmpty()){
+
+            val map = HashMap<String,String>()
+            map["name"] = name
+            map["email"] = email
+
+            fireStore.collection("UserData").document("user_2")
+                // .update(name,email)              // in this, new data add in this document  like-->  userEnteredName : userEnteredEmail
+                //.update("name",name)              // only name field updated
+                //.update(map as Map<String, Any>)    //those field updated, which is declare in map veriable Ex. here name & email updated of user_1
+                //.update("user_2",map)             // in user_1 there is no user_2 to update hence firebase create user_2 field in user_1 & save data there
+                //.set(map, SetOptions.merge())       // all field are updated
+                .set(map, SetOptions.mergeFields("name")) // OR .set(map, SetOptions.mergeFields("name","email"))  ==> send list of field which we want to update
+                .addOnSuccessListener {
+                    Toast.makeText(this, "Data Updated", Toast.LENGTH_SHORT).show()
+                }
+        }else {
+            binding.idUserEmail.error = "Please enter email for update"
+            binding.idUserEmail.requestFocus()
+
+            binding.idUsername.error = "Please enter your name for update"
+            binding.idUsername.requestFocus()
+
+            return
+        }
+    }
+
+    fun deleteEmail(view: View) {
+
+        fireStore.collection("UserData").document("user_2")
+            .update("email",FieldValue.delete())
+            .addOnSuccessListener {
+                Toast.makeText(this, "email deleted", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    fun deleteDocument(view: View) {
+        fireStore.collection("UserData").document("user_3")
+            .delete().addOnSuccessListener {
+                Toast.makeText(this, "Document deleted", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    fun deleteCollection(view: View) {
+        Toast.makeText(this, "Deleting collections from an Android client is not recommended.[from firebase document]", Toast.LENGTH_SHORT).show()
+
+    }
+
 }
