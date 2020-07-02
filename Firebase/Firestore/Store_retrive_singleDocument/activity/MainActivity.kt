@@ -93,6 +93,18 @@ class MainActivity : AppCompatActivity() {
                     Log.e("AXE","Exception : ",firebaseFirestoreException)
                 }
             }
-
     }
+    
+    // fetch all document at a time 
+     fireStore.collection("UserData").addSnapshotListener { querySnapshot, firebaseFirestoreException ->
+
+            for(data in querySnapshot!!.documents){
+                
+                Log.e("AXE","${count}: ${data.data}   :  ${data.id}")           //Ex.o/p ==>  {name=Alex doe, email=alex@gmail.com}   :  user_1
+            }
+
+        }
+    
+    
+    
 }
