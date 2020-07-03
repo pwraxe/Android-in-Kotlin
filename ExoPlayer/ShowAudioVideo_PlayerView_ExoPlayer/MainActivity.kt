@@ -18,7 +18,6 @@ import com.google.android.exoplayer2.util.Util
  *       android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode">
  *
  *
- *
  *ExoPlayer Dependencies
  *
  * // exoplayer
@@ -30,8 +29,6 @@ import com.google.android.exoplayer2.util.Util
  * implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.7.3'
  *
  * */
-
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -68,6 +65,13 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun buildMediaSource(uri: Uri) : MediaSource{
+        
+        // return ProgressiveMediaSource.Factory(DefaultDataSourceFactory(this, "Exo_Player_Demo")).createMediaSource(uri)     // for playing single video
+            
+        //    ------------------------------------------------------------> OR  <---------------------------------------------------------
+        
+        
+        //for playing multiple video via next button
         val progressMediaSrcFactory = ProgressiveMediaSource.Factory(DefaultDataSourceFactory(this, "Exo_Player_Demo"))
         
         val mSrc1 = progressMediaSrcFactory.createMediaSource(uri)   //mp4 (video url)
