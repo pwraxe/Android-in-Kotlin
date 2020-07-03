@@ -67,10 +67,16 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun buildMediaSource(uri: Uri) : MediaSource = ProgressiveMediaSource
-            .Factory(DefaultDataSourceFactory(this,"Exo_Player_Demo"))
-            .createMediaSource(uri)
-
+    private fun buildMediaSource(uri: Uri) : MediaSource{
+        val progressMediaSrcFactory = ProgressiveMediaSource.Factory(DefaultDataSourceFactory(this, "Exo_Player_Demo"))
+        
+        val mSrc1 = progressMediaSrcFactory.createMediaSource(uri)   //mp4 (video url)
+        val mSrc2 = progressMediaSrcFactory.createMediaSource(Uri.parse("https://storage.googleapis.com/exoplayer-test-media-0/play.mp3"))  // mp3 (audio url)
+        val mSrc3 = progressMediaSrcFactory.createMediaSource(uri)   // mp4 (video url)
+        val mSrc4 = progressMediaSrcFactory.createMediaSource(Uri.parse("https://storage.googleapis.com/exoplayer-test-media-0/play.mp3"))  // mp3 (audio url)
+        
+        return ConcatenatingMediaSource(mSrc1,mSrc2,mSrc3,mSrc4)  // this help to add new audio | video in list 
+    }
 
     override fun onStart() {
         super.onStart()
