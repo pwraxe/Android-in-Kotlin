@@ -32,6 +32,8 @@ import com.google.android.exoplayer2.util.Util
  * implementation 'com.google.android.exoplayer:exoplayer-hls:2.7.3'
  * implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.7.3'
  *
+ *
+ *  Visit :  https://exoplayer.dev/
  * */
 
 
