@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <VideoView
+            android:id="@+id/id_videoView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/id_inputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20_dp"
+            android:hint="Enter Video Name or HashTag"
+            android:padding="@dimen/size_20_dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_videoView" />
+
+        <Button
+            android:id="@+id/id_loadLocalVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20_dp"
+            android:background="@color/white"
+            android:onClick="loadLocalVideo"
+            android:padding="@dimen/size_20_dp"
+            android:text="Load Local Video"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_inputEditText" />
+
+        <Button
+            android:id="@+id/id_saveLocalVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_20_dp"
+            android:background="@color/white"
+            android:onClick="saveLocalVideoToServer"
+            android:padding="@dimen/size_20_dp"
+            android:text="Save on Server"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_inputEditText" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/id_viewVideosFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/size_20_dp"
+            android:layout_marginRight="@dimen/size_20_dp"
+            android:layout_marginBottom="@dimen/size_20_dp"
+            android:backgroundTint="#000"
+            android:onClick="viewAllVideos"
+            android:src="@drawable/ic_eye"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <ProgressBar
+            android:id="@+id/id_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="#000"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_loadLocalVideo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

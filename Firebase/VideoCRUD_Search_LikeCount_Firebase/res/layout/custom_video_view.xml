@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/is_deleteIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="16dp"
+
+            android:layout_marginEnd="360dp"
+            android:layout_marginRight="360dp"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/id_playerView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:auto_show="true"
+            app:fastforward_increment="2000"
+            app:hide_on_touch="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/is_deleteIcon"
+            app:resize_mode="fit"
+            app:rewind_increment="2000"
+            app:show_timeout="30000"
+            app:surface_type="surface_view"
+            app:use_controller="true" />
+
+
+        <TextView
+            android:id="@+id/id_rawVideoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="videoName"
+            android:textSize="@dimen/text_size_25_sp"
+            app:layout_constraintStart_toEndOf="@+id/heartButton"
+            app:layout_constraintTop_toBottomOf="@+id/id_playerView" />
+
+        <TextView
+            android:id="@+id/id_videoSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:text="videoSize"
+            android:textSize="@dimen/text_size_25_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_playerView" />
+
+        <ImageView
+            android:id="@+id/heartButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/size_20_dp"
+            android:src="@drawable/ic_unlike"
+            app:layout_constraintBottom_toBottomOf="@+id/is_deleteIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_likeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="@+id/is_deleteIcon"
+            app:layout_constraintStart_toEndOf="@+id/heartButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="#000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/id_rawVideoName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
