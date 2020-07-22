@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/id_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Full Name"
+            android:layout_margin="@dimen/size_20_dp"
+            android:padding="@dimen/size_20_dp"
+            android:inputType="textPersonName"
+            android:background="@drawable/edit_back" />
+
+
+        <EditText
+            android:id="@+id/id_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email"
+            android:layout_margin="@dimen/size_20_dp"
+            android:padding="@dimen/size_20_dp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/edit_back" />
+
+
+        <EditText
+            android:id="@+id/id_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password"
+            android:layout_margin="@dimen/size_20_dp"
+            android:padding="@dimen/size_20_dp"
+            android:inputType="textPassword"
+            android:background="@drawable/edit_back" />
+
+
+        <EditText
+            android:id="@+id/id_mobileNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Mobile No"
+            android:layout_margin="@dimen/size_20_dp"
+            android:padding="@dimen/size_20_dp"
+            android:inputType="number"
+            android:maxLength="10"
+            android:background="@drawable/edit_back" />
+
+        <Button
+            android:id="@+id/id_registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_margin="@dimen/size_20_dp"
+            android:padding="@dimen/size_20_dp"
+            android:onClick="registerNewUser"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-thin"
+
+            />
+
+
+    </LinearLayout>
+</layout>

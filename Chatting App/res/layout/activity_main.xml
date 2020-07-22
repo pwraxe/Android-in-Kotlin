@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/id_emailID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_back"
+            android:layout_marginTop="200dp"
+            android:layout_marginStart="@dimen/size_20_dp"
+            android:layout_marginEnd="@dimen/size_20_dp"
+            android:padding="@dimen/size_20_dp"
+            android:hint="Enter Email ID"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/id_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_back"
+            android:layout_margin="@dimen/size_20_dp"
+            android:padding="@dimen/size_20_dp"
+            android:hint="Enter Password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:onClick="loginUser"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:fontFamily="sans-serif-thin"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/size_20_dp" />
+
+        <TextView
+            android:id="@+id/id_registerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New, Register Here?"
+            android:onClick="registerUser"
+            android:fontFamily="sans-serif-thin"
+            android:textSize="20sp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_gravity="end"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="@dimen/size_20_dp"
+            android:layout_marginRight="@dimen/size_20_dp" />
+
+    </LinearLayout>
+</layout>

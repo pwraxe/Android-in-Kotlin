@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/id_singleUser"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+
+        <TextView
+            android:id="@+id/id_subMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="sans-serif-thin"
+            android:text=""
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/id_rawCircularImage"
+            app:layout_constraintStart_toEndOf="@+id/id_rawCircularImage"
+            app:layout_constraintTop_toBottomOf="@+id/id_rawName" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/id_rawCircularImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_default_dp"
+            android:layout_marginStart="@dimen/size_20_dp"
+            android:layout_marginLeft="@dimen/size_20_dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/id_status_dot"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/status_back"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/id_rawCircularImage"
+            app:layout_constraintEnd_toEndOf="@+id/id_rawCircularImage" />
+
+        <TextView
+            android:id="@+id/id_rawName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="Username"
+            android:textSize="16sp"
+
+            app:layout_constraintBottom_toTopOf="@+id/id_status_dot"
+            app:layout_constraintStart_toEndOf="@+id/id_rawCircularImage"
+            app:layout_constraintTop_toTopOf="@+id/id_rawCircularImage" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:background="#C6C4C4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_rawCircularImage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
