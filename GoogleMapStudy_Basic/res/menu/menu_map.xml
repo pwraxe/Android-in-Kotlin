@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/normal_map"
+        android:title="@string/normal_map"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/hybrid_map"
+        android:title="@string/hybrid_map"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/satellite_map"
+        android:title="@string/satellite_map"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/terrain_map"
+        android:title="@string/terrain_map"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/id_zoomIn"
+        android:title="++"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/id_zoomOut"
+        android:title="--"
+        app:showAsAction="ifRoom"
+        />
+
+    <item android:id="@+id/id_map_aubergine"
+        android:title="Aubergine Map"
+        app:showAsAction="never"
+        />
+
+    <item android:id="@+id/id_map_dark"
+        android:title="Dark Map"
+        app:showAsAction="never"
+        />
+
+    <item android:id="@+id/id_map_night"
+        android:title="Night Map"
+        app:showAsAction="never"
+        />
+
+    <item android:id="@+id/id_map_retro"
+        android:title="Retro Map"
+        app:showAsAction="never"
+        />
+
+    <item android:id="@+id/id_map_silver"
+        android:title="Silver Map"
+        app:showAsAction="never"
+        />
+
+
+
+
+
+
+</menu>
