@@ -1,0 +1,53 @@
+
+            Log.e("AXE","adChoicesInfo ==> ${unifiedNativeAd.adChoicesInfo}")                   // com.google.android.gms.internal.ads.zzadp@f757f91
+
+            val index = 0
+            binding.idImage2.setImageDrawable(unifiedNativeAd.adChoicesInfo.images[index].drawable)             // this is `i` icon with circle border
+            binding.idImage3.setImageDrawable(unifiedNativeAd.images[index].drawable)                           // this is main image   to get single images //arraySizeIs=1
+
+
+            Log.e("AXE","Advertiser ==> ${unifiedNativeAd.advertiser}")         // Freedomology
+            Log.e("AXE","Body ===> ${unifiedNativeAd.body}")                    // We guarantee to match or beat comparable travel booked and purchased on our site.
+            Log.e("AXE","Call To action ==> ${unifiedNativeAd.callToAction}")   // open   // this is text on Button
+
+            Log.e("AXE","HeadLine ==> ${unifiedNativeAd.headline}")         // Test Ad : Best Travel Guarantee.
+            Log.e("AXE","Icon ==> ${unifiedNativeAd.icon}")                 // null or image    // this is profile image
+            Log.e("AXE","Images ==> ${unifiedNativeAd.images}")             // [com.google.android.gms.internal.ads.zzadx@9268715]    this is List<NativeAd.Images> which sometime contains only one image
+
+
+            Log.e("AXE","isCustomClickGestureEnabled ==> ${unifiedNativeAd.isCustomClickGestureEnabled}")   //true
+            Log.e("AXE","isCustomMuteThisAdEnabled ==> ${unifiedNativeAd.isCustomMuteThisAdEnabled}")  // false
+            Log.e("AXE","mediaContent ==> ${unifiedNativeAd.mediaContent}")   // com.google.android.gms.internal.ads.zzze@1ce1a2a
+            unifiedNativeAd.mediaContent.apply {
+                Log.e("AXE","============================================================")
+                Log.e("AXE","Aspect Ratio : ${this.aspectRatio}")           // 1.910828
+                Log.e("AXE","Current Time : ${this.currentTime}")           // 0.0
+                Log.e("AXE","Duration : ${this.duration}")                  // 0.0
+                Log.e("AXE","Main Image : ${this.mainImage}")               // android.graphics.drawable.BitmapDrawable@736201b
+                Log.e("AXE","Video Controller : ${this.videoController.apply {
+                    Log.e("AXE","-----------------------------------------------------------------")
+                    Log.e("AXE","${this.isClickToExpandEnabled}")           //  false
+                    Log.e("AXE","${this.isCustomControlsEnabled}")          //  false
+                    Log.e("AXE","${this.isMuted}")                          //  true
+                    Log.e("AXE","${this.isClickToExpandEnabled}")           //  false
+                    Log.e("AXE","${this.playbackState}")                    //  0
+                    Log.e("AXE","${this.videoCurrentTime}")                 //  0.0
+                    Log.e("AXE","${this.play()}")                           //  Kotlin.Unit
+                    Log.e("AXE","${this.videoDuration}")                    //  0.0
+                    Log.e("AXE","${this.videoLifecycleCallbacks}")          // null
+                    Log.e("AXE","${this.hasVideoContent()}")                // false            // unifiedNativeAd.mediaContent.hasVideoContent()
+                    Log.e("AXE","-----------------------------------------------------------------")
+                }}")
+                Log.e("AXE","============================================================")
+            }
+
+            Log.e("AXE","muteThisAdReasons ==> ${unifiedNativeAd.muteThisAdReasons}")           // muteThisAdReasons ==> []
+
+            Log.e("AXE","Price ==> ${unifiedNativeAd.price}")                                   // null
+            Log.e("AXE","Response Info ==> ${unifiedNativeAd.responseInfo}")                    // com.google.android.gms.ads.ResponseInfo@d0baef6
+            unifiedNativeAd.responseInfo?.apply {
+                Log.e("ZAW","Response class name = ${this.mediationAdapterClassName}")
+                Log.e("ZAW","res id = ${this.responseId}")
+            }
+            Log.e("AXE","StartRating ==> ${unifiedNativeAd.starRating}")                        // null
+            Log.e("AXE","Store ==> ${unifiedNativeAd.store}")                                   // null
