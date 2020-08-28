@@ -5,11 +5,13 @@ import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.AbsListView
 import android.widget.Button
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.codexdroid.nativeadsdemo.databinding.ActivityMainBinding
@@ -24,8 +26,12 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var viewModel : MainViewModel
+    private lateinit var manager : LinearLayoutManager
 
-
+    private var isScrolling = false
+    private var currentItem : Int = 0
+    private var totalItem : Int = 0
+    private var scrollItem : Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,10 +40,34 @@ class MainActivity : AppCompatActivity() {
         val factory = MainViewModelFactory(requireNotNull(this).application)
 
         viewModel = ViewModelProvider(this,factory).get(MainViewModel::class.java)
+        manager = LinearLayoutManager(this)
 
         viewModel.dataList.observe(this){
             binding.idRecyclerView.adapter = CustomRecyclerAdapter(this,it)
         }
+
+        binding.idRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener(){
+
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                if(newState == AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL){
+                    isScrolling = true
+                }
+            }
+
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+                currentItem = manager.childCount
+                totalItem = manager.itemCount
+                scrollItem = manager.findFirstVisibleItemPosition()
+
+                if(currentItem+scrollItem == totalItem && isScrolling){
+                    isScrolling = false
+                    // show progress bar and fetch data
+                    //fetchNewData()
+                }
+            }
+        })
 
         MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713")
     }
