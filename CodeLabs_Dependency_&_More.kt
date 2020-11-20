@@ -16,6 +16,14 @@ Change App themr to Dark Mode
 Hide Status Bar
 	window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
+Change Color of status bar and its text
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR //  set status text dark
+            window.statusBarColor = ContextCompat.getColor(this,R.color.white)                  // set status background white
+        }
+
+
+
 ***************************************************************************************************************************
 
 Predefine Styling of Button (attrubute in xml)
