@@ -7,5 +7,6 @@
       android:shadowRadius="10"
 
 - (1..100).random()
+- All Layouts is type of viewgroup (Layouts like LL, RL, ConstrintLayout...)
       
       
