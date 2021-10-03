@@ -5,5 +5,7 @@
       android:shadowDx="10"
       android:shadowDy="0"
       android:shadowRadius="10"
+
+- (1..100).random()
       
       
