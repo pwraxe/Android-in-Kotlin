@@ -8,5 +8,7 @@
 
 - (1..100).random()
 - All Layouts is type of viewgroup (Layouts like LL, RL, ConstrintLayout...)
+- An "abstract" class is a class that cannot be instantiated because it is not fully implemented
+      Ex.  You use a sketch (abstract class) to create a blueprint (class) from which you build the actual object instance.
       
       
