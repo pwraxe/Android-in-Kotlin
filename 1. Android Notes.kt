@@ -11,4 +11,15 @@
 - An "abstract" class is a class that cannot be instantiated because it is not fully implemented
       Ex.  You use a sketch (abstract class) to create a blueprint (class) from which you build the actual object instance.
       
+- To Use Data Binding, step is
+      > add dataBinding { enabled true } in build.gradle file 
+      > add <layout>  tag as root in xml file 
+      > declare binding variable in MainAtivity like " private lateinit var binding: ActivityMainBinding " 
+      > initialized variable like > binding = DataBindingUtil.setContentView(this, R.layout.activity_main) > DONE
+
+- To Use View Binding, Step is
+      > buildFeatures { viewBinding = true } in build.gradle file
+      > declare binding variable in MainActivity like " private lateinit var binding: ActivityMainBinding " 
+      > initialized variable like " binding = ActivityMainBinding.inflate(layoutInflater); setContentView(binding.root) " > DONE
+      
       
