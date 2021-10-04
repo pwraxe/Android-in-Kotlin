@@ -1,4 +1,4 @@
-- 1dp = 1/160 inch
+- 1dp = 1/160 inch  or 0.15875 mm
 
 - shadow to text => 
       android:shadowColor="@android:color/holo_blue_dark"
