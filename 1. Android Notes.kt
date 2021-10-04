@@ -22,4 +22,10 @@
       > declare binding variable in MainActivity like " private lateinit var binding: ActivityMainBinding " 
       > initialized variable like " binding = ActivityMainBinding.inflate(layoutInflater); setContentView(binding.root) " > DONE
       
-      
+- mdpi     - medium-density screens (~160 dpi)
+- hdpi     - high-density screens (~240 dpi)
+- xhdpi    - extra-high-density screens (~320 dpi)
+- xxhdpi   - extra-extra-high-density screens (~480dpi)
+- xxxhdpi  - extra-extra-extra-high-density screens (~640dpi)
+- nodpi    - resources that are not meant to be scaled, regardless of the screen pixel density
+- anydpi   - resources that scale to any density
