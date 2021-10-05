@@ -29,3 +29,6 @@
 - xxxhdpi  - extra-extra-extra-high-density screens (~640dpi)
 - nodpi    - resources that are not meant to be scaled, regardless of the screen pixel density
 - anydpi   - resources that scale to any density
+
+- Explicit Intent : An explicit intent is highly specific, where you know the exact activity to be launched
+- Implicit Intent : In implicit intent , you have to tell the system the type of action, Ex. open link, send email, or make a call, and the system is responsible for fulfill the request.
