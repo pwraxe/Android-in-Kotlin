@@ -32,3 +32,15 @@
 
 - Explicit Intent : An explicit intent is highly specific, where you know the exact activity to be launched
 - Implicit Intent : In implicit intent , you have to tell the system the type of action, Ex. open link, send email, or make a call, and the system is responsible for fulfill the request.
+
+- Call onClickListener of recyclerView from adapter
+      fun onBindViewHolder(...){
+            val context = holder.view.context
+            val intent = Intent(context,XYZ_Activity::class.java)
+            context.startActivity(intent)
+      }
+      
+
+
+
+
