@@ -104,6 +104,13 @@
 - if try to save too much data in bundle then may be TransactionTooLargeException occur
 - Each Activity and Fragment have there own lifecycle and each manage there own and can initialized and remove from memory
 
+- Fragment also have 5 states
+      - INITIALIZED : A new instance of the fragment has been instantiated.
+      - CREATED     : The first fragment lifecycle methods are called. During this state, the view associated with the fragment is also created.
+      - STARTED     : The fragment is visible onscreen but does not have "focus", meaning it cant respond to user input.
+      - RESUMED     : The fragment is visible and has focus.
+      - DESTROYED   : The fragment object has been de-instantiated.
+
 
 
 
