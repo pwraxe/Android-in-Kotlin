@@ -60,7 +60,18 @@
 - Intent.ACTION_SET_ALARM – setting an alarm in the background
 - Intent.ACTION_DIAL – initiating a phone call
 
-
+- Change recycler view layout dynamically 
+      if(isLinearLayoutManager){
+          recyclerView.layoutManager = LinearLayoutManager(this)
+      }else{
+           recyclerView.layoutManager = GridLayoutManager(this,4)
+      }
+      //call adapter here
+      
+      // set menu icon dynamically
+        - create fun which takes MenuItem as Parameter
+        - if variable of MenuItem is null return it
+        - menuItem.icon = set icon by condition
 
 
 
