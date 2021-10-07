@@ -121,7 +121,9 @@ onStop()          :     The fragment has re-entered the CREATED state.
 onDestroyView()   :     Call before destroy state, The view already remove from memory but object still exists
 onDestroy()       :     The fragment enters the DESTROYED state.
 
-
+- Some Difference in onCreateOptionMenu() method working for activity or fragment
+      - Activity Class has Globla Property "menuInflater" where fragment class dont have
+      - onCreateOptionsMenu() return Boolean Value in Activity , and return Unit in Fragment
 
 
 
