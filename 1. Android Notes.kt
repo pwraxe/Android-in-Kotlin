@@ -73,6 +73,8 @@
         - if variable of MenuItem is null return it
         - menuItem.icon = set icon by condition
 
+- When Activity Initialized(i.e new Activity Obj created in memory) onCreate() method call once,
+
 
 
 
