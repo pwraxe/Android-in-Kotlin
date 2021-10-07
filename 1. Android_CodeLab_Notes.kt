@@ -131,12 +131,26 @@ onDestroy()       :     The fragment enters the DESTROYED state.
 - NavController : This object lets you control the navigation between destinations displayed in the NavHost
                   For navigate > call navigate() method of NavController
 
+- Navigation Component : It simply refers to the collection of tools for implementing navigation, particularly between fragments.
+
 To Use NavigationComponent add following Dependency
       - implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
       - implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
 
+- To Use Safe Args in navigation Component (build.gradle > module)
+      - classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
 
-
+- add container in activity_main.xml file to set/add fragment init for navigation
+      <FrameLayout .....>
+              <androidx.fragment.app.FragmentContainerView
+                  android:id="@+id/id_nav_host_fragment"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:name="androidx.navigation.fragment.NavHostFragment"
+                  app:defaultNavHost="true"
+                  app:navGraph="@navigation/nav_graph"  />
+      </FrameLayout>
+      
 
 
 
