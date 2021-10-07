@@ -51,5 +51,34 @@
       2> URN(Uniform Resource Name)
             tel:910000000000
 
+- ACTION_VIEW is a generic intent that takes a URI,
+
+
+- Intent.CATEGORY_APP_MAPS – launching the maps app
+- Intent.CATEGORY_APP_EMAIL – launching the email app
+- Intent.CATEGORY_APP_GALLERY – launching the gallery (photos) app
+- Intent.ACTION_SET_ALARM – setting an alarm in the background
+- Intent.ACTION_DIAL – initiating a phone call
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
