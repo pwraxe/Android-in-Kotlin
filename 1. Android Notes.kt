@@ -75,6 +75,12 @@
 
 - When Activity Initialized(i.e new Activity Obj created in memory) onCreate() method call once,
 
+ - Log.d() = debug message
+ - Log.i() = informational messages
+ - Log.e() = errors
+ - Log.w() = warnings
+ - Log.v() = verbose messages.
+
 
 
 
