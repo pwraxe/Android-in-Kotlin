@@ -111,6 +111,15 @@
       - RESUMED     : The fragment is visible and has focus.
       - DESTROYED   : The fragment object has been de-instantiated.
 
+onCreate()        :     Fragment is initialized 
+onCreateView()    :     In this method layout is inflated
+onViewCreated()   :     This method call after view created, typically bind views to properties
+onStart()         :     Fragment enter in onStart state    
+onResume()        :     Fragment enter in onResume and have focus
+onPause()         :     Fragment re-enter started state
+onStop()          :     The fragment has re-entered the CREATED state.
+onDestroyView()   :     Call before destroy state, The view already remove from memory but object still exists
+onDestroy()       :     The fragment enters the DESTROYED state.
 
 
 
