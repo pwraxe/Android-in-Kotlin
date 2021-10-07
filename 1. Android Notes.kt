@@ -83,7 +83,9 @@
       //When App open > onCreate() > onStart() > onResume() 
       //When app close > onPause() > onStop()
       //When Reopen App > onRestart() > onStart() > onResume()
-
+      //When App Close completly > onPause() > onStop() > onDestroy()
+      
+      
  - Log.d() = debug message
  - Log.i() = informational messages
  - Log.e() = errors
