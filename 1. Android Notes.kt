@@ -40,6 +40,8 @@
             context.startActivity(intent)
       }
       
+-  there's a handy Kotlin feature that can be used to separate your constants and make them usable without a particular instance of the class called companion objects
+- only a single instance of a companion object will exist for the duration of your program, which is why this is sometimes called the singleton pattern.
 
 
 
