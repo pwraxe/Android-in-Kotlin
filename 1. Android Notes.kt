@@ -78,7 +78,11 @@
 - onResume() - It call after onStart and this state allo user to interact  with UI/Screen
 - onCreate() and onDestroy() called only once during the lifetime of a single activity instance
 
-
+- onPause() state activity no longer focus, and onStop() state Activity no longer visible (i.e Activity has been stop) but activiy obj still in memory at BG
+- open app , onCreate(), onStart(), onResume() call, move next activity, prev activity goes onPause(), onStop(), then /** ready exact above line */
+      //When App open > onCreate() > onStart() > onResume() 
+      //When app close > onPause() > onStop()
+      //When Reopen App > onRestart() > onStart() > onResume()
 
  - Log.d() = debug message
  - Log.i() = informational messages
