@@ -129,7 +129,11 @@ onDestroy()       :     The fragment enters the DESTROYED state.
             When navigate between fragments, the destination shown in NavHost is updated. You will use a built-in implementation, called NavHostFragment
 
 - NavController : This object lets you control the navigation between destinations displayed in the NavHost
-for navigate > call navigate() method of NavController
+                  For navigate > call navigate() method of NavController
+
+To Use NavigationComponent add following Dependency
+      - implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
+      - implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
 
 
 
