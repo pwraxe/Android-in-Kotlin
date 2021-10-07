@@ -76,6 +76,7 @@
 - onCreate() - When Activity Initialized(i.e new Activity Obj created in memory) onCreate() method call once,
 - onStart()  - After just onCreate(), onStart() call which visible activity to user, onStart() call often  //pair(onStart, onStop)
 - onResume() - It call after onStart and this state allo user to interact  with UI/Screen
+- onCreate() and onDestroy() called only once during the lifetime of a single activity instance
 
 
 
