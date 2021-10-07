@@ -44,7 +44,12 @@
 - only a single instance of a companion object will exist for the duration of your program, which is why this is sometimes called the singleton pattern.
 
 - All URLs are URIs, but not all URIs are URLs.
-
+- URI (Uniform Resource Identifier)
+      1> URL(Uniform Resource Locator)
+            https://example.com
+            mailto:abc@gmail.com
+      2> URN(Uniform Resource Name)
+            tel:910000000000
 
 
 
