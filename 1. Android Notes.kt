@@ -99,6 +99,8 @@
 - onSaveInstanceState(Bundle)
 - onSaveInstanceState(Bundle, PersistableBundle)
 
+- A Bundle is a collection of key-value pairs, where the keys are always strings. (we can put data in bundle coz system keeps these bundle in memory)
+- Max Size of bundle is 500KB //Src from stackoverflow
 
 
 
