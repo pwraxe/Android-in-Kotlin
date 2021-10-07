@@ -74,6 +74,7 @@
         - menuItem.icon = set icon by condition
 
 - When Activity Initialized(i.e new Activity Obj created in memory) onCreate() method call once,
+- After just onCreate(), onStart() call which visible activity to user
 
  - Log.d() = debug message
  - Log.i() = informational messages
