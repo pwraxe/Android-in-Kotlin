@@ -73,8 +73,11 @@
         - if variable of MenuItem is null return it
         - menuItem.icon = set icon by condition
 
-- When Activity Initialized(i.e new Activity Obj created in memory) onCreate() method call once,
-- After just onCreate(), onStart() call which visible activity to user, onStart() call often  //pair(onStart, onStop)
+- onCreate() - When Activity Initialized(i.e new Activity Obj created in memory) onCreate() method call once,
+- onStart()  - After just onCreate(), onStart() call which visible activity to user, onStart() call often  //pair(onStart, onStop)
+- onResume() - It call after onStart and this state allo user to interact  with UI/Screen
+
+
 
  - Log.d() = debug message
  - Log.i() = informational messages
