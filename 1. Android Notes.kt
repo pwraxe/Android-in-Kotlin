@@ -81,7 +81,7 @@
  - Log.w() = warnings
  - Log.v() = verbose messages.
 
-
+- const is compile-time constant which won't change.
 
 
 
