@@ -84,6 +84,7 @@
       //When app close > onPause() > onStop()
       //When Reopen App > onRestart() > onStart() > onResume()
       //When App Close completly > onPause() > onStop() > onDestroy()
+      //When Any dialog open over activity, then it goes to onPause() only ,bcoz activity is partially visible
       
       
  - Log.d() = debug message
