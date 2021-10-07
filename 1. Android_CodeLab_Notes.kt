@@ -102,7 +102,7 @@
 - A Bundle is a collection of key-value pairs, where the keys are always strings. (we can put data in bundle coz system keeps these bundle in memory)
 - Max Size of bundle is 500KB //Src from stackoverflow  (the size varies from device to device)
 - if try to save too much data in bundle then may be TransactionTooLargeException occur
-- Each Activity and Fragment have there own lifecycle and each manage there own
+- Each Activity and Fragment have there own lifecycle and each manage there own and can initialized and remove from memory
 
 
 
