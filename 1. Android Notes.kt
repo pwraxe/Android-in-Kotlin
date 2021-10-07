@@ -96,6 +96,9 @@
 - const is compile-time constant which won't change.
 - When Activity Orientation change app call onDestroy() for potrait view and when screen changes with landscape app call onCreate()
 
+- onSaveInstanceState(Bundle)
+- onSaveInstanceState(Bundle, PersistableBundle)
+
 
 
 
