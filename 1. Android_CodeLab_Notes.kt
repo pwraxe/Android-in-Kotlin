@@ -125,10 +125,11 @@ onDestroy()       :     The fragment enters the DESTROYED state.
       - Activity Class has Globla Property "menuInflater" where fragment class dont have
       - onCreateOptionsMenu() return Boolean Value in Activity , and return Unit in Fragment
 
+- NavHost : A NavHost is used to display destinations form a navigation graph within an activity. 
+            When navigate between fragments, the destination shown in NavHost is updated. You will use a built-in implementation, called NavHostFragment
 
-
-
-
+- NavController : This object lets you control the navigation between destinations displayed in the NavHost
+for navigate > call navigate() method of NavController
 
 
 
