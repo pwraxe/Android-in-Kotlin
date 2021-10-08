@@ -152,7 +152,10 @@ To Use NavigationComponent add following Dependency
                   app:navGraph="@navigation/nav_graph"  />
       </FrameLayout>
       
-
+- Android Jetpack libraries are a collection of libraries to make it to develop app easier
+- Android Architecture Components are part of Android Jetpack libraries, to help you design apps with good architecture.
+- The ViewModel stores the app related data that is not destroyed when activity or fragment is destroyed and recreated by the Android framework.
+- Object of view model not destroy like activity or fragment they can automtically retain in case config changes or restart app
 
 
 
