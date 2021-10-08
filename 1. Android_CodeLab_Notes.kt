@@ -157,6 +157,7 @@ To Use NavigationComponent add following Dependency
 - The ViewModel stores the app related data that is not destroyed when activity or fragment is destroyed and recreated by the Android framework.
 - Object of view model not destroy like activity or fragment they can automtically retain in case config changes or restart app
 
-
+- //  Syntax for property delegation
+      var <property-name> : <property-type> by <delegate-class>()
 
 
