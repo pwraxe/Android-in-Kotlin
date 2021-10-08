@@ -139,6 +139,7 @@ To Use NavigationComponent add following Dependency
 
 - To Use Safe Args in navigation Component (build.gradle > module)
       - classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+      - Add PlugIn > build.gradle(:app) > plugin { id 'androidx.navigation.safeargs' }  //It generates Direction Classes
 
 - add container in activity_main.xml file to set/add fragment init for navigation
       <FrameLayout .....>
