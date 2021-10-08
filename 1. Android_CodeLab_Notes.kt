@@ -160,4 +160,5 @@ To Use NavigationComponent add following Dependency
 - //  Syntax for property delegation
       var <property-name> : <property-type> by <delegate-class>()
 
+- The ViewModel is destroyed when the associated fragment is detached, or when the activity is finished, Right before the ViewModel is destroyed, the onCleared() callback is called.
 
