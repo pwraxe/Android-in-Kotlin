@@ -163,6 +163,16 @@ To Use NavigationComponent add following Dependency
                   app:navGraph="@navigation/nav_graph"  />
       </FrameLayout>
       
+      
+============================================ BACK BUTTON in Navigation Component from MainActivity ====================================================
+      
+      val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+      val navController = navHostFragment.navController
+      setupActionBarWithNavController(navController)
+
+
+      
+      
 - Android Jetpack libraries are a collection of libraries to make it to develop app easier
 - Android Architecture Components are part of Android Jetpack libraries, to help you design apps with good architecture.
 - The ViewModel stores the app related data that is not destroyed when activity or fragment is destroyed and recreated by the Android framework.
