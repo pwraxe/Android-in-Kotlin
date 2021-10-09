@@ -22,6 +22,11 @@
       > declare binding variable in MainActivity like " private lateinit var binding: ActivityMainBinding " 
       > initialized variable like " binding = ActivityMainBinding.inflate(layoutInflater); setContentView(binding.root) " > DONE
       
+DisAdvantage of ViewBinding: It is a one-way binding. You can bind views to code but not vice versa.
+
+
+
+
 - mdpi     - medium-density screens (~160 dpi)
 - hdpi     - high-density screens (~240 dpi)
 - xhdpi    - extra-high-density screens (~320 dpi)
@@ -40,7 +45,7 @@
             context.startActivity(intent)
       }
       
--  there's a handy Kotlin feature that can be used to separate your constants and make them usable without a particular instance of the class called companion objects
+-  there`s a handy Kotlin feature that can be used to separate your constants and make them usable without a particular instance of the class called companion objects
 - only a single instance of a companion object will exist for the duration of your program, which is why this is sometimes called the singleton pattern.
 
 - All URLs are URIs, but not all URIs are URLs.
@@ -93,7 +98,7 @@
  - Log.w() = warnings
  - Log.v() = verbose messages.
 
-- const is compile-time constant which won't change.
+- const is compile-time constant which wont change.
 - When Activity Orientation change app call onDestroy() for potrait view and when screen changes with landscape app call onCreate()
 
 - onSaveInstanceState(Bundle)
