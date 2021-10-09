@@ -81,7 +81,9 @@ data class MySelfClass(var name: String = "", var nickname: String = "")
 
 	<TextView
 		..
-		android:text="@={classObj.nickname}"
+		android:text="@={classObj.nickname}"  //set data from Object
+		android:text="@{@string/string_name}"	//string_name from string.xml
+		android:onClick="@{() -> classObj.functionName()}"
 		/>
 
 </layout>
