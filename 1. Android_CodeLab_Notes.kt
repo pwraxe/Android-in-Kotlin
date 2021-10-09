@@ -12,7 +12,7 @@
       Ex.  You use a sketch (abstract class) to create a blueprint (class) from which you build the actual object instance.
       
 - To Use Data Binding, step is
-      > add dataBinding { enabled true } in build.gradle file 
+      > add dataBinding { enabled true } and plugin{ id `kotlin-kapt` } in build.gradle file 
       > add <layout>  tag as root in xml file 
       > declare binding variable in MainAtivity like " private lateinit var binding: ActivityMainBinding " 
       > initialized variable like > binding = DataBindingUtil.setContentView(this, R.layout.activity_main) > DONE
