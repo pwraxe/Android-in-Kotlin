@@ -204,3 +204,19 @@ class MainActivity : AppCompatActivity() {
    }
 }
 
+____________________________________________________________________________________________________________________________
+
+- The Android framework provides a class called SimpleDateFormat, which is a class for formatting and parsing dates in a locale-sensitive manner
+- In SimpleDateFormat  following represent
+      d = day in month
+      y = year
+      M = Month
+- January 4 in 2018, the pattern string "EEE, MMM d" parses to "Wed, Jul 4". 
+
+- 
+      - In SimpleDateF following representormat 
+      d = day in month
+      y = year
+      M = Month
+
+January 4 in 2018, the pattern string "EEE, MMM d" parses to "Wed, Jul 4". 
