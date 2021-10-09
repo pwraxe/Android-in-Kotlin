@@ -166,9 +166,19 @@ To Use NavigationComponent add following Dependency
       
 ============================================ BACK BUTTON in Navigation Component from MainActivity ====================================================
       
-      val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-      val navController = navHostFragment.navController
-      setupActionBarWithNavController(navController)
+      onCreate(..){
+            val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+            val navController = navHostFragment.navController
+            setupActionBarWithNavController(navController)
+      }
+      
+      override fun onSupportNavigateUp(): Boolean {
+        return findNavController(R.id.nav_host_fragment).navigateUp() || super.onSupportNavigateUp()
+    }
+      
+==========================================================================================================================================================
+      
+      
 
 
       
