@@ -192,8 +192,6 @@ To Use NavigationComponent add following Dependency
 - viewModels() gives you the ViewModel instance scoped to the current fragment,This will be different for different fragments.
 - activityViewModels() gives you the ViewModel instance scoped to the current activity. Therefore the instance will remain the same across multiple fragments in the same activity.
 
-
-
 ____________________________ NEW and VERY IMP _____________________________________
 
 
