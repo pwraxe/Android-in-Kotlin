@@ -178,11 +178,6 @@ To Use NavigationComponent add following Dependency
       
 ==========================================================================================================================================================
       
-      
-
-
-      
-      
 - Android Jetpack libraries are a collection of libraries to make it to develop app easier
 - Android Architecture Components are part of Android Jetpack libraries, to help you design apps with good architecture.
 - The ViewModel stores the app related data that is not destroyed when activity or fragment is destroyed and recreated by the Android framework.
@@ -192,6 +187,11 @@ To Use NavigationComponent add following Dependency
       var <property-name> : <property-type> by <delegate-class>()
 
 - The ViewModel is destroyed when the associated fragment is detached, or when the activity is finished, Right before the ViewModel is destroyed, the onCleared() callback is called.
+
+- val viewModel : ViewModelFileName by viewModels()  <---------- This viewModel scope is only for perticular fragment where it writter
+- viewModels() gives you the ViewModel instance scoped to the current fragment,This will be different for different fragments.
+- activityViewModels() gives you the ViewModel instance scoped to the current activity. Therefore the instance will remain the same across multiple fragments in the same activity.
+
 
 
 ____________________________ NEW and VERY IMP _____________________________________
