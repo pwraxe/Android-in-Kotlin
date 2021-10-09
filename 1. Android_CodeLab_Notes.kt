@@ -219,4 +219,26 @@ ________________________________________________________________________________
       y = year
       M = Month
 
-January 4 in 2018, the pattern string "EEE, MMM d" parses to "Wed, Jul 4". 
+- January 4 in 2018, the pattern string "EEE, MMM d" parses to "Wed, Jul 4". 
+- LifecycleOwner is a class that has an Android lifecycle, such as an activity or a fragment
+- A LiveData observer observes the changes to the app`s data only if the lifecycle owner is in active states (STARTED or RESUMED)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
