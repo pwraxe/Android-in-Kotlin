@@ -173,3 +173,16 @@ To Use NavigationComponent add following Dependency
 
 - The ViewModel is destroyed when the associated fragment is detached, or when the activity is finished, Right before the ViewModel is destroyed, the onCleared() callback is called.
 
+
+____________________________ NEW and VERY IMP _____________________________________
+
+
+class MainActivity : AppCompatActivity(R.layout.activity_main) <-----------this is shortcut of following code
+
+class MainActivity : AppCompatActivity() {
+   override fun onCreate(savedInstanceState: Bundle?) {
+       super.onCreate(savedInstanceState)
+       setContentView(R.layout.main_activity)
+   }
+}
+
