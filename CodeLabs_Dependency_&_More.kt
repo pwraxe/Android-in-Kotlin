@@ -76,6 +76,9 @@ data class MySelfClass(var name: String = "", var nickname: String = "")
 			name="classObj"
 			type = "com.example.android.myapp.MySelfClass"
 			/>
+	
+ 
+
 
 	</data>
 
@@ -100,6 +103,10 @@ data class MySelfClass(var name: String = "", var nickname: String = "")
 		binding?.apply{					// If this written then above TextView Work
 			lifecycleOwner = viewLifecycleOwner
             		classObj = myViewModel
+			
+			//if want to refer current class
+			classObj = this@ClassName
+			
 		}
 		
 	}
