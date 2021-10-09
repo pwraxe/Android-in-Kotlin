@@ -88,10 +88,20 @@ data class MySelfClass(var name: String = "", var nickname: String = "")
 
 </layout>
 ------------------------------------------------------------------------
-
+	
+	// if using data binding 
+	// if using viewmodel
+	//val myViewModel : ViewModelClass by activityViewModels()   //this viewmodel active for activity 
+	
 	onCreate(){
 		val mySelf = MySelfClass("Akshay","AXE")
 		mySelf.name || classObj.name
+		
+		binding?.apply{					// If this written then above TextView Work
+			lifecycleOwner = viewLifecycleOwner
+            		classObj = myViewModel
+		}
+		
 	}
 
 ************************************************************************************************************************************
