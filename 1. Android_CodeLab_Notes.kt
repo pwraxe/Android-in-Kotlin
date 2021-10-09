@@ -17,13 +17,19 @@
       > declare binding variable in MainAtivity like " private lateinit var binding: ActivityMainBinding " 
       > initialized variable like > binding = DataBindingUtil.setContentView(this, R.layout.activity_main) > DONE
 
+Advantages of DataBinding : 
+      - Data binding = binding data (from code) to views + view binding (binding views to code)
+      - it lets you remove many UI framework calls in your activities, make them simple and easy to maintain.
+      - Improve app`s performance and help prevent memory leaks and NPE
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - To Use View Binding, Step is
       > buildFeatures { viewBinding = true } in build.gradle file
       > declare binding variable in MainActivity like " private lateinit var binding: ActivityMainBinding " 
       > initialized variable like " binding = ActivityMainBinding.inflate(layoutInflater); setContentView(binding.root) " > DONE
       
-DisAdvantage of ViewBinding: It is a one-way binding. You can bind views to code but not vice versa.
-
+DisAdvantage of ViewBinding: 
+      - It is a one-way binding. You can bind views to code but not vice versa.
+      - Using view binding you can`t reference the app data in the views (layout files)
 
 
 
