@@ -225,6 +225,7 @@ ________________________________________________________________________________
 
 - popUpTo : remove all fragment except mention fragment name
 - popUpInclusive : remove all fragment include mention fragment name
+- A thread is a bit of an abstract concept, it as a single path of execution for code in your app, Each line of code that`s to be executed by same thread.
 
 
 
