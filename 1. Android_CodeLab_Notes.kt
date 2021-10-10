@@ -228,7 +228,7 @@ ________________________________________________________________________________
 - A thread is a bit of an abstract concept, it as a single path of execution for code in your app, Each line of code that`s to be executed by same thread.
 
 - REST : REpresentational State Transfer
-
+- According to the Material design guidelines, you should have 8dp of space at the top, bottom, and sides of the list, and 4dp of space between the items.
 
 
 
