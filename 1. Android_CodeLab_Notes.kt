@@ -231,7 +231,13 @@ ________________________________________________________________________________
 - According to the Material design guidelines, you should have 8dp of space at the top, bottom, and sides of the list, and 4dp of space between the items.
 
 
-
+=============================== Room Database ================================
+      
+- Add following Dependency 
+      implementation "androidx.room:room-runtime:2.3.0"
+      kapt "androidx.room:room-compiler:2.3.0"
+      // optional - Kotlin Extensions and Coroutines support for Room
+      implementation "androidx.room:room-ktx:2.3.0"
 
 
 
