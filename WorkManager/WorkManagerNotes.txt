@@ -1,3 +1,7 @@
+Add Following Dependency
+	implementation "androidx.work:work-runtime-ktx:$versions.work"
+
+
 1. OneTimeWorkRequest
 	if you don't want to send constrints to Worker Class
 	{
