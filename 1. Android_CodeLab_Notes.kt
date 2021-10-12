@@ -240,6 +240,10 @@ ________________________________________________________________________________
       implementation "androidx.room:room-ktx:2.3.0"
 
 
+------------------------------------------------------------------  WORK MANAGER
+- Add following Dependency
+    implementation "androidx.work:work-runtime-ktx:$versions.work"
+
 
 
 
