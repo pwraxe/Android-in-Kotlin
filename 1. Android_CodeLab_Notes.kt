@@ -252,7 +252,10 @@ Few WorkManager Classes
       - WorkManager: This class actually schedules your WorkRequest and makes it run. 
                         It schedules WorkRequests in a way that spreads out the load on system resources, while honoring the constraints you specify.
 
-
+ 
+SAM Conversion : Single Abstract Method
+      - any click event can listen by implementing onClickListener interface, 
+        this interface has one abstract method `onClick()` and this method can be represent anonymously, this process known as SAM Conversion
 
 
 
