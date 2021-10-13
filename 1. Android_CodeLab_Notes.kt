@@ -258,6 +258,11 @@ SAM Conversion : Single Abstract Method
         this interface has one abstract method `onClick()` and this method can be represent anonymously, this process known as SAM Conversion
 
 
+Property Delegation
+      private val viewModel: FragmentViewModel by viewModels()   //initialised viewmodel directly
+
+
+
 
 
 
