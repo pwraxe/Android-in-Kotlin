@@ -1,7 +1,6 @@
 Add Following Dependency
 	implementation "androidx.work:work-runtime-ktx:$versions.work"
 
-
 1. OneTimeWorkRequest
 	if you don't want to send constrints to Worker Class
 	{
@@ -9,8 +8,6 @@ Add Following Dependency
 		val request = OneTimeWorkRequest.from(BackgroundWorkerClass::class.java)
 		manager.enqueue(request)
 	}
-	
-	
 
 	if you want to send constraints to Worker Class
 	{	  
