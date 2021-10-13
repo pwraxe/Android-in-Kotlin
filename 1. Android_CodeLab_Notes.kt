@@ -261,7 +261,7 @@ SAM Conversion : Single Abstract Method
 Property Delegation
       private val viewModel: FragmentViewModel by viewModels()   //initialised viewmodel directly
 
-
+NotificationManager : It is responsible for sending a notification, updating its contents, and canceling the notification
 
 
 
