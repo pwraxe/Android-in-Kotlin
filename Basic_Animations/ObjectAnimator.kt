@@ -4,6 +4,13 @@
 |
 | downside y is positive
 V
+
+- Alpha denote opacity of object. 
+- 0 indicates that the object is completely transparent,  
+- 1 indicates that the object is completely opaque. View objects have a default value of 1.
+- opacity lies between 0 to 1
+
+
 ____________________________________________________________________________________________________________________________________________________________
 Rotate
     - val animator = ObjectAnimator.ofFloat(star, View.ROTATION,-360f,0f)
@@ -33,6 +40,15 @@ Translate
         animX.repeatMode = ObjectAnimator.REVERSE
         animX.start()
 _____________________________________________________________________________________________________________________________________________________________
+Scale :
+        val scaleX = PropertyValuesHolder.ofFloat(View.SCALE_X,8f)
+        val scaleY = PropertyValuesHolder.ofFloat(View.SCALE_Y,8f)
+
+        val animator = ObjectAnimator.ofPropertyValuesHolder(star,scaleX,scaleY)
+        animator.repeatCount = 1
+        animator.duration = 3000
+        animator.repeatMode = ObjectAnimator.REVERSE
+        animator.start()
 _____________________________________________________________________________________________________________________________________________________________
 _____________________________________________________________________________________________________________________________________________________________
 _____________________________________________________________________________________________________________________________________________________________
