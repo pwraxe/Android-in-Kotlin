@@ -4,3 +4,29 @@ annotationProcessor 'com.google.dagger:dagger-compiler:2.28'
 
 
 Dagger = DAG = Directed Acyclic Graph 
+
+_____________________________________________________________________________________________________________________________________________________________________
+
+Method -1 (By Injecting constructor)
+====================================
+
+class Male @Inject constructor()
+class Female @Inject constructor()
+
+class Human @Inject constructor(private var male: Male, private var female: Female) {
+    fun doWork() { Log.d("AXE", "Human Class Working...") }
+}
+
+@Component
+interface HumanComponent {
+    fun getWorkingStatus() : Human
+}
+
+InMainActivity
+    val component : HumanComponent? = DaggerHumanComponent.create()
+    val status : Human? = component?.getWorkingStatus()
+    status?.doWork()
+    
+____________________________________________________________________________________________________________________________________________________________________
+Method - 2 (By Injecting Variable)
+
