@@ -50,6 +50,13 @@ Scale :
         animator.repeatMode = ObjectAnimator.REVERSE
         animator.start()
 _____________________________________________________________________________________________________________________________________________________________
+Background Color Change
+    
+    // blink background from black to red
+    val animator = ObjectAnimator.ofInt(star.parent, "backgroundColor", Color.BLACK, Color.RED).start()  
+    
+    //change from black to red directly without blinking
+    var animator = ObjectAnimator.ofArgb(star.parent, "backgroundColor", Color.BLACK, Color.RED).start()
 _____________________________________________________________________________________________________________________________________________________________
 _____________________________________________________________________________________________________________________________________________________________
 _____________________________________________________________________________________________________________________________________________________________
