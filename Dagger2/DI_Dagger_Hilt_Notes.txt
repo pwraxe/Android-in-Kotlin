@@ -78,7 +78,9 @@ Hilt :
                     it contains a graph that consists objects that Dagger knows how to provide and their respective
                     Inside the @Component interface, you can define functions that return instances of the classes you need
                     
-    - @Singleton  : this annotation tells dagger to return same instance of object without recreating it
+    - @Singleton  : This annotation tells dagger to return same instance of object without recreating it
+    - @Binds      : Tell Dagger which implementation an interface should have.
+    - @Provides   : Tell Dagger how to provide classes that your project doesn't own.
 
 
 
