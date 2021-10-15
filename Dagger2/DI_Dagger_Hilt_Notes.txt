@@ -82,7 +82,24 @@ Hilt :
     - @Binds      : Tell Dagger which implementation an interface should have.
     - @Provides   : Tell Dagger how to provide classes that your project doesn't own.
 
+___________________________________________________________________________________________________________________________________________________________________
 
+Inject in Activity
+
+class LoginActivity: Activity() {
+    
+    @Inject lateinit var loginViewModel: LoginViewModel         // You want Dagger to provide an instance of LoginViewModel from the graph
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        // Make Dagger instantiate @Inject fields in LoginActivity
+        (applicationContext as MyApplication).appComponent.inject(this)
+        
+        // Now loginViewModel is available
+        super.onCreate(savedInstanceState)
+    }
+}
+
+class LoginViewModel @Inject constructor(private val userRepository: UserRepository) { ... }
 
 
 
