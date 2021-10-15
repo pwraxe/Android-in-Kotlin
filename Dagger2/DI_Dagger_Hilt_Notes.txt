@@ -1,45 +1,83 @@
-DI - Dependency Injection : One Class Depend on Other class
-There are two major ways to do dependency injection
-    1) Constructor Injection.   : You pass the dependencies of a class to its constructor
-    2) Field Injection (or Setter Injection)  : When Dependency class initilised from current class object
-       Ex 
-            class Car {
-                lateinit var engine: Engine
-                fun start() { engine.start() }
-            }
-            fun main(args: Array) {
-                val car = Car()
-                car.engine = Engine()
-                car.start()
-            }
-    
-Dpendency injection by hand, or manual dependency injection
-    - You created, provided, and managed the dependencies of the different classes yourself, without relying on a library.
-    * Drawback : 
-            - For big apps, taking all the dependencies and connecting them correctly can require a large amount of boilerplate code.
-            - In a multi-layered architecture, if object create for a top layer, you have create/provide dependencies of the layers below it.
-     
-     - These Drawbacks solved by automating the process of creating and providing dependencies by two ways
-     
-            - Reflection-based solutions : which connect dependencies at runtime.
-            - Static solutions : which generate the code to connect dependencies at compile time.
-
-
-Dagger : 
-    - It is a popular dependency injection library for Java, Kotlin, and Android that is maintained by Google.
-    - It provides fully static and compile-time dependencies.
-
-Dagger = DAG = Directed Acyclic Graph 
-
 //Dagger Dependency
+
 implementation 'com.google.dagger:dagger:2.28.3'
 annotationProcessor 'com.google.dagger:dagger-compiler:2.28'
 
 
-Note: Whenever you feel perticular class is creating without change at all time just create singleton for it and pass its reference
 
+________________________________________________________________________________________________________________________________________________________________________
+Dagger Notes 
+
+    - DI : Dependency Injection : One Class Depend on Other class
+    - Dagger -> DAG -> Directed Acyclic Graph : 
+        - It is a popular dependency injection library for Java, Kotlin, and Android that is maintained by Google.
+        - It provides fully static and compile-time dependencies.
+
+    - There are two major ways to do dependency injection
+         1) Constructor Injection.   : You pass the dependencies of a class to its constructor
+         2) Field Injection (or Setter Injection)  : When Dependency class initilised from current class object
+    
+    - DI by hand || Manual DI  :  You created, provided, and managed the dependencies of the different classes yourself, without relying on a library.
+    - Drawback : - For big apps, taking all the dependencies and connecting them correctly can require a large amount of boilerplate code.
+                 - In a multi-layered architecture, if object create for a top layer, you have create/provide dependencies of the layers below it.
+                 - Solution (by automating the process of creating and providing dependencies by 2 ways)
+                         - Reflection-based solutions : which connect dependencies at runtime.
+                         - Static solutions : which generate the code to connect dependencies at compile time.
+                         
+      IMP :  Whenever you feel perticular class is creating without change at all time just create singleton for it and pass its reference
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+________________________________________________________________________________________________________________________________________________________________________
+Hilt Notes : 
+    - It is Jetpack's recommended library for dependency injection in Android
+    - Hilt defines a standard way to do DI in your application by providing containers for every Android class in your project and managing their lifecycles automatically for you.
+    - Use Hilt for dependency injection on Android. 
+    - Hilt is built on top of Dagger and it provides a standard way to incorporate Dagger dependency injection into an Android application.
+
+
+
+
+
+
+    
+
+________________________________________________________________________________________________________________________________________________________________________
+Annotations Explanation
+
+    - @Inject     : lets Dagger know how to create instances of object (Way - 1)
+    
+    - @Component  : Tells Dagger to generate a container with all the dependencies required to satisfy the types, 
+                    It contains a graph that consists objects that Dagger knows how to provide and their respective
+                    Inside the @Component interface, you can define functions that return instances of the classes you need
+                    
+    - @Singleton  : This annotation tells dagger to return same instance of object without recreating it
+    
+    - @Binds      : Tell Dagger which implementation an interface should have.
+    
+    - @Module     : tell Dagger how to provide an instance of a class (Way - 2)
+                  : It informs Dagger that this class is a Dagger Module
+    
+    - @Provides   : Tell Dagger how to provide classes that your project doesn't own.
+                  : Class Annotated with @Module has anather annotation @Provides
+ 
+ 
+           
+            
+
+
+ 
 
 _____________________________________________________________________________________________________________________________________________________________________
+Code Example
 
 Method -1 (By Injecting constructor)
 ====================================
@@ -62,31 +100,6 @@ InMainActivity
     status?.doWork()
     
 ____________________________________________________________________________________________________________________________________________________________________
-
-********************************************************************************************************************************************************************
-********************************************************************************************************************************************************************
-
-Hilt : 
-    - It is Jetpack's recommended library for dependency injection in Android
-    - Hilt defines a standard way to do DI in your application by providing containers for every Android class in your project and managing their lifecycles automatically for you.
-    - Use Hilt for dependency injection on Android. 
-    - Hilt is built on top of Dagger and it provides a standard way to incorporate Dagger dependency injection into an Android application.
-
-
-    - @Inject     : lets Dagger know how to create instances of object (Way - 1)
-    - @Component  : tells Dagger to generate a container with all the dependencies required to satisfy the types, 
-                    it contains a graph that consists objects that Dagger knows how to provide and their respective
-                    Inside the @Component interface, you can define functions that return instances of the classes you need
-                    
-    - @Singleton  : This annotation tells dagger to return same instance of object without recreating it
-    - @Binds      : Tell Dagger which implementation an interface should have.
-    
-    - @Module     : tell Dagger how to provide an instance of a class (Way - 2)
-                  : It informs Dagger that this class is a Dagger Module
-    
-    - @Provides   : Tell Dagger how to provide classes that your project doesn't own.
-
-___________________________________________________________________________________________________________________________________________________________________
 
 Inject in Activity
 
