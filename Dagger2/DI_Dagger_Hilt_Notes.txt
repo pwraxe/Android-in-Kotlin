@@ -76,6 +76,7 @@ Hilt :
     - @Inject     : lets Dagger know how to create instances of object
     - @Component  : tells Dagger to generate a container with all the dependencies required to satisfy the types, 
                     it contains a graph that consists objects that Dagger knows how to provide and their respective
+                    Inside the @Component interface, you can define functions that return instances of the classes you need
 
 
 
