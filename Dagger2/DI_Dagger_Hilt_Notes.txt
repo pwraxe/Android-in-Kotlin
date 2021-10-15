@@ -1,3 +1,22 @@
+DI - Dependency Injection : One Class Depend on Other class
+There are two major ways to do dependency injection
+    1) Constructor Injection.   : You pass the dependencies of a class to its constructor
+    2) Field Injection (or Setter Injection)  : When Dependency class initilised from current class object
+       Ex 
+            class Car {
+                lateinit var engine: Engine
+                fun start() { engine.start() }
+            }
+            fun main(args: Array) {
+                val car = Car()
+                car.engine = Engine()
+                car.start()
+            }
+    
+Dpendency injection by hand, or manual dependency injection
+    - You created, provided, and managed the dependencies of the different classes yourself, without relying on a library.
+
+
 //Dagger Dependency
 implementation 'com.google.dagger:dagger:2.28.3'
 annotationProcessor 'com.google.dagger:dagger-compiler:2.28'
