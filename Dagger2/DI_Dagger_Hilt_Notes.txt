@@ -68,6 +68,8 @@ Annotations Explanation
     
     - @Provides   : Tell Dagger how to provide classes that your project doesn't own.
                   : Class Annotated with @Module has anather annotation @Provides
+                  
+    - @Subcomponent : It informs Dagger this interface is a Dagger Subcomponent
  
  
            
@@ -125,12 +127,21 @@ class MyAppModule{
     fun myFunction() : Any { .... }
 }
 
-@Component(modules = [MyAppModule::class])
+@Singleton
+@Component(modules = [MyAppModule::class,MyAppSubComponent::class])
 interface MyComponent {
     fun myFun() : Any
 }
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
+@Subcomponent
+interface MyAppSubComponent{
+    
+    @Subcomponent
+    interface MySubComponent{ fun show():Any }
+    
+    fun show():Any
+}
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
