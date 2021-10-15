@@ -73,13 +73,17 @@ Hilt :
     - Hilt is built on top of Dagger and it provides a standard way to incorporate Dagger dependency injection into an Android application.
 
 
-    - @Inject     : lets Dagger know how to create instances of object
+    - @Inject     : lets Dagger know how to create instances of object (Way - 1)
     - @Component  : tells Dagger to generate a container with all the dependencies required to satisfy the types, 
                     it contains a graph that consists objects that Dagger knows how to provide and their respective
                     Inside the @Component interface, you can define functions that return instances of the classes you need
                     
     - @Singleton  : This annotation tells dagger to return same instance of object without recreating it
     - @Binds      : Tell Dagger which implementation an interface should have.
+    
+    - @Module     : tell Dagger how to provide an instance of a class (Way - 2)
+                  : It informs Dagger that this class is a Dagger Module
+    
     - @Provides   : Tell Dagger how to provide classes that your project doesn't own.
 
 ___________________________________________________________________________________________________________________________________________________________________
