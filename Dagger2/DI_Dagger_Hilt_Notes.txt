@@ -29,14 +29,15 @@ Dagger :
     - It is a popular dependency injection library for Java, Kotlin, and Android that is maintained by Google.
     - It provides fully static and compile-time dependencies.
 
-
+Dagger = DAG = Directed Acyclic Graph 
 
 //Dagger Dependency
 implementation 'com.google.dagger:dagger:2.28.3'
 annotationProcessor 'com.google.dagger:dagger-compiler:2.28'
 
 
-Dagger = DAG = Directed Acyclic Graph 
+Note: Whenever you feel perticular class is creating without change at all time just create singleton for it and pass its reference
+
 
 _____________________________________________________________________________________________________________________________________________________________________
 
