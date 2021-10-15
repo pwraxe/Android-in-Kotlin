@@ -15,8 +15,15 @@ There are two major ways to do dependency injection
     
 Dpendency injection by hand, or manual dependency injection
     - You created, provided, and managed the dependencies of the different classes yourself, without relying on a library.
-
-
+    * Drawback : 
+            - For big apps, taking all the dependencies and connecting them correctly can require a large amount of boilerplate code.
+            - In a multi-layered architecture, if object create for a top layer, you have create/provide dependencies of the layers below it.
+     
+     - These Drawbacks solved by automating the process of creating and providing dependencies by two ways
+     
+            - Reflection-based solutions : which connect dependencies at runtime.
+            - Static solutions : which generate the code to connect dependencies at compile time.
+            
 //Dagger Dependency
 implementation 'com.google.dagger:dagger:2.28.3'
 annotationProcessor 'com.google.dagger:dagger-compiler:2.28'
