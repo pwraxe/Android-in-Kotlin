@@ -3,7 +3,14 @@
 implementation 'com.google.dagger:dagger:2.28.3'
 annotationProcessor 'com.google.dagger:dagger-compiler:2.28'
 
+Dependency Injection Steps (Ref. https://simplifiedcoding.in/course/android-dependency-injection-course/start/4)
 
+#1 Add @Inject annotations to classes that you want to inject
+#2 Create a module for the classes that cannot be constructor injected e.g. Interfaces
+#3 Create Injectors for Activity/Fragments
+#4 Create App Component
+#5 Instantiate Dagger inside your application class, implement HasAndroidInjector and inject DispatchingAndroidInjector
+#6 Use AndroidInjection.inject to inject dependencies with the help Inject annotation
 
 ________________________________________________________________________________________________________________________________________________________________________
 Dagger Notes 
