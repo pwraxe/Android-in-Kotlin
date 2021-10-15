@@ -62,5 +62,19 @@ InMainActivity
     status?.doWork()
     
 ____________________________________________________________________________________________________________________________________________________________________
-Method - 2 (By Injecting Variable)
+
+********************************************************************************************************************************************************************
+********************************************************************************************************************************************************************
+
+Hilt : 
+    - It is Jetpack's recommended library for dependency injection in Android
+    - Hilt defines a standard way to do DI in your application by providing containers for every Android class in your project and managing their lifecycles automatically for you.
+    - Use Hilt for dependency injection on Android. 
+    - Hilt is built on top of Dagger and it provides a standard way to incorporate Dagger dependency injection into an Android application.
+
+
+
+
+
+
 
