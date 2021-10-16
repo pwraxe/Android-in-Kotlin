@@ -68,7 +68,9 @@ Hilt Notes :
     - Note: If you plan to use Hilt in your Project then Custom Application class should be ther with annotate as @HiltAndroidApp
     - If you annotate an Android class with @AndroidEntryPoint, then you also must annotate Android classes that depend on it.
     
-
+    - At build time, Hilt generates Dagger components for Android classes. Then, Dagger walks through your code and performs the following steps:
+        1) Builds and validates dependency graphs, ensuring that there are no unsatisfied dependencies and no dependency cycles.
+        2) Generates the classes that it uses at runtime to create the actual objects and their dependencies.
 
 
 
@@ -98,7 +100,7 @@ Annotations Explanation
     - @Subcomponent : It informs Dagger this interface is a Dagger Subcomponent
  
     - @HiltAndroidApp  :  triggers Hilt's code generation, including a base class for your application that serves as the application-level dependency container.
-           
+    - @AndroidEntryPoint :  generates an individual Hilt component for each Android class in your project.       
             
 
 
