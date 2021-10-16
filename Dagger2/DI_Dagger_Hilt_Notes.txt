@@ -50,10 +50,15 @@ Dagger Notes
 ________________________________________________________________________________________________________________________________________________________________________
 Hilt Notes : 
     
-    - Dependency
-        - classpath 'com.google.dagger:hilt-android-gradle-plugin:2.38.1'
-    
-    
+    - To Add Hilt in Project Follow these steps (For more : https://developer.android.com/training/dependency-injection/hilt-android)
+        1) Add Classpath :  classpath 'com.google.dagger:hilt-android-gradle-plugin:2.38.1'
+        2) Apply Plugins :  apply plugin: 'dagger.hilt.android.plugin'
+        3) Add Dependency:  
+                - implementation "com.google.dagger:hilt-android:2.38.1"
+                - kapt "com.google.dagger:hilt-compiler:2.38.1"
+        4) Sync
+        
+        
     - It is Jetpack's recommended library for dependency injection in Android
     - Hilt defines a standard way to do DI in your application by providing containers for every Android class in your project and managing their lifecycles automatically for you.
     - Use Hilt for dependency injection on Android. 
