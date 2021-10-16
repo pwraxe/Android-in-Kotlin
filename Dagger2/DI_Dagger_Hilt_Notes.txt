@@ -35,9 +35,12 @@ Dagger Notes
                          - Reflection-based solutions : which connect dependencies at runtime.
                          - Static solutions : which generate the code to connect dependencies at compile time.
                          
-      IMP :  Whenever you feel perticular class is creating without change at all time just create singleton for it and pass its reference
-      
+      IMP :  Whenever you feel perticular class is creating without change at all time just create singleton for it and pass its reference 
       - ApplicationGraph : Representation and dependencies between classes makes applicationGraph .
+      
+      Here We cant use @Inject annotations
+        - you cannot constructor-inject an interface. 
+        - You also cannot constructor-inject a type that you do not own,
       
       
       
