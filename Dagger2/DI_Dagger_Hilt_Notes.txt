@@ -37,7 +37,7 @@ Dagger Notes
                          
       IMP :  Whenever you feel perticular class is creating without change at all time just create singleton for it and pass its reference
       
-      
+      - ApplicationGraph : Representation and dependencies between classes makes applicationGraph .
       
       
       
