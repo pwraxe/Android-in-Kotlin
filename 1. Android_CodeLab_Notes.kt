@@ -266,7 +266,7 @@ NotificationManager :
       - Once a channel is created, it can be used to deliver any number of notifications.
 
 
-
+ApplicationClass : If you think some variables, functions, classes will need in whole app then define those in custom Application class with extending Application Class itself and define those custom application class in manifest file with `name` attrib
 
 
 
