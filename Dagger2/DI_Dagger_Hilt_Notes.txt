@@ -53,6 +53,8 @@ Hilt Notes :
     - Hilt defines a standard way to do DI in your application by providing containers for every Android class in your project and managing their lifecycles automatically for you.
     - Use Hilt for dependency injection on Android. 
     - Hilt is built on top of Dagger and it provides a standard way to incorporate Dagger dependency injection into an Android application.
+    - It reduces the boilerplate of doing manual dependency injection in your project. 
+    - Doing manual dependency injection requires you to construct every class and its dependencies by hand, and to use containers to reuse and manage dependencies.
 
 
 
