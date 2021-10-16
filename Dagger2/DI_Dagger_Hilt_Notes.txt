@@ -58,7 +58,6 @@ Hilt Notes :
                 - kapt "com.google.dagger:hilt-compiler:2.38.1"
         4) Sync
         
-        
     - It is Jetpack's recommended library for dependency injection in Android
     - Hilt defines a standard way to do DI in your application by providing containers for every Android class in your project and managing their lifecycles automatically for you.
     - Use Hilt for dependency injection on Android. 
@@ -66,7 +65,8 @@ Hilt Notes :
     - It reduces the boilerplate of doing manual dependency injection in your project. 
     - Doing manual dependency injection requires you to construct every class and its dependencies by hand, and to use containers to reuse and manage dependencies.
     
-    
+    - Note: If you plan to use Hilt in your Project then Custom Application class should be ther with annotate as @HiltAndroidApp
+    - If you annotate an Android class with @AndroidEntryPoint, then you also must annotate Android classes that depend on it.
     
 
 
@@ -97,7 +97,7 @@ Annotations Explanation
                   
     - @Subcomponent : It informs Dagger this interface is a Dagger Subcomponent
  
- 
+    - @HiltAndroidApp  :  triggers Hilt's code generation, including a base class for your application that serves as the application-level dependency container.
            
             
 
@@ -171,6 +171,14 @@ interface MyAppSubComponent{
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
+Hilt Example 
+
+@HiltAndroidApp
+class MyOwnApplication : Application{
+}
+
+@AndroidEntryPoint
+class MainActivity : AppCompatActivity{}
 
 
 
