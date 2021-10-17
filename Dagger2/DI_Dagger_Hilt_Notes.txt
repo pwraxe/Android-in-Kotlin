@@ -39,6 +39,16 @@ Dagger Notes
       - ApplicationGraph : Representation and dependencies between classes makes applicationGraph .
      
       
+-------------------------------------------------- Problem with Field Injection -------------------------------------------------------------- 
+    - When you using Field Injection with Dagger   >  This cause InvocationTargetException || KaptWithoutKotlincTask$KaptExecutionWorkAction 
+    if you use 
+    @Inject 
+    var name: ClassName    > This generates private variable automatically by dagger
+    
+    HEnce following is the solution
+    - var car : Car? = null
+          @Inject set
+---------------------------------------------------------------------------------------------------------------------------------------------
       
       
       
