@@ -106,7 +106,8 @@ Annotations Explanation
     
     - @Module     : tell Dagger how to provide an instance of a class (Way - 2)
                   : It informs Dagger that this class is a Dagger Module
-    
+                  :  When you want to use classes which you didn't create, then use @Module annotation for provides object of those class which not own by you.
+                  
     - @Provides   : Tell Dagger how to provide classes that your project doesn't own.
                   : Class Annotated with @Module has anather annotation @Provides
                   
@@ -123,6 +124,11 @@ Annotations Explanation
  
 
 _____________________________________________________________________________________________________________________________________________________________________
+
+   
+    
+    
+
 
 
 
