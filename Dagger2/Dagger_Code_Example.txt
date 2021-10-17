@@ -148,3 +148,80 @@ class classModule
     
     ....
 }
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Example on @Module and @Provides
+
+class Car @Inject constructor(var engine: Engine, var wheel: Wheel)
+class Wheel @Inject constructor()
+class Engine @Inject constructor(mainEngine: MainEngine, subEngine: SubEngine)
+
+@Component (modules = [EngineModule::class])
+interface CarComponent { fun inject(mainActivity: MainActivity) }
+
+@Module
+object EngineModule {
+
+    @Provides
+    fun provideMainEngine() : MainEngine = MainEngine()
+
+    @Provides
+    fun provideSubEngine() : SubEngine = SubEngine()
+
+    @Provides
+    fun engineProvider(mainEngine: MainEngine,subEngine: SubEngine) : Engine{
+        mainEngine.showMainEngine()
+        subEngine.showSubEngine()
+        return Engine(mainEngine,subEngine)
+    }
+}
+
+class SubEngine {
+    fun showSubEngine() { Log.d("AXE", "showSubEngine method") }
+}
+
+class MainEngine(){
+    fun showMainEngine() { Log.d("AXE", "showMainEngine method ") }
+}
+
+class MainActivity : AppCompatActivity() {
+
+    var car: Car? = null
+        @Inject set
+
+    onCreate(...) { DaggerCarComponent.create().inject(this) }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
