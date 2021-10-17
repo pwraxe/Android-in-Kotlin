@@ -192,7 +192,107 @@ class MainActivity : AppCompatActivity() {
     onCreate(...) { DaggerCarComponent.create().inject(this) }
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------
+@Provides , @Module, Freez/3rdParty Classes 
 
+    - Freez Classes // This folder contains those classes which consider as API Classes / 3rd Party Classes / Read Only Classes
+            - class Doctor()
+            - class Engineer()
+            
+
+    - Classes
+    
+            class Human @Inject constructor(var male: Male, var female: Female) {
+                fun humanWork(){ Log.d("AXE","Human Class Work Method") }
+            }
+
+            class Female @Inject constructor(var doctor: Doctor, var engineer: Engineer){
+                fun showFemale() { Log.d("AXE","Show female method") }
+            }
+
+            class Male @Inject constructor(var doctor: Doctor, var engineer: Engineer){
+                fun showMale() { Log.d("AXE","Show male method") }
+            }
+            
+     
+     
+     - Interface
+     
+            @Component (modules = [MaleModule::class])
+            interface HumanLives {
+                fun doWork() : Human
+                fun inject(mainActivity: MainActivity)
+            }
+            
+            
+      - Module Classes
+            
+            @Module
+            object FemaleModule {
+            
+                @Provides
+                fun providesFemaleDoctor() : Doctor = Doctor()
+
+                @Provides
+                fun providesFemaleEngineer() : Engineer = Engineer()
+
+                /*** Doctor, Engineer, Collector these classes are made frozed i.e . consider as thired party classes
+                 *   mean these classes are not editable it just read only hence provide them via modules
+                 * */
+
+                @Provides
+                fun providesFemaleDesignations(doctor: Doctor, engineer: Engineer) : Female {
+                    return Female(doctor, engineer)
+                }
+            }
+        
+        ================================================================================
+        
+        @Module
+        object MaleModule {
+        
+            @Provides
+            fun provideMaleDoctor() : Doctor = Doctor()
+
+            @Provides
+            fun provideMaleEngineer() : Engineer = Engineer()
+
+            /*** Doctor, Engineer, Collector these classes are make frozen i.e . consider as thired party classes
+             *   mean these classes are not editable it just read only hence provide them via modules
+             * */
+
+            @Provides
+            fun providesMaleDesignations(doctor: Doctor,engineer: Engineer) : Male{
+                return Male(doctor,engineer)
+            }
+
+        }
+        
+        
+        ------------------------------------ MainActivity -------------------------------------------------
+        
+        class MainActivity : AppCompatActivity() {
+
+            var human: Human? = null
+                @Inject set
+
+            onCreate(...) {
+                val humanLives : HumanLives? = DaggerHumanLives.create()
+                humanLives?.doWork()?.male?.showMale()              // Show male method
+                humanLives?.doWork()?.female?.showFemale()          // Show female method
+
+                DaggerHumanLives.create().inject(this)    // This useful for Field Injection
+
+                human?.male?.showMale()                             // Show male method
+                human?.female?.showFemale()                         // Show female method
+
+                human?.humanWork()
+            }
+        }
+
+        
+---------------------------------------------------------------------------------------------------------------------------------------------------  
+        
+        
 
 
 
