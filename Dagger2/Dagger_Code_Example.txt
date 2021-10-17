@@ -137,3 +137,14 @@ class MyOwnApplication : Application{
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity{}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+@Module
+class classModule
+{
+    @Provides
+    fun method() : ClassName { return ClassName() }
+    
+    ....
+}
