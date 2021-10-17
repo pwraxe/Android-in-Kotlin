@@ -1,7 +1,7 @@
 Code Example
 
-Method -1 (By Injecting constructor)
-====================================
+By Injecting constructor
+========================
 
 class Engine @Inject constructor()
 class Wheel @Inject constructor()
@@ -19,24 +19,11 @@ InMainActivity
     val component : CarComponent? = DaggerCarComponent.create()
     val status : Car? = component?.getCarStatus()
     status?.doWork()
-
-
-
-
-DaggerCarComponent Create 
-      --------------------------
-         - Its Private Constructor
-         - private Builder class with its constructor
-         - fun builder() : Builder{}
-         - create() : CarComponent
-         - Implement interface and override methods
-         - build() : CarComponent
-      
     
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-Field Injection
-===============
+By Injecting Field
+==================
 
 class Engine @Inject constructor()
 class Wheel @Inject constructor()
@@ -54,16 +41,50 @@ interface CarComponent {
 
 class MainActivity() : AppCom...(){
 
+var car : Car? = null
+        @Inject set              -------------------------------------------------------------> IMP , Very Imp
 
-    var car : Car? = null
-        @Inject set
 
     onCreate(){
         DaggerCarComponent.create().inject(this)
         car?.showCarProperty()
     }
 }
-    
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+By Injecting Method
+===================
+
+class Engine @Inject constructor()
+class Wheel @Inject constructor()
+
+class Car @Inject constructor(var engine: Engine, var wheel: Wheel){
+    @Inject
+    fun isCarLock(remote: Remote?){
+        remote?.isLock(this)
+    }
+}
+
+class Remote @Inject constructor() {
+
+    fun isLock(car: Car) {
+        Log.d("AXE", "Remote car isLock method")
+    }
+}
+
+@Component
+interface CarComponent {
+    fun inject(mainActivity: MainActivity)
+}
+
+class MainActivity : AppCompatActivity() {
+    onCreate() {  
+        DaggerCarComponent.create().inject(this) 
+    }
+}
+
+
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 Inject in Activity
 
