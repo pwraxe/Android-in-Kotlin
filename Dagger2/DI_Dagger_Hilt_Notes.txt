@@ -118,22 +118,38 @@ Code Example
 Method -1 (By Injecting constructor)
 ====================================
 
-class Male @Inject constructor()
-class Female @Inject constructor()
+class Engine @Inject constructor()
+class Wheel @Inject constructor()
 
-class Human @Inject constructor(private var male: Male, private var female: Female) {
-    fun doWork() { Log.d("AXE", "Human Class Working...") }
+class Car @Inject constructor(private var engine: engine, private var wheel: Wheel) {
+    fun doWork() { Log.d("AXE", "Car Class Working...") }
 }
 
 @Component
-interface HumanComponent {
-    fun getWorkingStatus() : Human
+interface CarComponent {
+    fun getCarStatus() : Car
 }
 
 InMainActivity
-    val component : HumanComponent? = DaggerHumanComponent.create()
-    val status : Human? = component?.getWorkingStatus()
+    val component : CarComponent? = DaggerCarComponent.create()
+    val status : Car? = component?.getCarStatus()
     status?.doWork()
+
+
+
+
+DaggerCarComponent Create 
+      --------------------------
+         - Its Private Constructor
+         - private Builder class with its constructor
+         - fun builder() : Builder{}
+         - create() : CarComponent
+         - Implement interface and override methods
+         - build() : CarComponent
+      
+    
+    
+    
     
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 Inject in Activity
