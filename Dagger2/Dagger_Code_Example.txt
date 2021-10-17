@@ -1,0 +1,118 @@
+Code Example
+
+Method -1 (By Injecting constructor)
+====================================
+
+class Engine @Inject constructor()
+class Wheel @Inject constructor()
+
+class Car @Inject constructor(private var engine: engine, private var wheel: Wheel) {
+    fun doWork() { Log.d("AXE", "Car Class Working...") }
+}
+
+@Component
+interface CarComponent {
+    fun getCarStatus() : Car
+}
+
+InMainActivity
+    val component : CarComponent? = DaggerCarComponent.create()
+    val status : Car? = component?.getCarStatus()
+    status?.doWork()
+
+
+
+
+DaggerCarComponent Create 
+      --------------------------
+         - Its Private Constructor
+         - private Builder class with its constructor
+         - fun builder() : Builder{}
+         - create() : CarComponent
+         - Implement interface and override methods
+         - build() : CarComponent
+      
+    
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Field Injection
+===============
+
+class Engine @Inject constructor()
+class Wheel @Inject constructor()
+
+class Car @Inject constructor(var engine: Engine, var wheel: Wheel) {
+    fun showCarProperty(){
+        Log.d("AXE", "Car has Engine and Wheel for running it")
+    }
+}
+
+@Component
+interface CarComponent {
+    fun inject(mainActivity: MainActivity)
+}
+
+class MainActivity() : AppCom...(){
+
+
+    var car : Car? = null
+        @Inject set
+
+    onCreate(){
+        DaggerCarComponent.create().inject(this)
+        car?.showCarProperty()
+    }
+}
+    
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Inject in Activity
+
+class LoginActivity: Activity() {
+    
+    @Inject lateinit var loginViewModel: LoginViewModel         // You want Dagger to provide an instance of LoginViewModel from the graph
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        // Make Dagger instantiate @Inject fields in LoginActivity
+        (applicationContext as MyApplication).appComponent.inject(this)
+        
+        // Now loginViewModel is available
+        super.onCreate(savedInstanceState)
+    }
+}
+
+class LoginViewModel @Inject constructor(private val userRepository: UserRepository) { ... }
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+@Module
+class MyAppModule{
+    
+    @Provides
+    fun myFunction() : Any { .... }
+}
+
+@Singleton
+@Component(modules = [MyAppModule::class,MyAppSubComponent::class])
+interface MyComponent {
+    fun myFun() : Any
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+@Subcomponent
+interface MyAppSubComponent{
+    
+    @Subcomponent
+    interface MySubComponent{ fun show():Any }
+    
+    fun show():Any
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Hilt Example 
+
+@HiltAndroidApp
+class MyOwnApplication : Application{
+}
+
+@AndroidEntryPoint
+class MainActivity : AppCompatActivity{}
