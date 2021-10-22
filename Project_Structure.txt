@@ -1,0 +1,83 @@
+
+-main
+{
+	java.com.example.appname
+	{
+		    data
+		    { 
+			      api
+			      di
+			      fcm
+			      listener
+			      model
+			      preference
+			      repository
+		    }	
+		
+        localStorage
+        {
+              room DB
+              SharePref
+        }
+
+        network_service
+        ui
+        {
+              adapter
+			        base
+			        view
+			        {
+				          activities
+				          fragments
+				          viewmodel
+			        }
+		    }
+
+        utils
+        {
+              customUI
+              ext
+              AppConfig.kt
+              AppConstant.kt
+              CommonUtils.kt
+              DeviceInfo.kt
+              InternetObserver.kt
+              LogUtils
+              NetworkHelper.kt
+              NetworkUtils.kt
+              PrefManager.kt
+              ToastUtils.kt
+              -any external file-
+        }
+        AppController.kt
+      }
+  res
+  {
+      anim
+      drawable
+      font
+      layout
+      menu
+      mipmap
+      navigation
+      values
+      {
+        attrs.xml
+        colors.xml
+        dimen.xml
+        strings.xml
+        styles.xml
+        themes.xml
+      }
+      values-hi-rIN
+      {
+        strings.xml
+      }
+      xml
+      {
+        provider_path.xml
+      }
+	}	
+	AndroidManifest.xml
+}
+	
