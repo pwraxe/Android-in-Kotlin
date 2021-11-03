@@ -292,7 +292,25 @@ class MainActivity : AppCompatActivity() {
         
 ---------------------------------------------------------------------------------------------------------------------------------------------------  
         
-        
+ Inject keyword use for create object of specific class so we can access all public methods of that class
+ 
+ 
+ class Male @Inject constructor() { fun getMale(){....} }
+ class Female @Inject constructor() { fun getFemale(){....} }
+ 
+ class Human @Inject constructor(var male: Male, var female: Female) { fun getHuman(){ male.getMale(); female.getFemale(); } }
+ 
+ @AndroidEntryPoint
+ class MainActivity : AppCompatActivity
+ {
+    @Inject
+    lateinit var human:Human            //Object create internally,
+
+    onCreate(...) {
+        ....
+        human.getHuman()                // we can access method of it
+    }
+ }
 
 
 
