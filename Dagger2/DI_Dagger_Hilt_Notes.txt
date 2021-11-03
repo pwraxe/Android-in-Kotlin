@@ -89,7 +89,23 @@ Hilt Notes :
       - Annotate Hilt Module with @InstallIn to tell Hilt that Hoe each model of android class will be  use or install IN
 
 
-    
+    Add Hilt in Project
+        Step 1 > Add classpath in build.gradle(Project) > classpath "com.google.dagger:hilt-android-gradle-plugin:2.38.1"
+        Step 2 > Add plugin in build.gradle(Module) > id 'dagger.hilt.android.plugin'
+        Step 3 > Add following dependency in build.gradle(Module) file
+                - implementation "com.google.dagger:hilt-android:2.38.1"
+                - kapt "com.google.dagger:hilt-compiler:2.38.1"
+        Step 4 > check " compileOptions{} "  available or not in build.gradle(Module) file, if not add following code
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+                
+                
+        Step 5 > Search for Application subclass , if not then create file extend Application() and annotate with @HiltAndroidApp, registered application class in manifest, if not 
+        Step 6 > Ex. Annotate MainActivity as @AndroidEntryPoint
+        
+
 
 ________________________________________________________________________________________________________________________________________________________________________
 Annotations Explanation
