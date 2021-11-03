@@ -107,6 +107,18 @@ Hilt Notes :
         
 
 
+
+    Hilt > Field Injection
+        in MainActivity >
+            > @Inject
+              lateinit var classVariable: ClassName
+            > lateinit var classVariable : ClassName @Inject set
+            > lateinit var classVariable : ClassName 
+                @Inject set
+
+
+
+
 ________________________________________________________________________________________________________________________________________________________________________
 Annotations Explanation
 
