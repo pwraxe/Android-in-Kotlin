@@ -8,3 +8,32 @@
     
 - Creational design pattern: Describes how to create or instantiate objects. 
     - Ex. Builder, Singleton and Prototype.
+    
+    
+    MVC  :  Model View Controller   (View and Controller are tightly coupled)
+    
+            View        <====>        Controller      <====>        Model
+            (XML)       <====>        (Activity /     <====>        (Data classes, POJO classes)
+                                       fragment)
+                                     
+                                     
+    MVP  :  Model View Presenter
+    
+            View        <====>        Presenter       <====>        Model
+            ( XML,      <====>        ( Presenter     <====>        (Data classes, POJO classes)
+            Activity,                   Sub Class )
+            Fragment )  
+            
+            
+            
+   MV-VM  :  Model View ViewModel  (Google Recommand for small and large project)
+        
+            View        <====>        ViewModel       <====>        Repository 
+            ( XML,      <====>        ( ViewModel     <====>        |---> API Call
+            Activity,                   Sub Class )                 |---> Database Call
+            Fragment )  
+            
+            
+   
+   
+   
