@@ -1,3 +1,12 @@
 - Design patterns are reusable, template solutions to common development problems.
+
+- Structural design pattern: Describes how objects are composed and combined to form larger structures. 
+    - Ex. Model-View-Controller (MVC), Model-View-ViewModel (MVVM) and Facade.
+    
+- Behavioral design pattern: Describes how objects communicate with each other. 
+    - Ex. Delegation, Strategy and Observer.
+    
+- Creational design pattern: Describes how to create or instantiate objects. 
+    - Ex. Builder, Singleton and Prototype.
  
  
