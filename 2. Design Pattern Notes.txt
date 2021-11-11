@@ -1,0 +1,3 @@
+- Design patterns are reusable, template solutions to common development problems.
+ 
+ 
