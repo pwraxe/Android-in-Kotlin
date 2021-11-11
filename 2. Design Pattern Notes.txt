@@ -9,4 +9,3 @@
 - Creational design pattern: Describes how to create or instantiate objects. 
     - Ex. Builder, Singleton and Prototype.
  
- 
