@@ -22,5 +22,13 @@
     - The function which annotate with @Preview should not take any param otherwise you get error at @Preview
     - We can have multiple function with Annotate with @Preview 
     - @Preview annotate method get internally called, we dont need to explicitly call it
+    - We can see live changes in @Preview annotate method
     
+    Ex. 
+    
+    @Preview
+    @Composable
+    fun PreviewMessageCard1(){
+        Text("Your text message")
+    }
     
