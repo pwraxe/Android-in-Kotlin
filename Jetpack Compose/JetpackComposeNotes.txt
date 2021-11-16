@@ -1,9 +1,7 @@
 - Jetpack Compose function always call anather composable function
 - Any Composable function annotate with @Composable keyword
 - Composable function starts with Capital letter
-
 - setContent{
-    
     Column{
         // element in column align vertical
     }
@@ -14,6 +12,12 @@
     
     Box{
       // element in box align top left by default like element without constraints
-    }
-  
+    } 
 }
+
+
+- @Preview anootation is just for diplaying contains whithour physically run 
+    - we can have row data to function which annotatate with @Preview to get lookup of our view 
+    - The function which annotate with @Preview should not take any param otherwise you get error at @Preview
+    
+    
