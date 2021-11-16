@@ -7,7 +7,7 @@ Setup Jetpack :
 Add following items in  build.gradle(:app)
 
 
- plugins{ id 'org.jetbrains.kotlin:android' }
+ plugins{ id 'kotlin:android' }
  
  android {
  	 buildFeatures {
