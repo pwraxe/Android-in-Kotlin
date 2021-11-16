@@ -1,0 +1,3 @@
+- Jetpack Compose function always call anather composable function
+- Any Composable function annotate with @Composable keyword
+- Composable function starts with Capital letter
