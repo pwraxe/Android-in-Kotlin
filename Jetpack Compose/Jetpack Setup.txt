@@ -1,2 +1,42 @@
 Setup Jetpack : 
 	https://developer.android.com/jetpack/compose/interop/adding
+	
+	
+	
+	
+Add following items in  build.gradle(:app)
+
+
+ plugins{ id 'org.jetbrains.kotlin:android' }
+ 
+ android {
+ 	 buildFeatures {
+        	// Enables Jetpack Compose for this module
+        	compose true
+    	}
+    	composeOptions {
+        	kotlinCompilerExtensionVersion '1.0.5'
+    	}
+ }
+
+
+
+// jetpack compose libraries
+    implementation 'androidx.compose.ui:ui:1.0.5'
+    implementation 'androidx.compose.ui:ui-tooling:1.0.5'                                           // Tooling support (Previews, etc.)
+    implementation 'androidx.compose.foundation:foundation:1.0.5'                                   // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+    implementation 'androidx.compose.material:material:1.0.5'                                       // Material Design
+
+    // Material design icons
+    implementation 'androidx.compose.material:material-icons-core:1.0.5'
+    implementation 'androidx.compose.material:material-icons-extended:1.0.5'
+    implementation "com.google.android.material:compose-theme-adapter:1.1.0"                        // When using a MDC theme
+
+    implementation 'androidx.activity:activity-compose:1.4.0'                                       // Integration with activities
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0'                           // Integration with ViewModels
+    implementation 'androidx.compose.animation:animation:1.0.5'                                     // Animations
+
+    // Integration with observables
+    implementation 'androidx.compose.runtime:runtime-livedata:1.0.5'
+    implementation 'androidx.compose.runtime:runtime-rxjava2:1.0.5'
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.0.5'                            // UI Tests
