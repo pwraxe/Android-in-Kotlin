@@ -41,5 +41,20 @@
     }
     - Text below text is like element without constraints 
     
-    
-    
+--------------------------------------------------------------------------------------------------------------------------------
+Show Image in Preview and in App
+
+
+When showing image make sure image type only .png or .jpeg else
+"java.lang.IllegalArgumentException: Only VectorDrawables and rasterized asset types are supported ex. PNG, JPG"
+
+
+
+Image(painter = painterResource(id = R.drawable.android_img_name), contentDescription = message)
+
+
+@Composable
+fun Show(){
+    Image(painter = painterResource(id = R.drawable.android_img_name), contentDescription = "some desc")
+}
+
