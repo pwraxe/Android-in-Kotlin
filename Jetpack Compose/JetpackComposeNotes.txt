@@ -32,3 +32,14 @@
         Text("Your text message")
     }
     
+    
+    
+    @Composable
+    fun Show(){
+        Text("aaaaa")
+        Text("bbbbb")
+    }
+    - Text below text is like element without constraints 
+    
+    
+    
