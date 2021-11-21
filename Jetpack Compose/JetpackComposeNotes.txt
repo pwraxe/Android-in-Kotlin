@@ -67,5 +67,6 @@ TextView
     - To Change text background color
            - Surface(color = MaterialTheme.colors.primary) { Text(text = "Hi Developer") }
 
-    - To
-
+    - Padding to TextView
+           - Text(text = "Hello World!", modifier = Modifier.padding(12.dp))
+    
