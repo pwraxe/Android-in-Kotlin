@@ -2,6 +2,8 @@
 - Any Composable function annotate with @Composable keyword
 - Composable function starts with Capital letter
 - All Composable functions must have @Composable annotation; this annotation informs the Compose compiler that this function is intended to convert data into UI.
+- The function doesn't return anything because they describe the desired screen state instead of constructing UI widgets.
+
 - setContent{
     Column{
         // element in column align vertical
