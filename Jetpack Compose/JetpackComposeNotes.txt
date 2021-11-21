@@ -61,3 +61,11 @@ fun Show(){
     Image(painter = painterResource(id = R.drawable.android_img_name), contentDescription = "some desc")
 }
 
+===================================================================================================================================
+
+TextView
+    - To Change text background color
+           - Surface(color = MaterialTheme.colors.primary) { Text(text = "Hi Developer") }
+
+    - To
+
