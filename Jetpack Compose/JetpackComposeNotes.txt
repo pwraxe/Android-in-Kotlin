@@ -70,3 +70,8 @@ TextView
     - Padding to TextView
            - Text(text = "Hello World!", modifier = Modifier.padding(12.dp))
     
+===================================================================================================================================
+
+Modifiers
+    - Modifiers tell a UI element how to lay out, display, or behave within its parent layout.
+
