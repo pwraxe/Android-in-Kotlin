@@ -68,7 +68,10 @@ TextView
            - Surface(color = MaterialTheme.colors.primary) { Text(text = "Hi Developer") }
 
     - Padding to TextView
-           - Text(text = "Hello World!", modifier = Modifier.padding(12.dp))
+           - Text(text = "Hello World!", 
+                  modifier = Modifier.padding(all = 12.dp))     OR
+                  modifier = Modifier.padding(horizontal = 12.dp, vertical = 36.dp))    OR
+                  modifier = Modifier.padding(start = 12.dp,top = 24.dp, end = 36.dp, bottom = 48.dp))
     
 ===================================================================================================================================
 
