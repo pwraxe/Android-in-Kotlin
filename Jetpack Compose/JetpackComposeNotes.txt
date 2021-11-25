@@ -80,6 +80,9 @@ TextView
 
 Modifiers
     - Modifiers tell a UI element how to lay out, display, or behave within its parent layout.
+    - fillMaxWidth()  > match_parent (Horizontal)
+    - fillMaxHeight() > match_parent (Verticle)
+    - fillMaxSize()   > for both Vertically and Horizontally match_parent
 
 Initialised Variable
     Syntax : var variableName by remember { mutableStateOf(data) } 
