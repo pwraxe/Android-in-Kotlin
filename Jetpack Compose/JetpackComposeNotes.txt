@@ -78,3 +78,6 @@ TextView
 Modifiers
     - Modifiers tell a UI element how to lay out, display, or behave within its parent layout.
 
+Initialised Variable
+    Syntax : var variableName by remember { mutableStateOf(data) } 
+    Ex.    : var isButtonClick by remember { mutableStateOf(false) }
