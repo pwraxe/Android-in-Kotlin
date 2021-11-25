@@ -3,6 +3,11 @@
 - Composable function starts with Capital letter
 - All Composable functions must have @Composable annotation; this annotation informs the Compose compiler that this function is intended to convert data into UI.
 - The function doesn't return anything because they describe the desired screen state instead of constructing UI widgets.
+- State hoisting : state that is read or modified by multiple functions should live in a common ancestor/method/module —> this process is called state hoisting.
+
+
+
+- Jetpack Compose Example
 
 - setContent{
     Column{
@@ -50,8 +55,6 @@ Show Image in Preview and in App
 
 When showing image make sure image type only .png or .jpeg else
 "java.lang.IllegalArgumentException: Only VectorDrawables and rasterized asset types are supported ex. PNG, JPG"
-
-
 
 Image(painter = painterResource(id = R.drawable.android_img_name), contentDescription = message)
 
