@@ -40,3 +40,6 @@ Add following items in  build.gradle(:app)
     implementation 'androidx.compose.runtime:runtime-livedata:1.0.5'
     implementation 'androidx.compose.runtime:runtime-rxjava2:1.0.5'
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.0.5'                            // UI Tests
+    
+    //material icons
+    implementation "androidx.compose.material:material-icons-extended:1.0.5"
