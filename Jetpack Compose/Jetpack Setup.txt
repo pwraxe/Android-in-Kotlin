@@ -46,3 +46,6 @@ Add following items in  build.gradle(:app)
     
     //Alternatives of Glide and Picasso in Jetpack Compose
     implementation 'io.coil-kt:coil-compose:1.4.0'
+    
+    //constraint layout in jetpack compose
+    implementation "androidx.constraintlayout:constraintlayout-compose:1.0.0-rc01"
