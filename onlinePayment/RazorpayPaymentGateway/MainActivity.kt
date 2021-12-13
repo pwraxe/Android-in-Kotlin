@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity(), PaymentResultListener {
 
             val checkout = Checkout()
             val jsonObj = JSONObject()
-            checkout.setKeyID("rzp_live_SuITUgzoQZhVrM")
+            checkout.setKeyID("rzp_live_QZ********hVrM")
 
             jsonObj.put("name","Akshay Pawar")
             jsonObj.put("description","This is test payment from live mode")
