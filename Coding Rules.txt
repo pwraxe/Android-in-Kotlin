@@ -1,0 +1,157 @@
+Do's
+=====
+
+Rule 1 : Copyright Licence write under /* ... */
+Rule 2 : Package name never line-wrapped
+Rule 3 : Import statement should be specific class
+Rule 4 : Minumum public declaration in single file
+Rule 5 : Braces are optional if and when statement have only one else branch 
+Rule 6 : Braces are optional if for, when branch, do, and while statements contains only one sinel expression
+Rule 7 : return statement with Braces/block is valid even single line
+		 Ex. if(condition){
+		 	return // OKAY
+		 }
+Rule 8 : if(condition) { <<---- Braces write next to expression 
+		 <<---- Line break after the opening brace.
+		 <<---- Line break before the closing brace.
+		 }
+Rule 9 : braces of Empty catch block always start to same line and end to next line
+		 Ex. try{
+		 	statement
+		 }catch(ex: Exception){ <<---- start same line
+		 } <<---- end to next line //RIGHT
+
+Rule 10: if 'if' statement return as expression or value in single line then no need of braces and it can be write in single line 
+		Ex. if(condition) 0 else 1 <<----- RIGHT
+Rule 11: Each statement should in single line, new statement starts with next line
+Rule 12: Max character limit of Single statement of one line is 100, if statement goes more than 100 char then write next line with indentation
+Rule 13: Long URL, Package , imports can be in single line
+Rule 14: Break sigle line to next line if we use dot operator, write dot operator to starting of new line 
+		Ex. Alert()
+			.title()
+			.message()
+Rule 15: Break function parameter to next line if it is not fits in single line
+Rule 16: if function has single expression and it return something then write function as expression by assign 
+		 expression to function directly without writing extra block
+		 Ex. fun add(a:Int,b:Int):Int = a+b <<--------- function as a expression
+Rule 17: Horizontal Space
+		Ex.
+			if () {  <<--- space between 'if (' AND Space between ') {'
+			} else {  <---- '} else {' <<---- observed space between 2 braces and else
+			for () { } <---> space between 'for (' AND ') {'  //Same for other
+			a + b <<-----space between 2 operand
+			onClick{ value -> statement } <<----  space between value and '->' operator
+			it.toString() <<---- OKAY // no spece need between calling method
+			it::toString() <<--- OKAY
+			for(i in 0..10) <<-- No space between 0 and 10 bcoz it indicate range
+			class Foo : Interface <<--------- RIGHT (Have Space between colon)
+			list(1, 2, 3) <<---- RIGHT (space after comma)
+			var num = 0 //comment <<----RIGHT (space between expression and Comment)
+
+Rule 18: Enum with only its variable should be in single line
+		 enum class Foo { A, B, C}
+
+Rule 19: Annotation without argument can place in single line
+		Ex. @Null @NotNull
+			var abc: Any
+
+		Annotation with parameter can place next line
+		Ex. @Target("ddddd")
+			@Deprecated("abc abc")
+			var abc:Any
+
+Rule 20: Naming Convenstion
+
+		* Package name only contains small case 
+			Ex. package com.example.myproject <<--- RIGHT
+		* function name starts with small case and append next work by capital character
+			Ex. showName <<--- RIGHT (start with small case 's' and append capital case 'N')
+		* Contant Name should capital letter, 
+			Ex. const val NUM = 1
+		* more than 2 word connected by underscore
+			Ex. const val MY_NEW_VALUE = 12
+		* constant but without 'const' keywork written by camelCase
+			Ex. val myNewValue = 12
+		* privare var '_name' and public val 'name' should be match except undersore
+
+
+
+______________________________________________________________________________________________________________________________________________________________
+
+Don't
+======
+
+Rule 1 : Do not write Copyright like sinle line and document style comment Ex. // OR /** ... */
+Rule 2 : Do not bring Package name to next line if it is long 
+Rule 3 : Wildcard imports Not allowed ex. import java.uitl.*
+Rule 4 : DO not specify all fields publically, keep those which need to access from other file
+Rule 5 : Avoid to write Braces to if statement for single expression in it also for else 
+Rule 6 : Braces require if, for, when branch, do, and while statements contains more than one expression
+Rule 7 : return statement without Braces/block is invalid
+		 Ex. if(condition) 
+		 		return // WRONG
+Rule 8 : if(condition) 
+		 { <<---- Try to do not get Braces next to if statement //and others too
+		 	statement } << ---------- Do not write closing brace next to end of statement, move Braces next line
+Rule 9 : Do not start and close catch block braces to same line if catch block is empty
+		 Ex. try{
+		 	statement
+		 }catch(ex: Exception){} <<---- //WRONG
+Rule 10: Do not write braces if 'IF' statement return as exprssion in single line
+		Ex. if(condition){
+		 	0
+		}else{
+			1
+		}	<<------- //WRONG
+		
+Rule 11: Do not write each statement in sigle line to reduce lines of code at unneccessory places
+Rule 12: Do not append single expression more than 100 character
+Rule 13: Do not wrapped or move to next line if it is Long URL, Package or imports
+Rule 14: Do not write dot operator be4 line break
+		Ex. Alert().
+			title().
+			message(). <<---- INVALID/WRONG
+Rule 15: Do not try to write function parameter in single line if it reaching maz column size of single line
+Rule 16: Do not write braces if function has single statement and returns single expression 
+Rule 17: Horizontal Space
+		 Ex. 
+			if(){   <<---- WRONG
+			}else{  <<---- WRONG
+			for(){  <<---- WRONG
+			a+b 	 <<---- WRONG
+			onClick{value->statement } <<----  WRONG
+			it . toString() <<---- WRONG
+			it :: toString() <<--- WRONG
+			for(i in 0 .. 10) <<-- WRONG (space given between 0 and 10)
+			class Foo: Interface || class Foo :Interface <<--------- WRONG (Need Space between colon)
+			list(1,2,3) <<---- WRONG(Need space after comma)
+			var num = 0//comment <<----Need space between expression and Comment
+
+
+Rule 19: Do not write Annotation in next line if no argument
+		Ex. @Null 
+			@NotNull
+			var abc: Any
+			
+		Do not write Annotation in single line if Annotation has parameter
+		Ex. @Target("ddddd") @Deprecated("abc abc")
+			var abc:Any
+
+Rule 20: Naming Convension
+
+		* Package name should not rather than small case
+			Ex. 
+				package com.example.my project <<--- WRONG
+				package com.example.my_project <<--- WRONG
+				package com.example.myProject  <<--- WRONG
+
+		* more than 1 work in function name with small case not allowed
+			Ex.  fun showname() <<---- WRONG
+		* do not start fun name with capital letter
+			Ex. fun Showname() <<---- WRONG
+		* Contant Name should not small letter, 
+			Ex. const val num = 1 <<---- WRONG
+		* do not append more than 2 word without underscore
+			Ex. MYNEWVALUE = 12 <<---- WRONG
+		* non-constant value (val w/o const keyword) should not write all small case and append
+			Ex. val mynewvalue = 12 <<---- WRONG
