@@ -1,3 +1,9 @@
+What is an Activity?
+Activity is an core building block within an android app
+It Provides a window to display composable of your users interface and handle interaction with the users such as receiving touch input on the screen
+Activity is an entry point to the users interaction with the app
+
+
 - 1dp = 1/160 inch  or 0.15875 mm
 
 - shadow to text => 
