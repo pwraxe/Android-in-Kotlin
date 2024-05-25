@@ -1,0 +1,25 @@
+Add Dependency
+	implementation(libs.androidx.core.splashscreen)  <-- for Splash Screen
+  implementation (libs.androidx.navigation.compose) <-- for Navigation  
+
+Create File 
+	res/drawable/splash_screen.xml, add forground and background image
+
+Goto
+res/values/themes.xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.RoomDatabaseStudy" parent="android:Theme.Material.Light.NoActionBar" />
+    
+    <style name="SplashScreen" parent="Theme.RoomDatabaseStudy">
+        <item name="windowSplashScreenBackground">@color/purple_700</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_screen</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/white</item>
+        <item name="postSplashScreenTheme">@style/Theme.RoomDatabaseStudy</item>
+    </style>
+
+</resources>
+
+
+Check MainActivity for Splash 
