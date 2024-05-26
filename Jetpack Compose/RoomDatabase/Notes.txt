@@ -1,0 +1,39 @@
+build.gradle (Module :app) {
+	plugin {
+		id("com.google.devtools.ksp") version "1.9.20-1.0.14"
+	}
+
+	dependency {
+		//Room
+		implementation("androidx.room:room-runtime:${rootProject.extra["room_version"]}")
+		ksp("androidx.room:room-compiler:${rootProject.extra["room_version"]}")
+		implementation("androidx.room:room-ktx:${rootProject.extra["room_version"]}")
+	}
+}
+
+
+In Jetpack Compose, we can write own ViewModel Provider, with multiple viewModel, 
+We can get ViewModel from ViewModelFactory
+
+object ViewModelProvider {
+	val factory = viewModelFactory {
+		initializer {
+			AnyViewModelObject()
+		}
+		initializer {
+			HomeViewModel()
+		}
+		...
+	}
+}
+
+
+fun CreationExtras.applicationSubClass(): ApplicationSubClass = 
+	(this[AndroidViewModelFactory.APPLICATION_KEY] as ApplicationSubClass)
+
+Note: ApplicationSubClass mean class which extend Application class
+
+val coroutineScope = rememberCoroutineScope()
+
+Declare ViewModel object inside function parameter
+viewModel: ItemEntryViewModel = viewModel(factory = AppViewModelProvider.Factory)
