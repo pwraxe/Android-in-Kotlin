@@ -1,6 +1,7 @@
 /**
 If you want more icons then add following dependency
 implementation (libs.androidx.material.icons.extended)
+implementation ("androidx.compose.material:compose-material-icons-extended-android")
 
 **/
 
