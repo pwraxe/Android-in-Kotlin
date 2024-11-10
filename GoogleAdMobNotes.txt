@@ -1,0 +1,16 @@
+Add Ads in Android
+
+1. Upload App on Playstore and wait for get in production
+2. Goto  "https://admob.google.com/v2/home"
+3. Left Menu > Click on 'Apps' > 'View All Apps' 
+4. Add app, (skip if you already added app)
+5. Click on required ${App name}
+
+Follow this steps OR goto 6
+https://support.google.com/admob/thread/302311277?hl=en&msgid=302475921
+
+6. Link your app to app store (https://support.google.com/admob/answer/10037806?hl=en&sjid=17447984161811617678-AP)
+7. Create Add Unit (https://support.google.com/admob/answer/6128738?hl=en&sjid=17447984161811617678-AP)
+	- Left Menu > Apps > Ad Unit > Add ad unit for your app here (existing will display here)
+
+8. Left Menu > Setting > Account Control > Change Seller Information to 'Transparent'
