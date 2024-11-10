@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Akshay Pawar - Software Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            background-color: #121212;
+            overflow: hidden;  /* Prevent scrolling */
+            cursor: pointer; /* Re-enable the cursor */
+        }
+
+        .container {
+            height: 100vh; /* Take full height of the viewport */
+            position: relative;
+            z-index: 2;
+        }
+
+        h1, .designation {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            position: absolute;
+            user-select: none; /* Prevent text selection */
+        }
+
+        .designation {
+            font-size: 1.2rem; /* Smaller text */
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Buttons styling */
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: #121212;
+            padding: 0.8rem 2rem;
+            margin: 0.5rem;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px; /* Reduced corner radius */
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ddd;
+            transform: scale(1.05);
+        }
+
+        /* Sticky buttons at bottom extreme corners */
+        #view-portfolio {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 3;
+        }
+
+        #visit-compose {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 3;
+        }
+
+        /* Starry background */
+        .star {
+            position: absolute;
+            background-color: white;
+            width: 4px;
+            height: 4px;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            opacity: 0.8;
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
+            pointer-events: none;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Starry background -->
+    <div class="stars"></div>
+
+    <div class="container">
+        <!-- Floating area with background color -->
+        <h1 class="name">Akshay Pawar</h1>
+        <div class="designation">Software Developer</div>
+
+        <!-- Buttons -->
+        <button id="view-portfolio" class="btn" onclick="window.location.href='https://pwraxe.github.io'">View Portfolio</button>
+        <button id="visit-compose" class="btn" onclick="window.location.href='https://pwraxe.github.io/compose'">Visit Compose</button>
+    </div>
+
+    <script>
+        // Create stars background
+        function createStars(numStars) {
+            const starsContainer = document.querySelector('.stars');
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.top = `${Math.random() * 100}vh`;
+                star.style.left = `${Math.random() * 100}vw`;
+                starsContainer.appendChild(star);
+            }
+        }
+
+        createStars(500);
+
+        // Function to animate stars
+        function animateStars() {
+            const stars = document.querySelectorAll('.star');
+            stars.forEach(star => {
+                let top = parseFloat(star.style.top);
+                let left = parseFloat(star.style.left);
+
+                // Move stars vertically and horizontally
+                top += 0.05;
+                if (top > 100) top = -2;
+
+                left += Math.random() * 0.05 - 0.025;
+                if (left > 100) left = -2;
+                else if (left < -2) left = 100;
+
+                star.style.top = `${top}vh`;
+                star.style.left = `${left}vw`;
+            });
+        }
+
+        setInterval(animateStars, 30);
+
+        // Function to make text float randomly
+        function makeTextFloat() {
+            const textElements = document.querySelectorAll('.name, .designation');
+
+            textElements.forEach((element) => {
+                let speed = 5;
+                let x = Math.random() * window.innerWidth;
+                let y = Math.random() * window.innerHeight;
+                let vx = (Math.random() - 0.5) * speed;
+                let vy = (Math.random() - 0.5) * speed;
+
+                function moveText() {
+                    x += vx;
+                    y += vy;
+
+                    // Boundary check
+                    if (x < 0 || x > window.innerWidth - element.offsetWidth) vx = -vx;
+                    if (y < 0 || y > window.innerHeight - element.offsetHeight) vy = -vy;
+
+                    element.style.transform = `translate(${x}px, ${y}px)`;
+                    requestAnimationFrame(moveText);
+                }
+
+                moveText();
+            });
+        }
+
+        makeTextFloat();
+
+        // Function for explosion effect (broken glass effect)
+        function explodeText(element) {
+            const text = element.innerText;
+            element.innerHTML = ''; // Clear current text
+
+            // Create individual characters (pieces)
+            const particles = text.split('').map((char, index) => {
+                const span = document.createElement('span');
+                span.innerText = char;
+                span.style.position = 'absolute';
+                span.style.opacity = '1';
+                span.style.fontSize = '2rem';
+                span.style.transition = 'transform 1s ease-out, opacity 0.5s ease-out';
+                span.style.transform = `translate(${Math.random() * 30 - 15}px, ${Math.random() * 30 - 15}px)`;
+                element.appendChild(span);
+                return span;
+            });
+
+            // Physics properties
+            const gravity = 0.3; // Gravity strength
+            const bounceFactor = 0.5; // Bounce effect when hitting the ground
+            const groundLevel = window.innerHeight - 50; // Ground position (50px from bottom)
+
+            particles.forEach((span) => {
+                let vy = Math.random() * -10 - 5; // Random initial vertical velocity
+                let vx = (Math.random() - 0.5) * 5; // Random horizontal velocity
+                let yPos = 0; // Initial Y position
+                let xPos = Math.random() * window.innerWidth; // Random X position
+
+                function applyPhysics() {
+                    vy += gravity; // Apply gravity
+
+                    // Update position
+                    yPos += vy;
+                    xPos += vx;
+
+                    // Check if the character hits the "ground"
+                    if (yPos > groundLevel) {
+                        yPos = groundLevel;
+                        vy *= -bounceFactor; // Bounce back
+                    }
+
+                    span.style.transform = `translate(${xPos}px, ${yPos}px)`;
+
+                    // Continue animation if the piece is still falling or bouncing
+                    if (yPos < groundLevel || Math.abs(vy) > 1) {
+                        requestAnimationFrame(applyPhysics);
+                    }
+                }
+
+                applyPhysics(); // Start physics for each character
+            });
+
+            // Reset after 5 seconds and make the text float again
+            setTimeout(() => {
+                element.innerHTML = text; // Reset text
+                makeTextFloat(); // Restart the floating animation
+            }, 5000); // After 5 seconds
+        }
+
+        // Add event listeners for text explosion
+        const textElements = document.querySelectorAll('.name, .designation');
+        textElements.forEach((element) => {
+            element.addEventListener('click', () => {
+                explodeText(element);
+            });
+        });
+
+    </script>
+
+</body>
+</html>
